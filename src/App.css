@@ -1,0 +1,33 @@
+@charset "utf-8";
+@import 'bulma/css/bulma.min.css';
+@import 'primereact/resources/themes/luna-amber/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
+
+.footer {
+  display: block;
+  text-align: center !important;
+  padding: 3rem 1.5rem 3rem;
+  background: #191919;
+}
+
+.footer__text {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.125;
+}
+
+.header {
+  display: block;
+  text-align: center !important;
+  padding: 3rem 1.5rem 3rem;
+  background: #191919;
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+}

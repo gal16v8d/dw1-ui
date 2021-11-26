@@ -1,4 +1,4 @@
-import Card from '../../api/model/Card';
+import Card from '../../api/model/mongo/Card';
 import CardService from '../../api/service/CardService';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import VALUES from '../../constants/Dw1Constants';

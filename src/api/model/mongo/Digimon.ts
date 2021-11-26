@@ -1,7 +1,7 @@
 import Item from './Item';
 import Level from './Level';
 import Location from './Location';
-import PkData from './mongo/PkData';
+import PkData from './/PkData';
 import Tech from './Tech';
 import { ActiveType, DigiType } from './types/Digimon.types';
 

@@ -1,4 +1,4 @@
-import PkData from './mongo/PkData';
+import PkData from './PkData';
 import MenuType from './types/Menu.types';
 
 class Menu extends PkData {

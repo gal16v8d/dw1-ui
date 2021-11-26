@@ -1,5 +1,6 @@
 import axios from 'axios';
-import ApiData from '../model/types/ApiData.types';
+import ApiData from '../model/mongo/types/ApiData.types';
+import ApiDataRequest from '../model/requests/types/ApiDataRequest.types';
 
 class GenericService {
   baseUri: string;
@@ -13,12 +14,12 @@ class GenericService {
     return response?.data;
   };
 
-  public save = async (data: ApiData): Promise<string> => {
+  public save = async (data: ApiDataRequest): Promise<string> => {
     const response = await axios.post(this.baseUri, data);
     return response?.data;
   };
 
-  public update = async (id: string, data: ApiData): Promise<string> => {
+  public update = async (id: string, data: ApiDataRequest): Promise<string> => {
     const response = await axios.put(`${this.baseUri}/${id}`, data);
     return response?.data;
   };

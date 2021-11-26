@@ -5,7 +5,8 @@ import {
   useQuery,
   UseQueryResult,
 } from 'react-query';
-import ApiData from '../../model/types/ApiData.types';
+import ApiData from '../../model/mongo/types/ApiData.types';
+import ApiDataRequest from '../../model/requests/types/ApiDataRequest.types';
 import GenericService from '../GenericService';
 
 const useGetAll = (
@@ -46,14 +47,17 @@ const useSave = (
   string,
   any,
   {
-    data: ApiData;
+    data: ApiDataRequest;
   },
   unknown
 > => {
-  return useMutation(({ data }: { data: ApiData }) => service.save(data), {
-    onError: (err: any) =>
-      console.log(`Could not create the ${apiObject}`, err?.response),
-  });
+  return useMutation(
+    ({ data }: { data: ApiDataRequest }) => service.save(data),
+    {
+      onError: (err: any) =>
+        console.log(`Could not create the ${apiObject}`, err?.response),
+    }
+  );
 };
 
 const useUpdate = (
@@ -64,12 +68,13 @@ const useUpdate = (
   any,
   {
     id: string;
-    data: ApiData;
+    data: ApiDataRequest;
   },
   unknown
 > => {
   return useMutation(
-    ({ id, data }: { id: string; data: ApiData }) => service.update(id, data),
+    ({ id, data }: { id: string; data: ApiDataRequest }) =>
+      service.update(id, data),
     {
       onError: (err: any) =>
         console.log(`Could not update the ${apiObject}`, err?.response),

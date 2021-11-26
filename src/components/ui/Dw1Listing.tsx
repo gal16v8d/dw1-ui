@@ -4,17 +4,12 @@ import { DataTable } from 'primereact/datatable';
 import { Image } from 'primereact/image';
 import { Messages } from 'primereact/messages';
 import { Toolbar } from 'primereact/toolbar';
-import React from 'react';
-import CrudData from '../../api/model/crud/CrudData';
-import ApiData from '../../api/model/types/ApiData.types';
+import React, { useRef } from 'react';
+import ApiData from '../../api/model/mongo/types/ApiData.types';
+import Message from '../../api/util/Message';
 import VALUES from '../../constants/Dw1Constants';
 import Dw1Sidebar from './Dw1Sidebar';
 import Dw1Spinner from './Dw1Spinner';
-
-export interface EditorProps {
-  crudData: CrudData;
-  messages: React.MutableRefObject<null>;
-}
 
 interface ListingProps {
   apiData?: ApiData[];
@@ -27,11 +22,9 @@ const Dw1Listing: React.FC<ListingProps> = ({
   apiData,
   columns,
   editorComponent,
-
   imageColumn,
 }) => {
-  const messages = React.useRef(null);
-  const [crudData, setCrudData] = React.useState<CrudData>({});
+  const messages = useRef<Messages>(null);
 
   if (!apiData) {
     return <Dw1Spinner />;
@@ -80,23 +73,19 @@ const Dw1Listing: React.FC<ListingProps> = ({
   };
 
   const addData = () => {
-    setCrudData({
-      creating: true,
-    });
+    console.log('add');
   };
 
   const editData = (rowData: ApiData) => {
-    setCrudData({
-      data: rowData,
-      updating: true,
-    });
+    console.log('edit');
   };
 
   const deleteData = (rowData: ApiData) => {
-    setCrudData({
-      data: rowData,
-      deleting: true,
-    });
+    console.log('delete');
+  };
+
+  const showMessage = (msg: Message | Message[]): void => {
+    messages?.current?.show(msg);
   };
 
   const actionTemplate = (rowData: ApiData) => {

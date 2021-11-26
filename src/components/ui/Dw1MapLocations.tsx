@@ -1,7 +1,7 @@
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import { DataScroller } from 'primereact/datascroller';
-import Location from '../../api/model/Location';
+import Location from '../../api/model/mongo/Location';
 import './Dw1MapLocations.css';
 
 type LocationClassName = 'good-chip' | 'bad-chip';

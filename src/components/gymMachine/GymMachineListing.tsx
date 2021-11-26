@@ -1,5 +1,5 @@
 import { Image } from 'primereact/image';
-import GymMachine from '../../api/model/GymMachine';
+import GymMachine from '../../api/model/mongo/GymMachine';
 import GymMachineService from '../../api/service/GymMachineService';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import VALUES from '../../constants/Dw1Constants';

@@ -1,4 +1,4 @@
-import Machine from '../../api/model/Machine';
+import Machine from '../../api/model/mongo/Machine';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import MachineService from '../../api/service/MachineService';
 import VALUES from '../../constants/Dw1Constants';

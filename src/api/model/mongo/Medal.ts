@@ -1,4 +1,4 @@
-import PkData from './mongo/PkData';
+import PkData from './PkData';
 
 class Medal extends PkData {
   number: number;

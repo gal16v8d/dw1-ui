@@ -1,4 +1,4 @@
-import PkData from './mongo/PkData';
+import PkData from './PkData';
 
 class Element extends PkData {
   name: string;

@@ -1,5 +1,5 @@
 import Element from './Element';
-import PkData from './mongo/PkData';
+import PkData from './PkData';
 import { RangType, SpecType } from './types/Tech.types';
 
 class Tech extends PkData {

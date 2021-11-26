@@ -1,4 +1,4 @@
-import Recruit from '../../api/model/Recruit';
+import Recruit from '../../api/model/mongo/Recruit';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import RecruitService from '../../api/service/RecruitService';
 import VALUES from '../../constants/Dw1Constants';

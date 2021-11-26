@@ -1,5 +1,5 @@
 import Item from './Item';
-import PkData from './mongo/PkData';
+import PkData from './PkData';
 
 class MeritPoint extends PkData {
   point: number;

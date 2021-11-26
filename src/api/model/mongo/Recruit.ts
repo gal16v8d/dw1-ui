@@ -1,6 +1,6 @@
 import Digimon from './Digimon';
 import Location from './Location';
-import PkData from './mongo/PkData';
+import PkData from './PkData';
 
 class Recruit extends PkData {
   digimon: Digimon;

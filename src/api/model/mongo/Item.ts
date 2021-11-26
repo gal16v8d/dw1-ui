@@ -1,5 +1,5 @@
 import Location from './Location';
-import PkData from './mongo/PkData';
+import PkData from './PkData';
 
 class Item extends PkData {
   name: string;

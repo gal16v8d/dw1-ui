@@ -1,4 +1,4 @@
-import PkData from './mongo/PkData';
+import PkData from './PkData';
 
 class Exchange extends PkData {
   base: string;

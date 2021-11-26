@@ -115,10 +115,6 @@ const VALUES = {
   },
   MSG: {
     MSG_LIFE: 5000,
-    MSG_TYPE: {
-      SUCCESS: 'success',
-      ERROR: 'error',
-    },
   },
   PERMISSIONS: {
     ENABLE_CRUD: !!process.env.REACT_APP_ENABLE_CRUD || false,

@@ -1,7 +1,7 @@
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import { DataScroller } from 'primereact/datascroller';
-import Item from '../../api/model/Item';
+import Item from '../../api/model/mongo/Item';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import ItemService from '../../api/service/ItemService';
 import VALUES from '../../constants/Dw1Constants';

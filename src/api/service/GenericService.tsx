@@ -8,8 +8,8 @@ class GenericService {
     this.baseUri = baseUri;
   }
 
-  public getAll = async (): Promise<ApiData[]> => {
-    const response = await axios.get(this.baseUri);
+  public getAll = async (lvl?: number): Promise<ApiData[]> => {
+    const response = await axios.get(`${this.baseUri}?lvl=${lvl ?? 0}`);
     return response?.data;
   };
 

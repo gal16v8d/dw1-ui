@@ -10,7 +10,11 @@ const App: React.FC = () => {
   const queryClient = new QueryClient();
 
   return (
-    <div style={{ backgroundImage: `url(/assets/img/background.png)` }}>
+    <div
+      style={{
+        backgroundImage: `url(/assets/img/background.png)`,
+      }}
+    >
       <QueryClientProvider client={queryClient}>
         <Dw1App />
         {process.env.NODE_ENV === 'development' && (

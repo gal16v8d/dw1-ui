@@ -11,6 +11,7 @@ import GenericService from '../GenericService';
 const useGetAll = (
   queryKey: string,
   service: GenericService,
+  lvl?: number,
   payload?: {
     onSuccess?: (response: ApiData[]) => void;
     onError?: (error: any) => void;
@@ -22,7 +23,7 @@ const useGetAll = (
   return useQuery({
     queryKey: queryKey,
     queryFn: async () => {
-      return await service.getAll();
+      return await service.getAll(lvl);
     },
     cacheTime: payload?.cacheTime ?? undefined,
     enabled: payload?.enabled === undefined || payload?.enabled,

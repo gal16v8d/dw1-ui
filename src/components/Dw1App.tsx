@@ -7,14 +7,20 @@ import PageHeader from './ui/layout/PageHeader';
 import Dw1Spinner from './ui/Dw1Spinner';
 
 const CardListing = lazy(() => import('./card/CardListing'));
+const DigimonListing = lazy(() => import('./digimon/DigimonListing'));
 const ElementListing = lazy(() => import('./element/ElementListing'));
 const ExchangeListing = lazy(() => import('./exchange/ExchangeListing'));
 const GymMachineListing = lazy(() => import('./gymMachine/GymMachineListing'));
 const ItemListing = lazy(() => import('./item/ItemListing'));
 const LevelListing = lazy(() => import('./level/LevelListing'));
 const LocationListing = lazy(() => import('./location/LocationListing'));
+const MachineListing = lazy(() => import('./machine/MachineListing'));
 const MedalListing = lazy(() => import('./medal/MedalListing'));
+const MenuListing = lazy(() => import('./menu/MenuListing'));
+const MeritPointListing = lazy(() => import('./meritPoint/MeritPointListing'));
+const RecruitListing = lazy(() => import('./recruit/RecruitListing'));
 const StatusListing = lazy(() => import('./status/StatusListing'));
+const TechListing = lazy(() => import('./tech/TechListing'));
 
 const Dw1App = (): JSX.Element => {
   return (
@@ -30,7 +36,7 @@ const Dw1App = (): JSX.Element => {
             />
             <Route
               path={VALUES.API_OBJECT.DIGIMON.ROUTE}
-              element={<LevelListing />}
+              element={<DigimonListing />}
             />
             <Route
               path={VALUES.API_OBJECT.ELEMENT.ROUTE}
@@ -58,7 +64,7 @@ const Dw1App = (): JSX.Element => {
             />
             <Route
               path={VALUES.API_OBJECT.MACHINE.ROUTE}
-              element={<LocationListing />}
+              element={<MachineListing />}
             />
             <Route
               path={VALUES.API_OBJECT.MEDAL.ROUTE}
@@ -66,15 +72,15 @@ const Dw1App = (): JSX.Element => {
             />
             <Route
               path={VALUES.API_OBJECT.MENU.ROUTE}
-              element={<LocationListing />}
+              element={<MenuListing />}
             />
             <Route
               path={VALUES.API_OBJECT.MERIT_POINT.ROUTE}
-              element={<LocationListing />}
+              element={<MeritPointListing />}
             />
             <Route
               path={VALUES.API_OBJECT.RECRUIT.ROUTE}
-              element={<LocationListing />}
+              element={<RecruitListing />}
             />
             <Route
               path={VALUES.API_OBJECT.STATUS.ROUTE}
@@ -82,7 +88,7 @@ const Dw1App = (): JSX.Element => {
             />
             <Route
               path={VALUES.API_OBJECT.TECH.ROUTE}
-              element={<LocationListing />}
+              element={<TechListing />}
             />
           </Routes>
         </BrowserRouter>

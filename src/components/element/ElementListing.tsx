@@ -8,9 +8,17 @@ const ElementListing = (): JSX.Element => {
     VALUES.API_OBJECT.ELEMENT.QUERY_KEY,
     ElementService
   );
-  const columns = [{ field: 'name', header: 'Name' }];
+  const columns = [
+    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
+  ];
 
-  return <Dw1Listing apiData={data} columns={columns} />;
+  return (
+    <Dw1Listing
+      apiData={data}
+      columns={columns}
+      imageColumn={VALUES.API_OBJECT.ELEMENT.IMAGE}
+    />
+  );
 };
 
 export default ElementListing;

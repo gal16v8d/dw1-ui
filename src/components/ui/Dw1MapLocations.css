@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.p-chip.good-chip {
+  background: var(--primary-color);
+  color: var(--primary-color-text);
+}
+
+.p-chip.bad-chip {
+  background: var(--warning-color);
+  color: var(--primary-color-text);
+}

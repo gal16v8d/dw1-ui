@@ -8,7 +8,9 @@ const LocationListing = (): JSX.Element => {
     VALUES.API_OBJECT.LOCATION.QUERY_KEY,
     LocationService
   );
-  const columns = [{ field: 'name', header: 'Name' }];
+  const columns = [
+    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
+  ];
 
   return <Dw1Listing apiData={locations} columns={columns} />;
 };

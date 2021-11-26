@@ -1,13 +1,17 @@
 @charset "utf-8";
 @import 'bulma/css/bulma.min.css';
-@import 'primereact/resources/themes/luna-amber/theme.css';
+@import 'primereact/resources/themes/luna-green/theme.css';
 @import 'primereact/resources/primereact.min.css';
 @import 'primeicons/primeicons.css';
+
+:root {
+  --warning-color: #ffb74d;
+}
 
 .footer {
   display: block;
   text-align: center !important;
-  padding: 3rem 1.5rem 3rem;
+  padding: 1.5rem;
   background: #191919;
 }
 
@@ -21,7 +25,7 @@
 .header {
   display: block;
   text-align: center !important;
-  padding: 3rem 1.5rem 3rem;
+  padding: 1.5rem;
   background: #191919;
 }
 

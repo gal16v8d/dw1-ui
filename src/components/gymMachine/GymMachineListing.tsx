@@ -1,4 +1,3 @@
-import { Column } from 'primereact/column';
 import { Image } from 'primereact/image';
 import GymMachine from '../../api/model/GymMachine';
 import GymMachineService from '../../api/service/GymMachineService';
@@ -9,32 +8,37 @@ import Dw1Listing from '../ui/Dw1Listing';
 const GymMachineListing = (): JSX.Element => {
   const { data } = useGetAll(
     VALUES.API_OBJECT.GYM_MACHINE.QUERY_KEY,
-    GymMachineService
+    GymMachineService,
+    1
   );
-
-  const columns = [
-    { field: 'name', header: 'Name' },
-    { field: 'location.name', header: 'Location' },
-  ];
 
   const mapTrainProps = (rowData: GymMachine) => {
     return rowData.train.map((value) => (
       <Image
         key={`${rowData._id}-train-${value}`}
-        src={`assets/img/${value}.png`}
+        src={`assets/img/parameters/${value}.png`}
         alt={value}
       />
     ));
   };
 
-  return (
-    <Dw1Listing
-      apiData={data}
-      columns={columns}
-      additionalColumn={true}
-      additionalColumnBody={<Column body={mapTrainProps} header={'Train'} />}
-    />
-  );
+  const columns = [
+    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
+    {
+      columnKey: 'location.name',
+      field: 'location.name',
+      header: 'Location',
+      sortable: true,
+    },
+    {
+      columnKey: 'train',
+      body: mapTrainProps,
+      header: 'Train',
+      sortable: false,
+    },
+  ];
+
+  return <Dw1Listing apiData={data} columns={columns} />;
 };
 
 export default GymMachineListing;

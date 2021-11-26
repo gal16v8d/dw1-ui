@@ -1,6 +1,7 @@
 import { Button } from 'primereact/button';
 import { Column, ColumnProps } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
+import { Image } from 'primereact/image';
 import { Messages } from 'primereact/messages';
 import { Toolbar } from 'primereact/toolbar';
 import React from 'react';
@@ -17,18 +18,17 @@ export interface EditorProps {
 
 interface ListingProps {
   apiData?: ApiData[];
-  columns?: ColumnProps[];
-  additionalColumn?: boolean;
-  additionalColumnBody?: JSX.Element;
+  columns: ColumnProps[];
   editorComponent?: JSX.Element;
+  imageColumn?: string;
 }
 
 const Dw1Listing: React.FC<ListingProps> = ({
   apiData,
   columns,
-  additionalColumn,
-  additionalColumnBody,
   editorComponent,
+
+  imageColumn,
 }) => {
   const messages = React.useRef(null);
   const [crudData, setCrudData] = React.useState<CrudData>({});
@@ -37,18 +37,46 @@ const Dw1Listing: React.FC<ListingProps> = ({
     return <Dw1Spinner />;
   }
 
-  const mapToTableColumns = () => {
+  const mapImage = (rowData: ApiData) => {
     return (
-      columns &&
-      columns.map((col: ColumnProps, i: number) => (
-        <Column
-          key={`${col.field}-${i}`}
-          field={col.field}
-          header={col.header}
-          sortable={true}
+      <div className="container" style={{ display: 'flex' }}>
+        <Image
+          src={`assets/img/${imageColumn}/${rowData._id}.png`}
+          alt={`${imageColumn} img`}
+          width="50"
+          height="50"
         />
-      ))
+      </div>
     );
+  };
+
+  const appendImageColumn = (columnsToEdit: ColumnProps[]) => {
+    const elementExists = columns.find((col) => col.columnKey === 'image');
+    if (!elementExists) {
+      columnsToEdit.unshift({
+        columnKey: 'image',
+        body: mapImage,
+        header: 'Image',
+      });
+    }
+  };
+
+  const mapToTableColumns = () => {
+    const columnsToMap = columns;
+    if (imageColumn) {
+      appendImageColumn(columnsToMap);
+    }
+    return columnsToMap.map((col: ColumnProps, i: number) => (
+      <Column
+        key={`${col.columnKey}-${i}`}
+        body={col.body}
+        field={col.field}
+        header={col.header}
+        sortable={col.sortable}
+        sortFunction={col.sortFunction}
+        style={col.style}
+      />
+    ));
   };
 
   const addData = () => {
@@ -126,7 +154,6 @@ const Dw1Listing: React.FC<ListingProps> = ({
               loading={!apiData}
             >
               {mapToTableColumns()}
-              {additionalColumn && additionalColumnBody}
               {VALUES.PERMISSIONS.ENABLE_CRUD && (
                 <Column
                   body={actionTemplate}

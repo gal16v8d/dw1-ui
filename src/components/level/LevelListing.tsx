@@ -5,7 +5,9 @@ import Dw1Listing from '../ui/Dw1Listing';
 
 const LevelListing = (): JSX.Element => {
   const { data } = useGetAll(VALUES.API_OBJECT.LEVEL.QUERY_KEY, LevelService);
-  const columns = [{ field: 'name', header: 'Name' }];
+  const columns = [
+    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
+  ];
 
   return <Dw1Listing apiData={data} columns={columns} />;
 };

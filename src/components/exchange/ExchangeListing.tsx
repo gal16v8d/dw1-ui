@@ -9,9 +9,14 @@ const ExchangeListing = (): JSX.Element => {
     ExchangeService
   );
   const columns = [
-    { field: 'who', header: 'Trader' },
-    { field: 'base', header: 'You Have' },
-    { field: 'result', header: 'Will Trade' },
+    { columnKey: 'who', field: 'who', header: 'Trader', sortable: true },
+    { columnKey: 'base', field: 'base', header: 'You Have', sortable: true },
+    {
+      columnKey: 'result',
+      field: 'result',
+      header: 'Will Trade',
+      sortable: true,
+    },
   ];
 
   return <Dw1Listing apiData={data} columns={columns} />;

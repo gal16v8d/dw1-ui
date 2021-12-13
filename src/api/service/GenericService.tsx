@@ -14,12 +14,15 @@ class GenericService {
     return response?.data;
   };
 
-  public save = async (data: ApiDataRequest): Promise<string> => {
+  public save = async (data: ApiDataRequest): Promise<{ message: string }> => {
     const response = await axios.post(this.baseUri, data);
     return response?.data;
   };
 
-  public update = async (id: string, data: ApiDataRequest): Promise<string> => {
+  public update = async (
+    id: string,
+    data: ApiDataRequest
+  ): Promise<{ message: string }> => {
     const response = await axios.put(`${this.baseUri}/${id}`, data);
     return response?.data;
   };

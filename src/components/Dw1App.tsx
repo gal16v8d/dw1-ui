@@ -5,6 +5,7 @@ import Home from './home/Home';
 import PageFooter from './ui/layout/PageFooter';
 import PageHeader from './ui/layout/PageHeader';
 import Dw1Spinner from './ui/Dw1Spinner';
+import Dw1Sidebar from './ui/Dw1Sidebar';
 
 const CardListing = lazy(() => import('./card/CardListing'));
 const DigimonListing = lazy(() => import('./digimon/DigimonListing'));
@@ -28,6 +29,7 @@ const Dw1App = (): JSX.Element => {
       <PageHeader />
       <Suspense fallback={<Dw1Spinner />}>
         <BrowserRouter>
+          <Dw1Sidebar />
           <Routes>
             <Route path={'/'} element={<Home />} />
             <Route

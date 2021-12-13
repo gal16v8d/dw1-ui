@@ -10,7 +10,7 @@ const Dw1Sidebar = (): JSX.Element => {
   const [visibleLeft, setVisibleLeft] = useState<boolean>(false);
 
   return (
-    <div className="container">
+    <>
       <Sidebar visible={visibleLeft} onHide={() => setVisibleLeft(false)}>
         <Menu model={buildMenuOptions(navigate)} />
       </Sidebar>
@@ -20,7 +20,7 @@ const Dw1Sidebar = (): JSX.Element => {
         onClick={() => setVisibleLeft(true)}
         className="p-mr-2"
       />
-    </div>
+    </>
   );
 };
 

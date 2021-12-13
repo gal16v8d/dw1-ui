@@ -15,7 +15,7 @@ const useGetAll = (
   lvl?: number,
   payload?: {
     onSuccess?: (response: ApiData[]) => void;
-    onError?: (error: any) => void;
+    onError?: (error: { message: string }) => void;
     enabled?: boolean;
     cacheTime?: number;
     refetchOnMount?: boolean;
@@ -31,8 +31,8 @@ const useGetAll = (
     onSuccess: (response: ApiData[]) => {
       payload?.onSuccess && payload.onSuccess(response);
     },
-    onError: (error: any) => {
-      console.log(error?.response);
+    onError: (error: { message: string }) => {
+      console.log(error?.message);
       payload?.onError && payload.onError(error);
     },
     refetchOnMount:
@@ -44,7 +44,7 @@ const useSave = (
   apiObject: string,
   service: GenericService
 ): UseMutationResult<
-  string,
+  { message: string },
   any,
   {
     data: ApiDataRequest;
@@ -64,7 +64,7 @@ const useUpdate = (
   apiObject: string,
   service: GenericService
 ): UseMutationResult<
-  string,
+  { message: string },
   any,
   {
     id: string;

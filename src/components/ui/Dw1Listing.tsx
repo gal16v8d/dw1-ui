@@ -2,34 +2,32 @@ import { Button } from 'primereact/button';
 import { Column, ColumnProps } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
 import { Image } from 'primereact/image';
-import { Messages } from 'primereact/messages';
 import { Toolbar } from 'primereact/toolbar';
-import React, { useRef } from 'react';
+import React from 'react';
 import ApiData from '../../api/model/mongo/types/ApiData.types';
-import Message from '../../api/util/Message';
 import VALUES from '../../constants/Dw1Constants';
-import Dw1Sidebar from './Dw1Sidebar';
 import Dw1Spinner from './Dw1Spinner';
 
 interface ListingProps {
   apiData?: ApiData[];
   columns: ColumnProps[];
-  editorComponent?: JSX.Element;
   imageColumn?: string;
+  crudData?: {
+    selectedData: any;
+    setSelectedData: React.Dispatch<React.SetStateAction<any>>;
+  };
+  editorComponent?: JSX.Element;
+  messageComponent?: JSX.Element;
 }
 
 const Dw1Listing: React.FC<ListingProps> = ({
   apiData,
   columns,
-  editorComponent,
   imageColumn,
+  crudData,
+  editorComponent,
+  messageComponent,
 }) => {
-  const messages = useRef<Messages>(null);
-
-  if (!apiData) {
-    return <Dw1Spinner />;
-  }
-
   const mapImage = (rowData: ApiData) => {
     return (
       <div className="container" style={{ display: 'flex' }}>
@@ -73,19 +71,51 @@ const Dw1Listing: React.FC<ListingProps> = ({
   };
 
   const addData = () => {
-    console.log('add');
+    crudData &&
+      crudData.setSelectedData({
+        data: undefined,
+        creating: true,
+        updating: false,
+        deleting: false,
+      });
   };
 
   const editData = (rowData: ApiData) => {
-    console.log('edit');
+    crudData &&
+      crudData.setSelectedData({
+        data: rowData,
+        creating: false,
+        updating: true,
+        deleting: false,
+      });
   };
 
   const deleteData = (rowData: ApiData) => {
-    console.log('delete');
+    crudData &&
+      crudData.setSelectedData({
+        data: rowData,
+        creating: false,
+        updating: false,
+        deleting: true,
+      });
   };
 
-  const showMessage = (msg: Message | Message[]): void => {
-    messages?.current?.show(msg);
+  const leftToolbarTemplate = () => {
+    return (
+      <>
+        {VALUES.PERMISSIONS.ENABLE_CRUD && crudData && (
+          <React.Fragment>
+            <Button
+              icon="pi pi-plus"
+              label="New"
+              onClick={addData}
+              style={{ float: 'left' }}
+              tooltip="Add"
+            />
+          </React.Fragment>
+        )}
+      </>
+    );
   };
 
   const actionTemplate = (rowData: ApiData) => {
@@ -106,35 +136,16 @@ const Dw1Listing: React.FC<ListingProps> = ({
     );
   };
 
-  const leftToolbarTemplate = () => {
-    return (
-      <React.Fragment>
-        <Button
-          icon="pi pi-plus"
-          label="New"
-          onClick={addData}
-          style={{ float: 'left' }}
-          tooltip="Add"
-        />
-      </React.Fragment>
-    );
-  };
-
   return (
-    <>
-      <Dw1Sidebar />
-      <div className="container">
-        <br />
-        {<Messages ref={messages} />}
-        <div className="container is-fluid">
-          <br />
-          <div className="content-section implementation">
-            <Toolbar
-              className="p-mb-4"
-              left={
-                VALUES.PERMISSIONS.ENABLE_CRUD ? leftToolbarTemplate : undefined
-              }
-            ></Toolbar>
+    <div className="container is-fluid">
+      <br />
+      {messageComponent}
+      <div className="content-section implementation">
+        {!apiData ? (
+          <Dw1Spinner />
+        ) : (
+          <>
+            <Toolbar className="p-mb-4" left={leftToolbarTemplate}></Toolbar>
             <DataTable
               value={apiData}
               paginator={true}
@@ -143,7 +154,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
               loading={!apiData}
             >
               {mapToTableColumns()}
-              {VALUES.PERMISSIONS.ENABLE_CRUD && (
+              {VALUES.PERMISSIONS.ENABLE_CRUD && crudData && (
                 <Column
                   body={actionTemplate}
                   style={{ textAlign: 'center', width: '8em' }}
@@ -151,11 +162,11 @@ const Dw1Listing: React.FC<ListingProps> = ({
                 />
               )}
             </DataTable>
-          </div>
-          {VALUES.PERMISSIONS.ENABLE_CRUD && editorComponent}
-        </div>
+            {VALUES.PERMISSIONS.ENABLE_CRUD && editorComponent}
+          </>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 

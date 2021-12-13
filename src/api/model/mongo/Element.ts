@@ -1,12 +1,13 @@
-import PkData from './PkData';
-
-class Element extends PkData {
+interface Element {
+  _id: string;
   name: string;
+}
 
-  constructor(data: Element) {
-    super(data._id);
-    this.name = data.name;
+class ElementRequest {
+  constructor(private name: string) {
+    this.name = name;
   }
 }
 
 export default Element;
+export { ElementRequest };

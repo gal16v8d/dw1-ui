@@ -4,6 +4,7 @@ import { DataTable } from 'primereact/datatable';
 import { Image } from 'primereact/image';
 import { Toolbar } from 'primereact/toolbar';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ApiData from '../../api/model/mongo/types/ApiData.types';
 import VALUES from '../../constants/Dw1Constants';
 import Dw1Spinner from './Dw1Spinner';
@@ -28,6 +29,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
   editorComponent,
   messageComponent,
 }) => {
+  const { t } = useTranslation();
   const mapImage = (rowData: ApiData) => {
     return (
       <div className="container" style={{ display: 'flex' }}>
@@ -107,10 +109,9 @@ const Dw1Listing: React.FC<ListingProps> = ({
           <React.Fragment>
             <Button
               icon="pi pi-plus"
-              label="New"
+              label={t('baseComponent.listing.new')}
               onClick={addData}
               style={{ float: 'left' }}
-              tooltip="Add"
             />
           </React.Fragment>
         )}
@@ -124,13 +125,13 @@ const Dw1Listing: React.FC<ListingProps> = ({
         <Button
           icon="pi pi-pencil"
           onClick={() => editData(rowData)}
-          tooltip="Update"
+          tooltip={t('baseComponent.listing.update')}
         />
         <Button
           className="p-button-warning"
           icon="pi pi-trash"
           onClick={() => deleteData(rowData)}
-          tooltip="Delete"
+          tooltip={t('baseComponent.listing.delete')}
         />
       </div>
     );
@@ -158,7 +159,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
                 <Column
                   body={actionTemplate}
                   style={{ textAlign: 'center', width: '8em' }}
-                  header="Actions"
+                  header={t('baseComponent.listing.actions')}
                 />
               )}
             </DataTable>

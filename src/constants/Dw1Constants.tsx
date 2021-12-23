@@ -126,9 +126,6 @@ const VALUES = {
     ROWS: 10,
     ROW_OPTIONS: [10, 20, 50],
   },
-  UI: {
-    MAIN_TITLE: 'Digimon World 1 - Wiki',
-  },
 };
 
 export default VALUES;

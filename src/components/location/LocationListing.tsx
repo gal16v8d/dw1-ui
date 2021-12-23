@@ -1,6 +1,7 @@
 import { Messages } from 'primereact/messages';
 import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import Location from '../../api/model/mongo/Location';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import LocationService from '../../api/service/LocationService';
@@ -9,6 +10,7 @@ import Dw1BaseForm from '../ui/Dw1BaseForm';
 import Dw1Listing from '../ui/Dw1Listing';
 
 const LocationListing = (): JSX.Element => {
+  const { t } = useTranslation();
   const message = useRef<Messages>(null);
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.LOCATION.QUERY_KEY,
@@ -29,7 +31,12 @@ const LocationListing = (): JSX.Element => {
   const useLocationForm = useForm<Location>();
 
   const columns = [
-    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
+    {
+      columnKey: 'name',
+      field: 'name',
+      header: t('locationListing.l_name'),
+      sortable: true,
+    },
   ];
 
   const showMessage = (summary: string, type: string, detail: string): void => {
@@ -45,18 +52,18 @@ const LocationListing = (): JSX.Element => {
     return (
       <>
         <div className="field">
-          <label htmlFor="name">Name*</label>
+          <label htmlFor="name">{`${t('locationListing.l_name')}*`}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="name"
-              placeholder="Name*"
+              placeholder={`${t('locationListing.l_name')}*`}
               defaultValue={selectedData?.data?.name ?? ''}
               ref={useLocationForm.register({ required: true })}
             />
             {useLocationForm.errors.name && (
-              <small className="p-error">{'Field is required'}</small>
+              <small className="p-error">{t('form.error.required')}</small>
             )}
           </div>
         </div>

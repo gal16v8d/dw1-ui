@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Home = (): JSX.Element => {
+  const { t } = useTranslation();
   return (
     <>
-      <div style={{ background: 'white' }}>This is the home page for now</div>
+      <div style={{ background: 'white' }}>{t('home.text')}</div>
     </>
   );
 };

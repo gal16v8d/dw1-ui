@@ -1,6 +1,7 @@
 import { Messages } from 'primereact/messages';
 import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import Exchange from '../../api/model/mongo/Exchange';
 import ExchangeService from '../../api/service/ExchangeService';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
@@ -9,6 +10,7 @@ import Dw1BaseForm from '../ui/Dw1BaseForm';
 import Dw1Listing from '../ui/Dw1Listing';
 
 const ExchangeListing = (): JSX.Element => {
+  const { t } = useTranslation();
   const message = useRef<Messages>(null);
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.EXCHANGE.QUERY_KEY,
@@ -29,12 +31,22 @@ const ExchangeListing = (): JSX.Element => {
   const useExchangeForm = useForm<Exchange>();
 
   const columns = [
-    { columnKey: 'who', field: 'who', header: 'Trader', sortable: true },
-    { columnKey: 'base', field: 'base', header: 'You Have', sortable: true },
+    {
+      columnKey: 'who',
+      field: 'who',
+      header: t('exchangeListing.l_who'),
+      sortable: true,
+    },
+    {
+      columnKey: 'base',
+      field: 'base',
+      header: t('exchangeListing.l_base'),
+      sortable: true,
+    },
     {
       columnKey: 'result',
       field: 'result',
-      header: 'Will Trade',
+      header: t('exchangeListing.l_result'),
       sortable: true,
     },
   ];
@@ -52,54 +64,52 @@ const ExchangeListing = (): JSX.Element => {
     return (
       <>
         <div className="field">
-          <label htmlFor="who">Who*</label>
+          <label htmlFor="who">{`${t('exchangeListing.l_who')}*`}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="who"
-              placeholder="Who*"
+              placeholder={`${t('exchangeListing.l_who')}*`}
               defaultValue={selectedData?.data?.who}
               ref={useExchangeForm.register({ required: true })}
             />
             {useExchangeForm.errors.who && (
-              <small className="p-error">{'Field is required'}</small>
+              <small className="p-error">{t('form.error.required')}</small>
             )}
           </div>
         </div>
         <div className="field">
-          <label htmlFor="base">Base*</label>
+          <label htmlFor="base">{`${t('exchangeListing.l_base')}*`}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="base"
-              placeholder="Base*"
+              placeholder={`${t('exchangeListing.l_base')}*`}
               defaultValue={selectedData?.data?.base}
               ref={useExchangeForm.register({ required: true })}
             />
             {useExchangeForm.errors.base && (
-              <small className="p-error">{'Field is required'}</small>
+              <small className="p-error">{t('form.error.required')}</small>
             )}
           </div>
         </div>
         <div className="field">
-          <label htmlFor="result">Result*</label>
+          <label htmlFor="result">{`${t('exchangeListing.l_result')}*`}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="result"
-              placeholder="Result*"
+              placeholder={`${t('exchangeListing.l_result')}*`}
               defaultValue={selectedData?.data?.result}
               ref={useExchangeForm.register({
                 required: true,
               })}
             />
             {useExchangeForm.errors.result && (
-              <small className="p-error">
-                {'Field is required (should be a number)'}
-              </small>
+              <small className="p-error">{t('form.error.required')}</small>
             )}
           </div>
         </div>

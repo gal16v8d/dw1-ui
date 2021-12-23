@@ -1,6 +1,7 @@
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import { DataScroller } from 'primereact/datascroller';
+import { useTranslation } from 'react-i18next';
 import Item from '../../api/model/mongo/Item';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import ItemService from '../../api/service/ItemService';
@@ -9,6 +10,7 @@ import Dw1Listing from '../ui/Dw1Listing';
 import Dw1MapLocations from '../ui/Dw1MapLocations';
 
 const ItemListing = (): JSX.Element => {
+  const { t } = useTranslation();
   const { data } = useGetAll(VALUES.API_OBJECT.ITEM.QUERY_KEY, ItemService, 1);
 
   const mapLocations = (rowData: Item) => {
@@ -41,13 +43,26 @@ const ItemListing = (): JSX.Element => {
   };
 
   const columns = [
-    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
-    { columnKey: 'effects', body: mapEffects, header: 'Effects' },
-    { columnKey: 'locations', body: mapLocations, header: 'Locations' },
+    {
+      columnKey: 'name',
+      field: 'name',
+      header: t('itemListing.l_name'),
+      sortable: true,
+    },
+    {
+      columnKey: 'effects',
+      body: mapEffects,
+      header: t('itemListing.l_effects'),
+    },
+    {
+      columnKey: 'locations',
+      body: mapLocations,
+      header: t('itemListing.l_locations'),
+    },
     {
       columnKey: 'note',
       field: 'note',
-      header: 'Note',
+      header: t('itemListing.l_note'),
       sortable: true,
     },
   ];

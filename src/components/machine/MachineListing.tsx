@@ -1,13 +1,15 @@
+import isEmpty from 'lodash/isEmpty';
+import { DataScroller } from 'primereact/datascroller';
+import { useTranslation } from 'react-i18next';
 import Machine from '../../api/model/mongo/Machine';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import MachineService from '../../api/service/MachineService';
 import VALUES from '../../constants/Dw1Constants';
 import Dw1Listing from '../ui/Dw1Listing';
 import Dw1YesOrNo from '../ui/Dw1YesOrNo';
-import { DataScroller } from 'primereact/datascroller';
-import isEmpty from 'lodash/isEmpty';
 
 const MachineListing = (): JSX.Element => {
+  const { t } = useTranslation();
   const { data } = useGetAll(
     VALUES.API_OBJECT.MACHINE.QUERY_KEY,
     MachineService,
@@ -42,18 +44,18 @@ const MachineListing = (): JSX.Element => {
     {
       columnKey: 'location.name',
       field: 'location.name',
-      header: 'Location',
+      header: t('machineListing.l_location'),
       sortable: true,
     },
     {
       columnKey: 'product',
       body: mapProducts,
-      header: 'Products',
+      header: t('machineListing.l_products'),
     },
     {
       columnKey: 'random',
       body: mapRandom,
-      header: 'Random',
+      header: t('machineListing.l_random'),
     },
   ];
 

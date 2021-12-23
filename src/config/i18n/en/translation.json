@@ -1,0 +1,132 @@
+{
+  "baseComponent": {
+    "yes": "yes",
+    "no": "no",
+    "form": {
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+    "listing": {
+      "actions": "Actions",
+      "delete": "Delete",
+      "new": "New",
+      "update": "Update"
+    }
+  },
+  "header": {
+    "title": "Digimon World 1 - Wiki"
+  },
+  "home": {
+    "text": "This is the home page for now"
+  },
+  "form": {
+    "error": {
+      "required": "Field is required",
+      "required_number": "Field is required (should be a number)"
+    }
+  },
+  "footer": {
+    "by": "by: ",
+    "licence": "The source code is licensed by:"
+  },
+  "menu": {
+    "card": "Card",
+    "digimon": "Digimon",
+    "element": "Element",
+    "exchange": "Exchange",
+    "gymMachine": "Gym Machine",
+    "item": "Item",
+    "location": "Location",
+    "machine": "Machine",
+    "medal": "Medal",
+    "menu": "Menu",
+    "meritPoint": "Merit Point",
+    "recruit": "Recruit",
+    "status": "Status",
+    "tech": "Tech"
+  },
+  "cardListing": {
+    "l_exchangeable": "Exchangeable",
+    "l_name": "Name",
+    "l_number": "Number",
+    "l_point": "Point",
+    "l_price": "Price"
+  },
+  "digimonListing": {
+    "l_active": "Active",
+    "l_finishMove": "Finish Move",
+    "l_locationHappy": "Location Happy",
+    "l_locationSad": "Location Sad",
+    "l_iniTech": "Ini Tech",
+    "l_item": "Item",
+    "l_level": "Level",
+    "l_name": "Name",
+    "l_raisable": "Raisable",
+    "l_recruitable": "Recruitable",
+    "l_techs": "Techs",
+    "l_type": "Type"
+  },
+  "elementListing": {
+    "l_name": "Name"
+  },
+  "exchangeListing": {
+    "l_base": "You Have",
+    "l_result": "Will Trade",
+    "l_who": "Trader"
+  },
+  "gymMachineListing": {
+    "l_location": "Location",
+    "l_name": "Name",
+    "l_train": "Train"
+  },
+  "itemListing": {
+    "l_effects": "Effects",
+    "l_locations": "Locations",
+    "l_name": "Name",
+    "l_note": "Note"
+  },
+  "levelListing": {
+    "l_name": "Name"
+  },
+  "locationListing": {
+    "l_name": "Name"
+  },
+  "machineListing": {
+    "l_location": "Location",
+    "l_products": "Products",
+    "l_random": "Random"
+  },
+  "medalListing": {
+    "l_description": "Description",
+    "l_name": "Name",
+    "l_number": "Number"
+  },
+  "menuListing": {
+    "l_description": "Description",
+    "l_name": "Name",
+    "l_type": "Type"
+  },
+  "meritPointListing": {
+    "l_item": "Item",
+    "l_point": "Point"
+  },
+  "recruitListing": {
+    "l_digimon": "Digimon",
+    "l_job": "Job",
+    "l_locations": "Locations",
+    "l_note": "Note"
+  },
+  "statusListing": {
+    "l_description": "Description",
+    "l_name": "Name"
+  },
+  "techListing": {
+    "l_element": "Element",
+    "l_name": "Name",
+    "l_number": "Number",
+    "l_mp": "MP",
+    "l_power": "Power",
+    "l_rang": "Rang",
+    "l_spec": "Spec"
+  }
+}

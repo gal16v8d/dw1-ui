@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import Recruit from '../../api/model/mongo/Recruit';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import RecruitService from '../../api/service/RecruitService';
@@ -6,6 +7,7 @@ import Dw1Listing from '../ui/Dw1Listing';
 import Dw1MapLocations from '../ui/Dw1MapLocations';
 
 const RecruitListing = (): JSX.Element => {
+  const { t } = useTranslation();
   const { data } = useGetAll(
     VALUES.API_OBJECT.RECRUIT.QUERY_KEY,
     RecruitService,
@@ -25,25 +27,25 @@ const RecruitListing = (): JSX.Element => {
     {
       columnKey: 'digimon.name',
       field: 'digimon.name',
-      header: 'Digimon',
+      header: t('recruitListing.l_digimon'),
       sortable: true,
     },
     {
       columnKey: 'job',
       field: 'job',
-      header: 'Job',
+      header: t('recruitListing.l_job'),
       sortable: true,
     },
     {
       columnKey: 'note',
       field: 'note',
-      header: 'Note',
+      header: t('recruitListing.l_note'),
       sortable: true,
     },
     {
       columnKey: 'locations',
       body: mapLocations,
-      header: 'Locations',
+      header: t('recruitListing.l_locations'),
     },
   ];
 

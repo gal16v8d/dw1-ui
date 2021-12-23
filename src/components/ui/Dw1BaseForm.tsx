@@ -2,6 +2,7 @@ import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import React, { useEffect, useState } from 'react';
 import { UseFormMethods } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import {
   QueryObserverResult,
   RefetchOptions,
@@ -41,6 +42,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   refetch,
   showMessage,
 }): JSX.Element => {
+  const { t } = useTranslation();
   const [displayDialog, setDisplayDialog] = useState<boolean>(false);
   const currentId = selectedData?.data?._id ?? '';
   const postApi = useSave(apiObject, service);
@@ -108,11 +110,11 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   const dialogOptions = (
     <div className="field is-grouped">
       <div className="control">
-        <Button label="Guardar" />
+        <Button label={t('baseComponent.form.save')} />
       </div>
       <div className="control">
         <Button
-          label="Cancelar"
+          label={t('baseComponent.form.cancel')}
           className="p-button-warning"
           onClick={onCancel}
           type="button"

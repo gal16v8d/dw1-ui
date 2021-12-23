@@ -1,6 +1,7 @@
 import { Messages } from 'primereact/messages';
 import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import Element from '../../api/model/mongo/Element';
 import ElementService from '../../api/service/ElementService';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
@@ -9,6 +10,7 @@ import Dw1BaseForm from '../ui/Dw1BaseForm';
 import Dw1Listing from '../ui/Dw1Listing';
 
 const ElementListing = (): JSX.Element => {
+  const { t } = useTranslation();
   const message = useRef<Messages>(null);
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.ELEMENT.QUERY_KEY,
@@ -28,7 +30,12 @@ const ElementListing = (): JSX.Element => {
   }>({ creating: false, updating: false, deleting: false });
   const useElementForm = useForm<Element>();
   const columns = [
-    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
+    {
+      columnKey: 'name',
+      field: 'name',
+      header: t('elementListing.l_name'),
+      sortable: true,
+    },
   ];
 
   const showMessage = (summary: string, type: string, detail: string): void => {
@@ -44,18 +51,18 @@ const ElementListing = (): JSX.Element => {
     return (
       <>
         <div className="field">
-          <label htmlFor="name">Name*</label>
+          <label htmlFor="name">{`${t('elementListing.l_name')}*`}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="name"
-              placeholder="Name*"
+              placeholder={`${t('elementListing.l_name')}*`}
               defaultValue={selectedData?.data?.name ?? ''}
               ref={useElementForm.register({ required: true })}
             />
             {useElementForm.errors.name && (
-              <small className="p-error">{'Field is required'}</small>
+              <small className="p-error">{t('form.error.required')}</small>
             )}
           </div>
         </div>

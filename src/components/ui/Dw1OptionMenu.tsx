@@ -1,10 +1,14 @@
+import { TFunction } from 'react-i18next';
 import { NavigateFunction } from 'react-router-dom';
 import VALUES from '../../constants/Dw1Constants';
 
-const mapApiToMenu = (navigate: NavigateFunction) => {
+const mapApiToMenu = (
+  t: TFunction<'translation', undefined>,
+  navigate: NavigateFunction
+) => {
   return Object.values(VALUES.API_OBJECT).map((data) => {
     return {
-      label: data.NAME,
+      label: t(`menu.${data.NAME}`),
       icon: 'pi pi-arrow-right',
       command: () => navigate(data.ROUTE),
     };
@@ -12,6 +16,7 @@ const mapApiToMenu = (navigate: NavigateFunction) => {
 };
 
 const buildMenuOptions = (
+  t: TFunction<'translation', undefined>,
   navigate: NavigateFunction
 ): {
   label: string;
@@ -24,7 +29,7 @@ const buildMenuOptions = (
   return [
     {
       label: 'Wiki Info',
-      items: mapApiToMenu(navigate),
+      items: mapApiToMenu(t, navigate),
     },
   ];
 };

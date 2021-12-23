@@ -1,0 +1,132 @@
+{
+  "baseComponent": {
+    "yes": "si",
+    "no": "no",
+    "form": {
+      "cancel": "Cancelar",
+      "save": "Guardar"
+    },
+    "listing": {
+      "actions": "Acciones",
+      "delete": "Eliminar",
+      "new": "Nuevo",
+      "update": "Actualizar"
+    }
+  },
+  "header": {
+    "title": "Digimon World 1 - Wiki"
+  },
+  "home": {
+    "text": "Está es la página de inicio por ahora"
+  },
+  "form": {
+    "error": {
+      "required": "Este campo es requerido",
+      "required_number": "Este campo es requerido (debe ser un número)"
+    }
+  },
+  "menu": {
+    "card": "Carta",
+    "digimon": "Digimon",
+    "element": "Elemento",
+    "exchange": "Intercambio",
+    "gymMachine": "Máquina de Gimnasio",
+    "item": "Objeto",
+    "location": "Ubicación",
+    "machine": "Máquina",
+    "medal": "Medalla",
+    "menu": "Menú",
+    "meritPoint": "Puntos de Merito",
+    "recruit": "Reclutar",
+    "status": "Estatus",
+    "tech": "Técnica"
+  },
+  "footer": {
+    "by": "por: ",
+    "licence": "Licencia del código fuente:"
+  },
+  "cardListing": {
+    "l_exchangeable": "Intercambiable",
+    "l_name": "Nombre",
+    "l_number": "Número",
+    "l_point": "Puntos",
+    "l_price": "Precio"
+  },
+  "digimonListing": {
+    "l_active": "Activo",
+    "l_finishMove": "Mov. Final",
+    "l_locationHappy": "Ubicación Feliz",
+    "l_locationSad": "Ubicación Triste",
+    "l_iniTech": "Tec. Inicial",
+    "l_item": "Objeto",
+    "l_level": "Nivel",
+    "l_name": "Nombre",
+    "l_raisable": "Criar",
+    "l_recruitable": "Recrutable",
+    "l_techs": "Técnicas",
+    "l_type": "Tipo"
+  },
+  "elementListing": {
+    "l_name": "Nombre"
+  },
+  "exchangeListing": {
+    "l_base": "Tu tienes",
+    "l_result": "Cambia por",
+    "l_who": "Comerciante"
+  },
+  "gymMachineListing": {
+    "l_location": "Ubicación",
+    "l_name": "Nombre",
+    "l_train": "Entrena"
+  },
+  "itemListing": {
+    "l_effects": "Efectos",
+    "l_locations": "Ubicaciones",
+    "l_name": "Nombre",
+    "l_note": "Nota"
+  },
+  "levelListing": {
+    "l_name": "Nombre"
+  },
+  "locationListing": {
+    "l_name": "Nombre"
+  },
+  "machineListing": {
+    "l_location": "Ubicaciones",
+    "l_products": "Productos",
+    "l_random": "Aleatorio"
+  },
+  "medalListing": {
+    "l_description": "Descripción",
+    "l_name": "Nombre",
+    "l_number": "Número"
+  },
+  "menuListing": {
+    "l_description": "Descripción",
+    "l_name": "Nombre",
+    "l_type": "Tipo"
+  },
+  "meritPointListing": {
+    "l_item": "Objeto",
+    "l_point": "Puntos"
+  },
+  "recruitListing": {
+    "l_digimon": "Digimon",
+    "l_job": "Trabajo",
+    "l_locations": "Ubicaciones",
+    "l_note": "Nota"
+  },
+  "statusListing": {
+    "l_description": "Descripción",
+    "l_name": "Nombre"
+  },
+  "techListing": {
+    "l_element": "Elemento",
+    "l_name": "Nombre",
+    "l_number": "Número",
+    "l_mp": "MP",
+    "l_power": "Poder",
+    "l_rang": "Rang",
+    "l_spec": "Spec"
+  }
+}

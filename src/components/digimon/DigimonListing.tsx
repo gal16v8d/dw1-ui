@@ -1,6 +1,7 @@
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import { DataScroller } from 'primereact/datascroller';
+import { useTranslation } from 'react-i18next';
 import Digimon from '../../api/model/mongo/Digimon';
 import Tech from '../../api/model/mongo/Tech';
 import DigimonService from '../../api/service/DigimonService';
@@ -11,6 +12,7 @@ import Dw1MapLocations from '../ui/Dw1MapLocations';
 import Dw1YesOrNo from '../ui/Dw1YesOrNo';
 
 const DigimonListing = (): JSX.Element => {
+  const { t } = useTranslation();
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.DIGIMON.QUERY_KEY,
     DigimonService,
@@ -59,67 +61,72 @@ const DigimonListing = (): JSX.Element => {
   };
 
   const columns = [
-    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
+    {
+      columnKey: 'name',
+      field: 'name',
+      header: t('digimonListing.l_name'),
+      sortable: true,
+    },
     {
       columnKey: 'level.name',
       field: 'level.name',
-      header: 'Level',
+      header: t('digimonListing.l_level'),
       sortable: true,
     },
     {
       columnKey: 'type',
       field: 'type',
-      header: 'Type',
+      header: t('digimonListing.l_type'),
       sortable: true,
     },
     {
       columnKey: 'active',
       field: 'active',
-      header: 'Active',
+      header: t('digimonListing.l_active'),
       sortable: true,
     },
     {
       columnKey: 'itemDrop.name',
       field: 'itemDrop.name',
-      header: 'Item',
+      header: t('digimonListing.l_item'),
       sortable: true,
     },
     {
       columnKey: 'techInitial.name',
       field: 'techInitial.name',
-      header: 'Ini Tech',
+      header: t('digimonListing.l_iniTech'),
       sortable: true,
     },
     {
       columnKey: 'techFinal.name',
       field: 'techFinal.name',
-      header: 'Finish Move',
+      header: t('digimonListing.l_finishMove'),
       sortable: true,
     },
     {
       columnKey: 'techs',
       body: mapTechs,
-      header: 'Techs',
+      header: t('digimonListing.l_techs'),
     },
     {
       columnKey: 'recruitable',
       body: mapRecruitable,
-      header: 'Recruitable',
+      header: t('digimonListing.l_recruitable'),
     },
     {
       columnKey: 'raisable',
       body: mapRaisable,
-      header: 'Raisable',
+      header: t('digimonListing.l_raisable'),
     },
     {
       columnKey: 'location.happy',
       body: mapLocationHappy,
-      header: 'Location Happy',
+      header: t('digimonListing.l_locationHappy'),
     },
     {
       columnKey: 'location.Sad',
       body: mapLocationSad,
-      header: 'Location Sad',
+      header: t('digimonListing.l_locationSad'),
     },
   ];
 

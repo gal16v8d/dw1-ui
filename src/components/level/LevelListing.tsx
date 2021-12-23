@@ -1,6 +1,7 @@
 import { Messages } from 'primereact/messages';
 import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import Level from '../../api/model/mongo/Level';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import LevelService from '../../api/service/LevelService';
@@ -9,6 +10,7 @@ import Dw1BaseForm from '../ui/Dw1BaseForm';
 import Dw1Listing from '../ui/Dw1Listing';
 
 const LevelListing = (): JSX.Element => {
+  const { t } = useTranslation();
   const message = useRef<Messages>(null);
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.LEVEL.QUERY_KEY,
@@ -29,7 +31,12 @@ const LevelListing = (): JSX.Element => {
   const useLevelForm = useForm<Level>();
 
   const columns = [
-    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
+    {
+      columnKey: 'name',
+      field: 'name',
+      header: t('levelListing.l_name'),
+      sortable: true,
+    },
   ];
 
   const showMessage = (summary: string, type: string, detail: string): void => {
@@ -45,18 +52,18 @@ const LevelListing = (): JSX.Element => {
     return (
       <>
         <div className="field">
-          <label htmlFor="name">Name*</label>
+          <label htmlFor="name">{`${t('levelListing.l_name')}*`}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="name"
-              placeholder="Name*"
+              placeholder={`${t('levelListing.l_name')}*`}
               defaultValue={selectedData?.data?.name ?? ''}
               ref={useLevelForm.register({ required: true })}
             />
             {useLevelForm.errors.name && (
-              <small className="p-error">{'Field is required'}</small>
+              <small className="p-error">{t('form.error.required')}</small>
             )}
           </div>
         </div>

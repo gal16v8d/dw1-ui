@@ -1,6 +1,7 @@
 import { Messages } from 'primereact/messages';
 import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import Card from '../../api/model/mongo/Card';
 import CardService from '../../api/service/CardService';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
@@ -10,6 +11,7 @@ import Dw1Listing from '../ui/Dw1Listing';
 import Dw1YesOrNo from '../ui/Dw1YesOrNo';
 
 const CardListing = (): JSX.Element => {
+  const { t } = useTranslation();
   const message = useRef<Messages>(null);
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.CARD.QUERY_KEY,
@@ -42,19 +44,34 @@ const CardListing = (): JSX.Element => {
   };
 
   const columns = [
-    { columnKey: 'number', field: 'number', header: 'Number', sortable: true },
-    { columnKey: 'name', field: 'name', header: 'Name', sortable: true },
-    { columnKey: 'point', field: 'point', header: 'Point', sortable: true },
+    {
+      columnKey: 'number',
+      field: 'number',
+      header: t('cardListing.l_number'),
+      sortable: true,
+    },
+    {
+      columnKey: 'name',
+      field: 'name',
+      header: t('cardListing.l_name'),
+      sortable: true,
+    },
+    {
+      columnKey: 'point',
+      field: 'point',
+      header: t('cardListing.l_point'),
+      sortable: true,
+    },
     {
       columnKey: 'price',
       field: 'price',
-      header: 'Price (Bits)',
+      header: `${t('cardListing.l_price')} (Bits)`,
       sortable: true,
     },
     {
       columnKey: 'exchangeable',
       body: mapExchangeable,
-      header: 'Exchangeable',
+      header: t('cardListing.l_exchangeable'),
       sortable: false,
     },
   ];
@@ -72,45 +89,50 @@ const CardListing = (): JSX.Element => {
     return (
       <>
         <div className="field">
-          <label htmlFor="name">Name*</label>
+          <label htmlFor="name">{`${t('cardListing.l_name')}*`}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="name"
-              placeholder="Name*"
+              placeholder={`${t('cardListing.l_name')}*`}
               defaultValue={selectedData?.data?.name}
               ref={useElementForm.register({ required: true })}
             />
             {useElementForm.errors.name && (
-              <small className="p-error">{'Field is required'}</small>
+              <small className="p-error">{t('form.error.required')}</small>
             )}
           </div>
         </div>
         <div className="field">
-          <label htmlFor="number">Number*</label>
+          <label htmlFor="number">{`${t('cardListing.l_number')}*`}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="number"
-              placeholder="Number*"
+              placeholder={`${t('cardListing.l_number')}*`}
               defaultValue={selectedData?.data?.number}
-              ref={useElementForm.register({ required: true })}
+              ref={useElementForm.register({
+                required: true,
+                pattern: /^[\s\d]*$/,
+              })}
             />
             {useElementForm.errors.number && (
-              <small className="p-error">{'Field is required'}</small>
+              <small className="p-error">
+                {t('form.error.required_number')}
+              </small>
             )}
           </div>
         </div>
         <div className="field">
-          <label htmlFor="point">Point</label>
+          <label htmlFor="point">{t('cardListing.l_point')}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="point"
-              placeholder="Point"
+              placeholder={t('cardListing.l_point')}
               defaultValue={selectedData?.data?.point}
               ref={useElementForm.register({
                 required: false,
@@ -119,19 +141,19 @@ const CardListing = (): JSX.Element => {
             />
             {useElementForm.errors.point && (
               <small className="p-error">
-                {'Field is required (should be a number)'}
+                {t('form.error.required_number')}
               </small>
             )}
           </div>
         </div>
         <div className="field">
-          <label htmlFor="price">Price</label>
+          <label htmlFor="price">{t('cardListing.l_price')}</label>
           <div className="control">
             <input
               className="input"
               type="text"
               name="price"
-              placeholder="Price"
+              placeholder={t('cardListing.l_price')}
               defaultValue={selectedData?.data?.price}
               ref={useElementForm.register({
                 required: false,
@@ -140,12 +162,14 @@ const CardListing = (): JSX.Element => {
             />
             {useElementForm.errors.price && (
               <small className="p-error">
-                {'Field is required (should be a number)'}
+                {t('form.error.required_number')}
               </small>
             )}
           </div>
           <div className="field">
-            <label htmlFor="exchangeable">Exchangeable</label>
+            <label htmlFor="exchangeable">
+              {t('cardListing.l_exchangeable')}
+            </label>
             <input
               type="checkbox"
               name="exchangeable"

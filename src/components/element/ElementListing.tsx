@@ -1,17 +1,16 @@
 import { Messages } from 'primereact/messages';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
 import Element from '../../api/model/mongo/Element';
 import ElementService from '../../api/service/ElementService';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import VALUES from '../../constants/Dw1Constants';
+import { useListingContext } from '../../provider/listing/Dw1ListingProvider';
 import Dw1BaseForm from '../ui/Dw1BaseForm';
 import Dw1Listing from '../ui/Dw1Listing';
 
 const ElementListing = (): JSX.Element => {
-  const { t } = useTranslation();
-  const message = useRef<Messages>(null);
+  const { t, message } = useListingContext();
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.ELEMENT.QUERY_KEY,
     ElementService,

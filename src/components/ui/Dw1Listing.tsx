@@ -4,9 +4,9 @@ import { DataTable } from 'primereact/datatable';
 import { Image } from 'primereact/image';
 import { Toolbar } from 'primereact/toolbar';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import ApiData from '../../api/model/mongo/types/ApiData.types';
 import VALUES from '../../constants/Dw1Constants';
+import { useListingContext } from '../../provider/listing/Dw1ListingProvider';
 import Dw1Spinner from './Dw1Spinner';
 
 interface ListingProps {
@@ -29,7 +29,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
   editorComponent,
   messageComponent,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useListingContext();
   const mapImage = (rowData: ApiData) => {
     return (
       <div className="container" style={{ display: 'flex' }}>

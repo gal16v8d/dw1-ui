@@ -1,18 +1,18 @@
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import { DataScroller } from 'primereact/datascroller';
-import { useTranslation } from 'react-i18next';
 import Digimon from '../../api/model/mongo/Digimon';
 import Tech from '../../api/model/mongo/Tech';
 import DigimonService from '../../api/service/DigimonService';
 import { useGetAll } from '../../api/service/hooks/useGenericService';
 import VALUES from '../../constants/Dw1Constants';
+import { useListingContext } from '../../provider/listing/Dw1ListingProvider';
 import Dw1Listing from '../ui/Dw1Listing';
 import Dw1MapLocations from '../ui/Dw1MapLocations';
 import Dw1YesOrNo from '../ui/Dw1YesOrNo';
 
 const DigimonListing = (): JSX.Element => {
-  const { t } = useTranslation();
+  const { t } = useListingContext();
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.DIGIMON.QUERY_KEY,
     DigimonService,

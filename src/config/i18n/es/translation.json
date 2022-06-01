@@ -9,6 +9,7 @@
     "listing": {
       "actions": "Acciones",
       "delete": "Eliminar",
+      "image": "Imagén",
       "new": "Nuevo",
       "update": "Actualizar"
     }

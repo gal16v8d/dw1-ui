@@ -9,6 +9,7 @@ import {
   RefetchQueryFilters,
 } from 'react-query';
 import ApiData from '../../api/model/mongo/types/ApiData.types';
+import ApiDataRequest from '../../api/model/requests/types/ApiDataRequest.types';
 import GenericService from '../../api/service/GenericService';
 import {
   useDelete,
@@ -72,7 +73,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
     }
   }, [selectedData]);
 
-  const performCreate = async (rowData: any) => {
+  const performCreate = async (rowData: ApiDataRequest) => {
     await postApi
       .mutateAsync({
         data: rowData,
@@ -81,7 +82,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
       .catch((e) => goBackToList(e?.message ?? '', 'warn'));
   };
 
-  const performUpdate = async (rowData: any) => {
+  const performUpdate = async (rowData: ApiDataRequest) => {
     await putApi
       .mutateAsync({
         id: currentId,
@@ -91,7 +92,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
       .catch((e) => goBackToList(e?.message ?? '', 'warn'));
   };
 
-  const store = async (data: any) => {
+  const store = async (data: ApiDataRequest) => {
     if (selectedData?.creating) {
       await performCreate(data);
     } else {
@@ -99,7 +100,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
     }
   };
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: ApiDataRequest) => {
     await store(data);
   };
 

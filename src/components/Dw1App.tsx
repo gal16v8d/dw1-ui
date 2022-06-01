@@ -1,11 +1,11 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import VALUES from '../constants/Dw1Constants';
 import Home from './home/Home';
+import Dw1Sidebar from './ui/Dw1Sidebar';
+import Dw1Spinner from './ui/Dw1Spinner';
 import PageFooter from './ui/layout/PageFooter';
 import PageHeader from './ui/layout/PageHeader';
-import Dw1Spinner from './ui/Dw1Spinner';
-import Dw1Sidebar from './ui/Dw1Sidebar';
 
 const CardListing = lazy(() => import('./card/CardListing'));
 const DigimonListing = lazy(() => import('./digimon/DigimonListing'));

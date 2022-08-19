@@ -24,7 +24,7 @@ const TechListing = (): JSX.Element => {
     {
       columnKey: 'power',
       field: 'power',
-      header: t('techListing.l_npower'),
+      header: t('techListing.l_power'),
       sortable: true,
     },
     {

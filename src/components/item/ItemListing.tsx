@@ -1,13 +1,13 @@
+import Item from 'api/model/mongo/Item';
+import { useGetAll } from 'api/service/hooks/useGenericService';
+import ItemService from 'api/service/ItemService';
+import Dw1Listing from 'components/ui/Dw1Listing';
+import Dw1MapLocations from 'components/ui/Dw1MapLocations';
+import VALUES from 'constants/Dw1Constants';
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import { DataScroller } from 'primereact/datascroller';
 import { useTranslation } from 'react-i18next';
-import Item from '../../api/model/mongo/Item';
-import { useGetAll } from '../../api/service/hooks/useGenericService';
-import ItemService from '../../api/service/ItemService';
-import VALUES from '../../constants/Dw1Constants';
-import Dw1Listing from '../ui/Dw1Listing';
-import Dw1MapLocations from '../ui/Dw1MapLocations';
 
 const ItemListing = (): JSX.Element => {
   const { t } = useTranslation();

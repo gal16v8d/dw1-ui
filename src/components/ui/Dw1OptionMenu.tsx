@@ -1,6 +1,6 @@
+import VALUES from 'constants/Dw1Constants';
 import { TFunction } from 'react-i18next';
 import { NavigateFunction } from 'react-router-dom';
-import VALUES from '../../constants/Dw1Constants';
 
 const mapApiToMenu = (
   t: TFunction<'translation', undefined>,

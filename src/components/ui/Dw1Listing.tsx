@@ -1,12 +1,12 @@
+import ApiData from 'api/model/mongo/types/ApiData.types';
+import VALUES from 'constants/Dw1Constants';
 import { Button } from 'primereact/button';
 import { Column, ColumnProps } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
 import { Image } from 'primereact/image';
 import { Toolbar } from 'primereact/toolbar';
+import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import React from 'react';
-import ApiData from '../../api/model/mongo/types/ApiData.types';
-import VALUES from '../../constants/Dw1Constants';
-import { useListingContext } from '../../provider/listing/Dw1ListingProvider';
 import Dw1Spinner from './Dw1Spinner';
 
 interface ListingProps {

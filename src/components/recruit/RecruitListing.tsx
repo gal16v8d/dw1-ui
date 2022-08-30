@@ -1,10 +1,10 @@
+import Recruit from 'api/model/mongo/Recruit';
+import { useGetAll } from 'api/service/hooks/useGenericService';
+import RecruitService from 'api/service/RecruitService';
+import Dw1Listing from 'components/ui/Dw1Listing';
+import Dw1MapLocations from 'components/ui/Dw1MapLocations';
+import VALUES from 'constants/Dw1Constants';
 import { useTranslation } from 'react-i18next';
-import Recruit from '../../api/model/mongo/Recruit';
-import { useGetAll } from '../../api/service/hooks/useGenericService';
-import RecruitService from '../../api/service/RecruitService';
-import VALUES from '../../constants/Dw1Constants';
-import Dw1Listing from '../ui/Dw1Listing';
-import Dw1MapLocations from '../ui/Dw1MapLocations';
 
 const RecruitListing = (): JSX.Element => {
   const { t } = useTranslation();

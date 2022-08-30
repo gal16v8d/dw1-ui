@@ -1,14 +1,14 @@
+import Card from 'api/model/mongo/Card';
+import CardService from 'api/service/CardService';
+import { useGetAll } from 'api/service/hooks/useGenericService';
+import Dw1BaseForm from 'components/ui/Dw1BaseForm';
+import Dw1Listing from 'components/ui/Dw1Listing';
+import Dw1YesOrNo from 'components/ui/Dw1YesOrNo';
+import VALUES from 'constants/Dw1Constants';
 import { Messages } from 'primereact/messages';
+import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import Card from '../../api/model/mongo/Card';
-import CardService from '../../api/service/CardService';
-import { useGetAll } from '../../api/service/hooks/useGenericService';
-import VALUES from '../../constants/Dw1Constants';
-import { useListingContext } from '../../provider/listing/Dw1ListingProvider';
-import Dw1BaseForm from '../ui/Dw1BaseForm';
-import Dw1Listing from '../ui/Dw1Listing';
-import Dw1YesOrNo from '../ui/Dw1YesOrNo';
 
 const CardListing = (): JSX.Element => {
   const { t, message } = useListingContext();

@@ -1,13 +1,13 @@
+import Location from 'api/model/mongo/Location';
+import { useGetAll } from 'api/service/hooks/useGenericService';
+import LocationService from 'api/service/LocationService';
+import Dw1BaseForm from 'components/ui/Dw1BaseForm';
+import Dw1Listing from 'components/ui/Dw1Listing';
+import VALUES from 'constants/Dw1Constants';
 import { Messages } from 'primereact/messages';
+import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import Location from '../../api/model/mongo/Location';
-import { useGetAll } from '../../api/service/hooks/useGenericService';
-import LocationService from '../../api/service/LocationService';
-import VALUES from '../../constants/Dw1Constants';
-import { useListingContext } from '../../provider/listing/Dw1ListingProvider';
-import Dw1BaseForm from '../ui/Dw1BaseForm';
-import Dw1Listing from '../ui/Dw1Listing';
 
 const LocationListing = (): JSX.Element => {
   const { t, message } = useListingContext();

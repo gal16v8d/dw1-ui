@@ -1,3 +1,11 @@
+import ApiData from 'api/model/mongo/types/ApiData.types';
+import ApiDataRequest from 'api/model/requests/types/ApiDataRequest.types';
+import GenericService from 'api/service/GenericService';
+import {
+  useDelete,
+  useSave,
+  useUpdate,
+} from 'api/service/hooks/useGenericService';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import React, { useEffect, useState } from 'react';
@@ -8,14 +16,6 @@ import {
   RefetchOptions,
   RefetchQueryFilters,
 } from 'react-query';
-import ApiData from '../../api/model/mongo/types/ApiData.types';
-import ApiDataRequest from '../../api/model/requests/types/ApiDataRequest.types';
-import GenericService from '../../api/service/GenericService';
-import {
-  useDelete,
-  useSave,
-  useUpdate,
-} from '../../api/service/hooks/useGenericService';
 
 interface Dw1BaseFormProps {
   selectedData: {

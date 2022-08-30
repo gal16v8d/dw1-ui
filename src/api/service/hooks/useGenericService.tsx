@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import ApiData from 'api/model/mongo/types/ApiData.types';
+import ApiDataRequest from 'api/model/requests/types/ApiDataRequest.types';
+import GenericService from 'api/service/GenericService';
 import {
   useMutation,
   UseMutationResult,
   useQuery,
   UseQueryResult,
 } from 'react-query';
-import ApiData from '../../model/mongo/types/ApiData.types';
-import ApiDataRequest from '../../model/requests/types/ApiDataRequest.types';
-import GenericService from '../GenericService';
 
 const useGetAll = (
   queryKey: string,

@@ -1,8 +1,8 @@
+import { useGetAll } from 'api/service/hooks/useGenericService';
+import MedalService from 'api/service/MedalService';
+import Dw1Listing from 'components/ui/Dw1Listing';
+import VALUES from 'constants/Dw1Constants';
 import { useTranslation } from 'react-i18next';
-import { useGetAll } from '../../api/service/hooks/useGenericService';
-import MedalService from '../../api/service/MedalService';
-import VALUES from '../../constants/Dw1Constants';
-import Dw1Listing from '../ui/Dw1Listing';
 
 const MedalListing = (): JSX.Element => {
   const { t } = useTranslation();

@@ -1,4 +1,4 @@
-import VALUES from '../../constants/Dw1Constants';
+import VALUES from 'constants/Dw1Constants';
 import GenericService from './GenericService';
 
 class GymMachineService extends GenericService {}

@@ -1,6 +1,6 @@
 import axios from 'axios';
-import ApiData from '../model/mongo/types/ApiData.types';
-import ApiDataRequest from '../model/requests/types/ApiDataRequest.types';
+import ApiData from 'api/model/mongo/types/ApiData.types';
+import ApiDataRequest from 'api/model/requests/types/ApiDataRequest.types';
 
 class GenericService {
   baseUri: string;

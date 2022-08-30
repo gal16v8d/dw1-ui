@@ -119,9 +119,6 @@ const VALUES = {
   PERMISSIONS: {
     ENABLE_CRUD: !!process.env.REACT_APP_ENABLE_CRUD || false,
   },
-  QUERY_KEYS: {
-    GET_ALL_BY_LOGIN: (login: string): string => `cuentas-${login}`,
-  },
   TABLE: {
     ROWS: 10,
     ROW_OPTIONS: [10, 20, 50],

@@ -1,8 +1,8 @@
+import { useGetAll } from 'api/service/hooks/useGenericService';
+import MenuService from 'api/service/MenuService';
+import Dw1Listing from 'components/ui/Dw1Listing';
+import VALUES from 'constants/Dw1Constants';
 import { useTranslation } from 'react-i18next';
-import { useGetAll } from '../../api/service/hooks/useGenericService';
-import MenuService from '../../api/service/MenuService';
-import VALUES from '../../constants/Dw1Constants';
-import Dw1Listing from '../ui/Dw1Listing';
 
 const MenuListing = (): JSX.Element => {
   const { t } = useTranslation();

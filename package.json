@@ -43,7 +43,7 @@
     "prettier": "^2.4.1"
   },
   "engines": {
-    "node": "16.15.1"
+    "node": "16.17.1"
   },
   "scripts": {
     "start": "react-scripts start",

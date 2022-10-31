@@ -14,7 +14,7 @@ const LocationListing = (): JSX.Element => {
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.LOCATION.QUERY_KEY,
     LocationService,
-    0,
+    false,
     {
       onError: (error: { message: string }) => {
         showMessage('warn', 'warn', error.message);

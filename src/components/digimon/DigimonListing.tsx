@@ -16,7 +16,7 @@ const DigimonListing = (): JSX.Element => {
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.DIGIMON.QUERY_KEY,
     DigimonService,
-    1
+    true
   );
 
   const mapTechs = (rowData: Digimon) => {

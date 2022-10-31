@@ -11,7 +11,11 @@ import { useTranslation } from 'react-i18next';
 
 const ItemListing = (): JSX.Element => {
   const { t } = useTranslation();
-  const { data } = useGetAll(VALUES.API_OBJECT.ITEM.QUERY_KEY, ItemService, 1);
+  const { data } = useGetAll(
+    VALUES.API_OBJECT.ITEM.QUERY_KEY,
+    ItemService,
+    true
+  );
 
   const mapLocations = (rowData: Item) => {
     return (

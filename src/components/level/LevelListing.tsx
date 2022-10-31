@@ -14,7 +14,7 @@ const LevelListing = (): JSX.Element => {
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.LEVEL.QUERY_KEY,
     LevelService,
-    0,
+    false,
     {
       onError: (error: { message: string }) => {
         showMessage('warn', 'warn', error.message);

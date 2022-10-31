@@ -9,7 +9,7 @@ const MenuListing = (): JSX.Element => {
   const { data } = useGetAll(
     VALUES.API_OBJECT.MERIT_POINT.QUERY_KEY,
     MeritPointService,
-    1
+    true
   );
 
   const columns = [

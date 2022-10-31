@@ -13,7 +13,7 @@ const MachineListing = (): JSX.Element => {
   const { data } = useGetAll(
     VALUES.API_OBJECT.MACHINE.QUERY_KEY,
     MachineService,
-    1
+    true
   );
 
   const mapProducts = (rowData: Machine) => {

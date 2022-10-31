@@ -11,7 +11,7 @@ const GymMachineListing = (): JSX.Element => {
   const { data } = useGetAll(
     VALUES.API_OBJECT.GYM_MACHINE.QUERY_KEY,
     GymMachineService,
-    1
+    true
   );
 
   const mapTrainProps = (rowData: GymMachine) => {

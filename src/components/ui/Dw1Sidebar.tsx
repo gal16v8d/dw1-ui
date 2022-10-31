@@ -1,7 +1,7 @@
 import { Button } from 'primereact/button';
 import { Menu } from 'primereact/menu';
 import { Sidebar } from 'primereact/sidebar';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { buildMenuOptions } from './Dw1OptionMenu';
 import { useTranslation } from 'react-i18next';

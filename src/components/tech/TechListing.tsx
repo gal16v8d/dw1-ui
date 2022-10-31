@@ -6,7 +6,11 @@ import { useTranslation } from 'react-i18next';
 
 const TechListing = (): JSX.Element => {
   const { t } = useTranslation();
-  const { data } = useGetAll(VALUES.API_OBJECT.TECH.QUERY_KEY, TechService, 1);
+  const { data } = useGetAll(
+    VALUES.API_OBJECT.TECH.QUERY_KEY,
+    TechService,
+    true
+  );
 
   const columns = [
     {

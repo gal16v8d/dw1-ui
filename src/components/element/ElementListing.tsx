@@ -14,7 +14,7 @@ const ElementListing = (): JSX.Element => {
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.ELEMENT.QUERY_KEY,
     ElementService,
-    0,
+    false,
     {
       onError: (error: { message: string }) => {
         showMessage('warn', 'warn', error.message);

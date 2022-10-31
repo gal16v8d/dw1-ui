@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import ApiData from 'api/model/mongo/types/ApiData.types';
-import ApiDataRequest from 'api/model/requests/types/ApiDataRequest.types';
 import GenericService from 'api/service/GenericService';
 import {
   useMutation,
@@ -12,7 +11,7 @@ import {
 const useGetAll = (
   queryKey: string,
   service: GenericService,
-  lvl?: number,
+  expanded?: boolean,
   payload?: {
     onSuccess?: (response: ApiData[]) => void;
     onError?: (error: { message: string }) => void;
@@ -24,7 +23,7 @@ const useGetAll = (
   return useQuery({
     queryKey: queryKey,
     queryFn: async () => {
-      return await service.getAll(lvl);
+      return await service.getAll(expanded);
     },
     cacheTime: payload?.cacheTime ?? undefined,
     enabled: payload?.enabled === undefined || payload?.enabled,
@@ -47,17 +46,14 @@ const useSave = (
   { message: string },
   any,
   {
-    data: ApiDataRequest;
+    data: unknown;
   },
   unknown
 > => {
-  return useMutation(
-    ({ data }: { data: ApiDataRequest }) => service.save(data),
-    {
-      onError: (err: any) =>
-        console.log(`Could not create the ${apiObject}`, err?.response),
-    }
-  );
+  return useMutation(({ data }: { data: unknown }) => service.save(data), {
+    onError: (err: any) =>
+      console.log(`Could not create the ${apiObject}`, err?.response),
+  });
 };
 
 const useUpdate = (
@@ -68,13 +64,12 @@ const useUpdate = (
   any,
   {
     id: string;
-    data: ApiDataRequest;
+    data: unknown;
   },
   unknown
 > => {
   return useMutation(
-    ({ id, data }: { id: string; data: ApiDataRequest }) =>
-      service.update(id, data),
+    ({ id, data }: { id: string; data: unknown }) => service.update(id, data),
     {
       onError: (err: any) =>
         console.log(`Could not update the ${apiObject}`, err?.response),

@@ -3,19 +3,20 @@ import CardService from 'api/service/CardService';
 import { useGetAll } from 'api/service/hooks/useGenericService';
 import Dw1BaseForm from 'components/ui/Dw1BaseForm';
 import Dw1Listing from 'components/ui/Dw1Listing';
-import Dw1YesOrNo from 'components/ui/Dw1YesOrNo';
 import VALUES from 'constants/Dw1Constants';
 import { Messages } from 'primereact/messages';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { getCardColumns } from './CardColumns';
+import { getCardForm } from './CardForm';
 
 const CardListing = (): JSX.Element => {
   const { t, message } = useListingContext();
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.CARD.QUERY_KEY,
     CardService,
-    0,
+    false,
     {
       onError: (error: { message: string }) => {
         showMessage('warn', 'warn', error.message);
@@ -31,49 +32,12 @@ const CardListing = (): JSX.Element => {
   const [exchangeable, setExchangeable] = useState<boolean>(
     !!selectedData?.data?.exchangeable
   );
-  const useElementForm = useForm<Card>();
+  const useCardForm = useForm<Card>();
 
   useEffect(
     () => setExchangeable(!!selectedData?.data?.exchangeable),
     [selectedData?.data]
   );
-
-  const mapExchangeable = (rowData: Card) => {
-    return <Dw1YesOrNo value={rowData?.exchangeable} />;
-  };
-
-  const columns = [
-    {
-      columnKey: 'number',
-      field: 'number',
-      header: t('cardListing.l_number'),
-      sortable: true,
-    },
-    {
-      columnKey: 'name',
-      field: 'name',
-      header: t('cardListing.l_name'),
-      sortable: true,
-    },
-    {
-      columnKey: 'point',
-      field: 'point',
-      header: t('cardListing.l_point'),
-      sortable: true,
-    },
-    {
-      columnKey: 'price',
-      field: 'price',
-      header: `${t('cardListing.l_price')} (Bits)`,
-      sortable: true,
-    },
-    {
-      columnKey: 'exchangeable',
-      body: mapExchangeable,
-      header: t('cardListing.l_exchangeable'),
-      sortable: false,
-    },
-  ];
 
   const showMessage = (summary: string, type: string, detail: string): void => {
     message.current?.show({
@@ -84,108 +48,10 @@ const CardListing = (): JSX.Element => {
     });
   };
 
-  const formElements = () => {
-    return (
-      <>
-        <div className="field">
-          <label htmlFor="name">{`${t('cardListing.l_name')}*`}</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              name="name"
-              placeholder={`${t('cardListing.l_name')}*`}
-              defaultValue={selectedData?.data?.name}
-              ref={useElementForm.register({ required: true })}
-            />
-            {useElementForm.errors.name && (
-              <small className="p-error">{t('form.error.required')}</small>
-            )}
-          </div>
-        </div>
-        <div className="field">
-          <label htmlFor="number">{`${t('cardListing.l_number')}*`}</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              name="number"
-              placeholder={`${t('cardListing.l_number')}*`}
-              defaultValue={selectedData?.data?.number}
-              ref={useElementForm.register({
-                required: true,
-                pattern: /^[\s\d]*$/,
-              })}
-            />
-            {useElementForm.errors.number && (
-              <small className="p-error">
-                {t('form.error.required_number')}
-              </small>
-            )}
-          </div>
-        </div>
-        <div className="field">
-          <label htmlFor="point">{t('cardListing.l_point')}</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              name="point"
-              placeholder={t('cardListing.l_point')}
-              defaultValue={selectedData?.data?.point}
-              ref={useElementForm.register({
-                required: false,
-                pattern: /^[\s\d]*$/,
-              })}
-            />
-            {useElementForm.errors.point && (
-              <small className="p-error">
-                {t('form.error.required_number')}
-              </small>
-            )}
-          </div>
-        </div>
-        <div className="field">
-          <label htmlFor="price">{t('cardListing.l_price')}</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              name="price"
-              placeholder={t('cardListing.l_price')}
-              defaultValue={selectedData?.data?.price}
-              ref={useElementForm.register({
-                required: false,
-                pattern: /^[\s\d]*$/,
-              })}
-            />
-            {useElementForm.errors.price && (
-              <small className="p-error">
-                {t('form.error.required_number')}
-              </small>
-            )}
-          </div>
-          <div className="field">
-            <label htmlFor="exchangeable">
-              {t('cardListing.l_exchangeable')}
-            </label>
-            <input
-              type="checkbox"
-              name="exchangeable"
-              defaultChecked={exchangeable}
-              onChange={(e) => setExchangeable(e.target.checked)}
-              ref={useElementForm.register({ required: false })}
-            />
-          </div>
-        </div>
-      </>
-    );
-  };
-
   return (
     <Dw1Listing
       apiData={data}
-      columns={columns}
+      columns={getCardColumns(t)}
       crudData={{
         selectedData,
         setSelectedData,
@@ -197,8 +63,14 @@ const CardListing = (): JSX.Element => {
           showMessage={showMessage}
           apiObject={VALUES.API_OBJECT.CARD.NAME}
           service={CardService}
-          useForm={useElementForm}
-          formElements={formElements()}
+          useForm={useCardForm}
+          formElements={getCardForm(
+            t,
+            useCardForm,
+            selectedData,
+            exchangeable,
+            setExchangeable
+          )}
         />
       }
       messageComponent={<Messages ref={message} />}

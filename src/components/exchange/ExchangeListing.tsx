@@ -14,7 +14,7 @@ const ExchangeListing = (): JSX.Element => {
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.EXCHANGE.QUERY_KEY,
     ExchangeService,
-    0,
+    false,
     {
       onError: (error: { message: string }) => {
         showMessage('warn', 'warn', error.message);

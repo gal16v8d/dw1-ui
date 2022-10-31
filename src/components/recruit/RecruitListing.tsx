@@ -11,7 +11,7 @@ const RecruitListing = (): JSX.Element => {
   const { data } = useGetAll(
     VALUES.API_OBJECT.RECRUIT.QUERY_KEY,
     RecruitService,
-    1
+    true
   );
 
   const mapLocations = (rowData: Recruit) => {

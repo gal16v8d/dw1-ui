@@ -4,7 +4,7 @@ import { useGetAll } from 'api/service/hooks/useGenericService';
 import Dw1BaseForm from 'components/ui/Dw1BaseForm';
 import Dw1Listing from 'components/ui/Dw1Listing';
 import VALUES from 'constants/Dw1Constants';
-import { Messages } from 'primereact/messages';
+import { Messages, MessagesSeverityType } from 'primereact/messages';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -37,7 +37,11 @@ const ElementListing = (): JSX.Element => {
     },
   ];
 
-  const showMessage = (summary: string, type: string, detail: string): void => {
+  const showMessage = (
+    summary: string,
+    type: MessagesSeverityType,
+    detail: string
+  ): void => {
     message.current?.show({
       life: VALUES.MSG.MSG_LIFE,
       severity: type,

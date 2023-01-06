@@ -1,9 +1,11 @@
 import React from 'react';
 import { Messages } from 'primereact/messages';
-import { TFunction, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 interface Dw1ListingContextProps {
-  t: TFunction<'translation', undefined>;
+  // FIXME
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  t: any;
   message: React.RefObject<Messages>;
 }
 

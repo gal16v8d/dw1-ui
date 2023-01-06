@@ -7,6 +7,7 @@ import {
 } from 'api/service/hooks/useGenericService';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
+import { MessagesSeverityType } from 'primereact/messages';
 import React, { useEffect, useState } from 'react';
 import { UseFormMethods } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
@@ -30,7 +31,11 @@ interface Dw1BaseFormProps {
   refetch: <TPageData>(
     options?: (RefetchOptions & RefetchQueryFilters<TPageData>) | undefined
   ) => Promise<QueryObserverResult<ApiData[], unknown>>;
-  showMessage: (summary: string, type: string, message: string) => void;
+  showMessage: (
+    summary: string,
+    type: MessagesSeverityType,
+    message: string
+  ) => void;
 }
 
 const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({

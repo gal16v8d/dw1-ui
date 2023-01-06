@@ -1,9 +1,9 @@
 import Card from 'api/model/mongo/Card';
 import { UseFormMethods } from 'react-hook-form';
-import { TFunction } from 'react-i18next';
 
 export const getCardForm = (
-  t: TFunction<'translation', undefined>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  t: any,
   useElementForm: UseFormMethods<Card>,
   selectedData: {
     data?: Card;

@@ -10,7 +10,7 @@ const Dw1YesOrNo: React.FC<Dw1YesOrNoProps> = ({ value }): JSX.Element => {
   return (
     <Badge
       value={value ? t('baseComponent.yes') : t('baseComponent.no')}
-      severity={value ? 'success' : 'error'}
+      severity={value ? 'success' : 'danger'}
       className="p-mr-2"
     ></Badge>
   );

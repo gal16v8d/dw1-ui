@@ -1,23 +1,28 @@
 import Element from 'api/model/mongo/Element';
-import ElementService from 'api/service/ElementService';
+import GenericService from 'api/service/GenericService';
 import { useGetAll } from 'api/service/hooks/useGenericService';
 import Dw1BaseForm from 'components/ui/Dw1BaseForm';
 import Dw1Listing from 'components/ui/Dw1Listing';
 import VALUES from 'constants/Dw1Constants';
-import { Messages, MessagesSeverityType } from 'primereact/messages';
+import { Messages } from 'primereact/messages';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { showMessage } from 'util/ErrorHandler';
+import { elementColumns } from './ElementColumns';
+import { elementForm } from './ElementForm';
 
 const ElementListing = (): JSX.Element => {
   const { t, message } = useListingContext();
+  const elementService = new GenericService(VALUES.API_OBJECT.ELEMENT.ROUTE);
+
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.ELEMENT.QUERY_KEY,
-    ElementService,
+    elementService,
     false,
     {
       onError: (error: { message: string }) => {
-        showMessage('warn', 'warn', error.message);
+        showMessage(message, 'warn', 'warn', error.message);
       },
     }
   );
@@ -28,55 +33,11 @@ const ElementListing = (): JSX.Element => {
     deleting: boolean;
   }>({ creating: false, updating: false, deleting: false });
   const useElementForm = useForm<Element>();
-  const columns = [
-    {
-      columnKey: 'name',
-      field: 'name',
-      header: t('elementListing.l_name'),
-      sortable: true,
-    },
-  ];
-
-  const showMessage = (
-    summary: string,
-    type: MessagesSeverityType,
-    detail: string
-  ): void => {
-    message.current?.show({
-      life: VALUES.MSG.MSG_LIFE,
-      severity: type,
-      summary: `${summary}: `,
-      detail: detail,
-    });
-  };
-
-  const formElements = () => {
-    return (
-      <>
-        <div className="field">
-          <label htmlFor="name">{`${t('elementListing.l_name')}*`}</label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              name="name"
-              placeholder={`${t('elementListing.l_name')}*`}
-              defaultValue={selectedData?.data?.name ?? ''}
-              ref={useElementForm.register({ required: true })}
-            />
-            {useElementForm.errors.name && (
-              <small className="p-error">{t('form.error.required')}</small>
-            )}
-          </div>
-        </div>
-      </>
-    );
-  };
 
   return (
     <Dw1Listing
       apiData={data}
-      columns={columns}
+      columns={elementColumns(t)}
       imageColumn={VALUES.API_OBJECT.ELEMENT.IMAGE}
       crudData={{
         selectedData,
@@ -88,9 +49,9 @@ const ElementListing = (): JSX.Element => {
           refetch={refetch}
           showMessage={showMessage}
           apiObject={VALUES.API_OBJECT.ELEMENT.NAME}
-          service={ElementService}
+          service={elementService}
           useForm={useElementForm}
-          formElements={formElements()}
+          formElements={elementForm(t, useElementForm, selectedData)}
         />
       }
       messageComponent={<Messages ref={message} />}

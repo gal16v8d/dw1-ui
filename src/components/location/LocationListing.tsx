@@ -1,23 +1,26 @@
 import Location from 'api/model/mongo/Location';
+import GenericService from 'api/service/GenericService';
 import { useGetAll } from 'api/service/hooks/useGenericService';
-import LocationService from 'api/service/LocationService';
 import Dw1BaseForm from 'components/ui/Dw1BaseForm';
 import Dw1Listing from 'components/ui/Dw1Listing';
 import VALUES from 'constants/Dw1Constants';
-import { Messages, MessagesSeverityType } from 'primereact/messages';
+import { Messages } from 'primereact/messages';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { showMessage } from 'util/ErrorHandler';
+import { locationColumns } from './LocationColumns';
 
 const LocationListing = (): JSX.Element => {
   const { t, message } = useListingContext();
+  const locationService = new GenericService(VALUES.API_OBJECT.LOCATION.ROUTE);
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.LOCATION.QUERY_KEY,
-    LocationService,
+    locationService,
     false,
     {
       onError: (error: { message: string }) => {
-        showMessage('warn', 'warn', error.message);
+        showMessage(message, 'warn', 'warn', error.message);
       },
     }
   );
@@ -28,28 +31,6 @@ const LocationListing = (): JSX.Element => {
     deleting: boolean;
   }>({ creating: false, updating: false, deleting: false });
   const useLocationForm = useForm<Location>();
-
-  const columns = [
-    {
-      columnKey: 'name',
-      field: 'name',
-      header: t('locationListing.l_name'),
-      sortable: true,
-    },
-  ];
-
-  const showMessage = (
-    summary: string,
-    type: MessagesSeverityType,
-    detail: string
-  ): void => {
-    message.current?.show({
-      life: VALUES.MSG.MSG_LIFE,
-      severity: type,
-      summary: `${summary}: `,
-      detail: detail,
-    });
-  };
 
   const formElements = () => {
     return (
@@ -77,7 +58,7 @@ const LocationListing = (): JSX.Element => {
   return (
     <Dw1Listing
       apiData={data}
-      columns={columns}
+      columns={locationColumns(t)}
       crudData={{
         selectedData,
         setSelectedData,
@@ -88,7 +69,7 @@ const LocationListing = (): JSX.Element => {
           refetch={refetch}
           showMessage={showMessage}
           apiObject={VALUES.API_OBJECT.LOCATION.NAME}
-          service={LocationService}
+          service={locationService}
           useForm={useLocationForm}
           formElements={formElements()}
         />

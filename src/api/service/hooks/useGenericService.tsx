@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import ApiData from 'api/model/mongo/types/ApiData.types';
+import ApiError from 'api/model/responses/ApiError';
 import GenericService from 'api/service/GenericService';
 import {
   useMutation,
@@ -14,7 +15,7 @@ const useGetAll = (
   expanded?: boolean,
   payload?: {
     onSuccess?: (response: ApiData[]) => void;
-    onError?: (error: { message: string }) => void;
+    onError?: (error: ApiError) => void;
     enabled?: boolean;
     cacheTime?: number;
     refetchOnMount?: boolean;
@@ -30,7 +31,7 @@ const useGetAll = (
     onSuccess: (response: ApiData[]) => {
       payload?.onSuccess && payload.onSuccess(response);
     },
-    onError: (error: { message: string }) => {
+    onError: (error: ApiError) => {
       console.log(error?.message);
       payload?.onError && payload.onError(error);
     },
@@ -43,16 +44,16 @@ const useSave = (
   apiObject: string,
   service: GenericService
 ): UseMutationResult<
-  { message: string },
-  any,
+  void,
+  ApiError,
   {
     data: unknown;
   },
   unknown
 > => {
   return useMutation(({ data }: { data: unknown }) => service.save(data), {
-    onError: (err: any) =>
-      console.log(`Could not create the ${apiObject}`, err?.response),
+    onError: (err: ApiError) =>
+      console.log(`Could not create the ${apiObject}`, err?.message),
   });
 };
 
@@ -60,8 +61,8 @@ const useUpdate = (
   apiObject: string,
   service: GenericService
 ): UseMutationResult<
-  { message: string },
-  any,
+  unknown,
+  ApiError,
   {
     id: string;
     data: unknown;
@@ -71,8 +72,8 @@ const useUpdate = (
   return useMutation(
     ({ id, data }: { id: string; data: unknown }) => service.update(id, data),
     {
-      onError: (err: any) =>
-        console.log(`Could not update the ${apiObject}`, err?.response),
+      onError: (err: ApiError) =>
+        console.log(`Could not update the ${apiObject}`, err?.message),
     }
   );
 };
@@ -82,15 +83,15 @@ const useDelete = (
   service: GenericService
 ): UseMutationResult<
   void,
-  any,
+  ApiError,
   {
     id: string;
   },
   unknown
 > => {
   return useMutation(({ id }: { id: string }) => service.delete(id), {
-    onError: (err: any) =>
-      console.log(`Could not delete the ${apiObject}`, err?.response),
+    onError: (err: ApiError) =>
+      console.log(`Could not delete the ${apiObject}`, err?.message),
   });
 };
 

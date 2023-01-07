@@ -109,7 +109,9 @@ const Dw1Listing: React.FC<ListingProps> = ({
           <React.Fragment>
             <Button
               icon="pi pi-plus"
-              label={t('baseComponent.listing.new')}
+              label={
+                t('baseComponent.listing.new') ?? 'baseComponent.listing.new'
+              }
               onClick={addData}
               style={{ float: 'left' }}
             />
@@ -125,13 +127,17 @@ const Dw1Listing: React.FC<ListingProps> = ({
         <Button
           icon="pi pi-pencil"
           onClick={() => editData(rowData)}
-          tooltip={t('baseComponent.listing.update')}
+          tooltip={
+            t('baseComponent.listing.update') ?? 'baseComponent.listing.update'
+          }
         />
         <Button
           className="p-button-warning"
           icon="pi pi-trash"
           onClick={() => deleteData(rowData)}
-          tooltip={t('baseComponent.listing.delete')}
+          tooltip={
+            t('baseComponent.listing.delete') ?? 'baseComponent.listing.delete'
+          }
         />
       </div>
     );

@@ -1,9 +1,9 @@
 import Card from 'api/model/mongo/Card';
+import { TFunction } from 'i18next';
 import { UseFormMethods } from 'react-hook-form';
 
 export const getCardForm = (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  t: any,
+  t: TFunction<'translation', undefined>,
   useElementForm: UseFormMethods<Card>,
   selectedData: {
     data?: Card;
@@ -58,7 +58,7 @@ export const getCardForm = (
             className="input"
             type="text"
             name="point"
-            placeholder={t('cardListing.l_point')}
+            placeholder={t('cardListing.l_point') ?? 'cardListing.l_point'}
             defaultValue={selectedData?.data?.point}
             ref={useElementForm.register({
               required: false,
@@ -77,7 +77,7 @@ export const getCardForm = (
             className="input"
             type="text"
             name="price"
-            placeholder={t('cardListing.l_price')}
+            placeholder={t('cardListing.l_price') ?? 'cardListing.l_price'}
             defaultValue={selectedData?.data?.price}
             ref={useElementForm.register({
               required: false,

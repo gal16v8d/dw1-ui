@@ -1,12 +1,13 @@
 import { Badge } from 'primereact/badge';
-import { useTranslation } from 'react-i18next';
+import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 
 interface Dw1YesOrNoProps {
   value: boolean;
 }
 
 const Dw1YesOrNo: React.FC<Dw1YesOrNoProps> = ({ value }): JSX.Element => {
-  const { t } = useTranslation();
+  const { t } = useListingContext();
+
   return (
     <Badge
       value={value ? t('baseComponent.yes') : t('baseComponent.no')}

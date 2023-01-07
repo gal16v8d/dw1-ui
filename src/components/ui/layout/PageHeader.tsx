@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next';
+import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 
 const PageHeader = (): JSX.Element => {
-  const { t } = useTranslation();
+  const { t } = useListingContext();
   return (
     <header className="header">
       <h1 className="title">{t('header.title')}</h1>

@@ -1,25 +1,29 @@
 import Card from 'api/model/mongo/Card';
-import CardService from 'api/service/CardService';
+import ApiError from 'api/model/responses/ApiError';
+import GenericService from 'api/service/GenericService';
 import { useGetAll } from 'api/service/hooks/useGenericService';
 import Dw1BaseForm from 'components/ui/Dw1BaseForm';
 import Dw1Listing from 'components/ui/Dw1Listing';
 import VALUES from 'constants/Dw1Constants';
-import { Messages, MessagesSeverityType } from 'primereact/messages';
+import { Messages } from 'primereact/messages';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { getCardColumns } from './CardColumns';
+import { showMessage } from 'util/ErrorHandler';
+import { cardColumns } from './CardColumns';
 import { getCardForm } from './CardForm';
 
 const CardListing = (): JSX.Element => {
   const { t, message } = useListingContext();
+  const cardService = new GenericService(VALUES.API_OBJECT.CARD.ROUTE);
+
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.CARD.QUERY_KEY,
-    CardService,
+    cardService,
     false,
     {
-      onError: (error: { message: string }) => {
-        showMessage('warn', 'warn', error.message);
+      onError: (error: ApiError) => {
+        showMessage(message, 'warn', 'warn', error?.message);
       },
     }
   );
@@ -39,23 +43,10 @@ const CardListing = (): JSX.Element => {
     [selectedData?.data]
   );
 
-  const showMessage = (
-    summary: string,
-    type: MessagesSeverityType,
-    detail: string
-  ): void => {
-    message.current?.show({
-      life: VALUES.MSG.MSG_LIFE,
-      severity: type,
-      summary: `${summary}: `,
-      detail: detail,
-    });
-  };
-
   return (
     <Dw1Listing
       apiData={data}
-      columns={getCardColumns(t)}
+      columns={cardColumns(t)}
       crudData={{
         selectedData,
         setSelectedData,
@@ -66,7 +57,7 @@ const CardListing = (): JSX.Element => {
           refetch={refetch}
           showMessage={showMessage}
           apiObject={VALUES.API_OBJECT.CARD.NAME}
-          service={CardService}
+          service={cardService}
           useForm={useCardForm}
           formElements={getCardForm(
             t,

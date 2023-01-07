@@ -7,10 +7,10 @@ import {
 } from 'api/service/hooks/useGenericService';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
-import { MessagesSeverityType } from 'primereact/messages';
-import React, { useEffect, useState } from 'react';
+import { Messages, MessagesSeverityType } from 'primereact/messages';
+import { useListingContext } from 'provider/listing/Dw1ListingProvider';
+import React, { RefObject, useEffect, useState } from 'react';
 import { UseFormMethods } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
 import {
   QueryObserverResult,
   RefetchOptions,
@@ -32,9 +32,10 @@ interface Dw1BaseFormProps {
     options?: (RefetchOptions & RefetchQueryFilters<TPageData>) | undefined
   ) => Promise<QueryObserverResult<ApiData[], unknown>>;
   showMessage: (
+    message: RefObject<Messages>,
     summary: string,
     type: MessagesSeverityType,
-    message: string
+    detail: string
   ) => void;
 }
 
@@ -47,7 +48,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   refetch,
   showMessage,
 }): JSX.Element => {
-  const { t } = useTranslation();
+  const { t, message } = useListingContext();
   const [displayDialog, setDisplayDialog] = useState<boolean>(false);
   const currentId = selectedData?.data?._id ?? '';
   const postApi = useSave(apiObject, service);
@@ -57,7 +58,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   const goBackToList = async (detail: string, severity: 'success' | 'warn') => {
     setDisplayDialog(false);
     await refetch();
-    showMessage(severity, severity, detail);
+    showMessage(message, severity, severity, detail);
   };
 
   const performDelete = async () => {
@@ -65,7 +66,12 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
       .mutateAsync({
         id: currentId,
       })
-      .then(() => goBackToList('Delete was successful', 'success'))
+      .then(() =>
+        goBackToList(
+          `${apiObject} with id: ${currentId} was removed!`,
+          'success'
+        )
+      )
       .catch((e) => goBackToList(e?.message ?? '', 'warn'));
   };
 
@@ -82,7 +88,9 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
       .mutateAsync({
         data: rowData,
       })
-      .then((msg) => goBackToList(msg.message, 'success'))
+      .then(() =>
+        goBackToList(`${apiObject} was stored successfully!`, 'success')
+      )
       .catch((e) => goBackToList(e?.message ?? '', 'warn'));
   };
 
@@ -92,7 +100,9 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
         id: currentId,
         data: rowData,
       })
-      .then((msg) => goBackToList(msg.message, 'success'))
+      .then((msg) =>
+        goBackToList(`${apiObject} was updated successfully!`, 'success')
+      )
       .catch((e) => goBackToList(e?.message ?? '', 'warn'));
   };
 
@@ -115,11 +125,13 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   const dialogOptions = (
     <div className="field is-grouped">
       <div className="control">
-        <Button label={t('baseComponent.form.save')} />
+        <Button
+          label={t('baseComponent.form.save') ?? 'baseComponent.form.save'}
+        />
       </div>
       <div className="control">
         <Button
-          label={t('baseComponent.form.cancel')}
+          label={t('baseComponent.form.cancel') ?? 'baseComponent.form.cancel'}
           className="p-button-warning"
           onClick={onCancel}
           type="button"

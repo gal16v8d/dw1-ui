@@ -1,8 +1,7 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 
 const Home = (): JSX.Element => {
-  const { t } = useTranslation();
+  const { t } = useListingContext();
   return (
     <>
       <div style={{ background: 'white' }}>{t('home.text')}</div>

@@ -1,35 +1,16 @@
+import GenericService from 'api/service/GenericService';
 import { useGetAll } from 'api/service/hooks/useGenericService';
-import MenuService from 'api/service/MenuService';
 import Dw1Listing from 'components/ui/Dw1Listing';
 import VALUES from 'constants/Dw1Constants';
-import { useTranslation } from 'react-i18next';
+import { useListingContext } from 'provider/listing/Dw1ListingProvider';
+import { menuColumns } from './MenuColumns';
 
 const MenuListing = (): JSX.Element => {
-  const { t } = useTranslation();
-  const { data } = useGetAll(VALUES.API_OBJECT.MENU.QUERY_KEY, MenuService);
+  const { t } = useListingContext();
+  const menuService = new GenericService(VALUES.API_OBJECT.MENU.ROUTE);
+  const { data } = useGetAll(VALUES.API_OBJECT.MENU.QUERY_KEY, menuService);
 
-  const columns = [
-    {
-      columnKey: 'name',
-      field: 'name',
-      header: t('menuListing.l_name'),
-      sortable: true,
-    },
-    {
-      columnKey: 'type',
-      field: 'type',
-      header: t('menuListing.l_type'),
-      sortable: true,
-    },
-    {
-      columnKey: 'description',
-      field: 'description',
-      header: t('menuListing.l_description'),
-      sortable: true,
-    },
-  ];
-
-  return <Dw1Listing apiData={data} columns={columns} />;
+  return <Dw1Listing apiData={data} columns={menuColumns(t)} />;
 };
 
 export default MenuListing;

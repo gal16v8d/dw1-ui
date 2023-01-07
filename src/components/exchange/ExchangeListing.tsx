@@ -1,23 +1,27 @@
 import Exchange from 'api/model/mongo/Exchange';
-import ExchangeService from 'api/service/ExchangeService';
+import GenericService from 'api/service/GenericService';
 import { useGetAll } from 'api/service/hooks/useGenericService';
 import Dw1BaseForm from 'components/ui/Dw1BaseForm';
 import Dw1Listing from 'components/ui/Dw1Listing';
 import VALUES from 'constants/Dw1Constants';
-import { Messages, MessagesSeverityType } from 'primereact/messages';
+import { Messages } from 'primereact/messages';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { showMessage } from 'util/ErrorHandler';
+import { exchangeColumns } from './ExchangeColumns';
 
 const ExchangeListing = (): JSX.Element => {
   const { t, message } = useListingContext();
+  const exchangeService = new GenericService(VALUES.API_OBJECT.EXCHANGE.ROUTE);
+
   const { data, refetch } = useGetAll(
     VALUES.API_OBJECT.EXCHANGE.QUERY_KEY,
-    ExchangeService,
+    exchangeService,
     false,
     {
       onError: (error: { message: string }) => {
-        showMessage('warn', 'warn', error.message);
+        showMessage(message, 'warn', 'warn', error.message);
       },
     }
   );
@@ -28,40 +32,6 @@ const ExchangeListing = (): JSX.Element => {
     deleting: boolean;
   }>({ creating: false, updating: false, deleting: false });
   const useExchangeForm = useForm<Exchange>();
-
-  const columns = [
-    {
-      columnKey: 'who',
-      field: 'who',
-      header: t('exchangeListing.l_who'),
-      sortable: true,
-    },
-    {
-      columnKey: 'base',
-      field: 'base',
-      header: t('exchangeListing.l_base'),
-      sortable: true,
-    },
-    {
-      columnKey: 'result',
-      field: 'result',
-      header: t('exchangeListing.l_result'),
-      sortable: true,
-    },
-  ];
-
-  const showMessage = (
-    summary: string,
-    type: MessagesSeverityType,
-    detail: string
-  ): void => {
-    message.current?.show({
-      life: VALUES.MSG.MSG_LIFE,
-      severity: type,
-      summary: `${summary}: `,
-      detail: detail,
-    });
-  };
 
   const formElements = () => {
     return (
@@ -123,7 +93,7 @@ const ExchangeListing = (): JSX.Element => {
   return (
     <Dw1Listing
       apiData={data}
-      columns={columns}
+      columns={exchangeColumns(t)}
       crudData={{
         selectedData,
         setSelectedData,
@@ -134,7 +104,7 @@ const ExchangeListing = (): JSX.Element => {
           refetch={refetch}
           showMessage={showMessage}
           apiObject={VALUES.API_OBJECT.EXCHANGE.NAME}
-          service={ExchangeService}
+          service={exchangeService}
           useForm={useExchangeForm}
           formElements={formElements()}
         />

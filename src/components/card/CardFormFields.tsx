@@ -1,10 +1,10 @@
 import Card from 'api/model/mongo/Card';
 import { TFunction } from 'i18next';
-import { UseFormMethods } from 'react-hook-form';
+import { UseFormReturn } from 'react-hook-form';
 
-export const getCardForm = (
+export const cardFormFields = (
   t: TFunction<'translation', undefined>,
-  useElementForm: UseFormMethods<Card>,
+  useForm: UseFormReturn<Card>,
   selectedData: {
     data?: Card;
     creating: boolean;
@@ -14,20 +14,22 @@ export const getCardForm = (
   exchangeable: boolean,
   setExchangeable: React.Dispatch<React.SetStateAction<boolean>>
 ): JSX.Element => {
+  console.log('card form fields', selectedData);
+  // FIXME for some reason form is not taking selectedData updates
   return (
     <>
       <div className="field">
         <label htmlFor="name">{`${t('cardListing.l_name')}*`}</label>
         <div className="control">
           <input
+            {...useForm.register('name', { required: true })}
             className="input"
             type="text"
             name="name"
             placeholder={`${t('cardListing.l_name')}*`}
             defaultValue={selectedData?.data?.name}
-            ref={useElementForm.register({ required: true })}
           />
-          {useElementForm.errors.name && (
+          {useForm.formState.errors.name && (
             <small className="p-error">{t('form.error.required')}</small>
           )}
         </div>
@@ -36,17 +38,17 @@ export const getCardForm = (
         <label htmlFor="number">{`${t('cardListing.l_number')}*`}</label>
         <div className="control">
           <input
+            {...useForm.register('number', {
+              required: true,
+              pattern: /^[\s\d]*$/,
+            })}
             className="input"
             type="text"
             name="number"
             placeholder={`${t('cardListing.l_number')}*`}
             defaultValue={selectedData?.data?.number}
-            ref={useElementForm.register({
-              required: true,
-              pattern: /^[\s\d]*$/,
-            })}
           />
-          {useElementForm.errors.number && (
+          {useForm.formState.errors.number && (
             <small className="p-error">{t('form.error.required_number')}</small>
           )}
         </div>
@@ -55,17 +57,17 @@ export const getCardForm = (
         <label htmlFor="point">{t('cardListing.l_point')}</label>
         <div className="control">
           <input
+            {...useForm.register('point', {
+              required: false,
+              pattern: /^[\s\d]*$/,
+            })}
             className="input"
             type="text"
             name="point"
             placeholder={t('cardListing.l_point') ?? 'cardListing.l_point'}
             defaultValue={selectedData?.data?.point}
-            ref={useElementForm.register({
-              required: false,
-              pattern: /^[\s\d]*$/,
-            })}
           />
-          {useElementForm.errors.point && (
+          {useForm.formState.errors.point && (
             <small className="p-error">{t('form.error.required_number')}</small>
           )}
         </div>
@@ -74,17 +76,17 @@ export const getCardForm = (
         <label htmlFor="price">{t('cardListing.l_price')}</label>
         <div className="control">
           <input
+            {...useForm.register('price', {
+              required: false,
+              pattern: /^[\s\d]*$/,
+            })}
             className="input"
             type="text"
             name="price"
             placeholder={t('cardListing.l_price') ?? 'cardListing.l_price'}
             defaultValue={selectedData?.data?.price}
-            ref={useElementForm.register({
-              required: false,
-              pattern: /^[\s\d]*$/,
-            })}
           />
-          {useElementForm.errors.price && (
+          {useForm.formState.errors.price && (
             <small className="p-error">{t('form.error.required_number')}</small>
           )}
         </div>
@@ -93,11 +95,11 @@ export const getCardForm = (
             {t('cardListing.l_exchangeable')}
           </label>
           <input
+            {...useForm.register('exchangeable', { required: false })}
             type="checkbox"
             name="exchangeable"
             defaultChecked={exchangeable}
             onChange={(e) => setExchangeable(e.target.checked)}
-            ref={useElementForm.register({ required: false })}
           />
         </div>
       </div>

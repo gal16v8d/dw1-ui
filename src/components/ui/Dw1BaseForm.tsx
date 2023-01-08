@@ -10,7 +10,7 @@ import { Dialog } from 'primereact/dialog';
 import { Messages, MessagesSeverityType } from 'primereact/messages';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import React, { RefObject, useEffect, useState } from 'react';
-import { UseFormMethods } from 'react-hook-form';
+import { UseFormReturn } from 'react-hook-form';
 import {
   QueryObserverResult,
   RefetchOptions,
@@ -26,7 +26,7 @@ interface Dw1BaseFormProps {
   };
   apiObject: string;
   service: GenericService;
-  useForm: UseFormMethods<any>;
+  useForm: UseFormReturn<any>;
   formElements: JSX.Element;
   refetch: <TPageData>(
     options?: (RefetchOptions & RefetchQueryFilters<TPageData>) | undefined
@@ -100,7 +100,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
         id: currentId,
         data: rowData,
       })
-      .then((msg) =>
+      .then(() =>
         goBackToList(`${apiObject} was updated successfully!`, 'success')
       )
       .catch((e) => goBackToList(e?.message ?? '', 'warn'));

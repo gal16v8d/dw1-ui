@@ -1,12 +1,12 @@
-import Element from 'api/model/mongo/Element';
+import Location from 'api/model/mongo/Location';
 import { TFunction } from 'i18next';
-import { UseFormMethods } from 'react-hook-form';
+import { UseFormReturn } from 'react-hook-form';
 
-export const elementForm = (
+export const locationFormFields = (
   t: TFunction<'translation', undefined>,
-  useElementForm: UseFormMethods<Element>,
+  useForm: UseFormReturn<Location>,
   selectedData: {
-    data?: Element;
+    data?: Location;
     creating: boolean;
     updating: boolean;
     deleting: boolean;
@@ -15,17 +15,17 @@ export const elementForm = (
   return (
     <>
       <div className="field">
-        <label htmlFor="name">{`${t('elementListing.l_name')}*`}</label>
+        <label htmlFor="name">{`${t('locationListing.l_name')}*`}</label>
         <div className="control">
           <input
+            {...useForm.register('name', { required: true })}
             className="input"
             type="text"
             name="name"
-            placeholder={`${t('elementListing.l_name')}*`}
+            placeholder={`${t('locationListing.l_name')}*`}
             defaultValue={selectedData?.data?.name ?? ''}
-            ref={useElementForm.register({ required: true })}
           />
-          {useElementForm.errors.name && (
+          {useForm.formState.errors.name && (
             <small className="p-error">{t('form.error.required')}</small>
           )}
         </div>

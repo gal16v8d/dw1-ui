@@ -25,13 +25,11 @@ const buildMenuOptions = (
     icon: string;
     command: () => void;
   }[];
-}[] => {
-  return [
-    {
-      label: 'Wiki Info',
-      items: mapApiToMenu(t, navigate),
-    },
-  ];
-};
+}[] => [
+  {
+    label: 'Wiki Info',
+    items: mapApiToMenu(t, navigate),
+  },
+];
 
 export { buildMenuOptions };

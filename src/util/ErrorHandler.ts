@@ -7,13 +7,12 @@ const showMessage = (
   summary: string,
   type: MessagesSeverityType,
   detail: string
-): void => {
+): void =>
   message.current?.show({
     life: VALUES.MSG.MSG_LIFE,
     severity: type,
     summary: `${summary}: `,
     detail: detail,
   });
-};
 
 export { showMessage };

@@ -77,11 +77,10 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
     showMessage(message, severity, severity, detail);
   };
 
-  const performDelete = async () => {
+  const performDelete = async (): Promise<void> =>
     await deleteApi.mutateAsync({
       id: currentId,
     });
-  };
 
   useEffect(() => {
     if (selectedData.deleting) {
@@ -91,11 +90,10 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
     }
   }, [selectedData]);
 
-  const performCreate = async (rowData: unknown) => {
+  const performCreate = async (rowData: unknown): Promise<void> =>
     await postApi.mutateAsync({
       data: rowData,
     });
-  };
 
   const performUpdate = async (rowData: unknown) => {
     await putApi.mutateAsync({
@@ -112,13 +110,9 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
     }
   };
 
-  const onSubmit = async (data: unknown) => {
-    await store(data);
-  };
+  const onSubmit = async (data: unknown): Promise<void> => await store(data);
 
-  const onCancel = () => {
-    setDisplayDialog(false);
-  };
+  const onCancel = (): void => setDisplayDialog(false);
 
   const dialogOptions = (
     <div className="field is-grouped">

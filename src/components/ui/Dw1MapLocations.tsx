@@ -14,8 +14,8 @@ interface Dw1MapLocationsProps {
 const Dw1MapLocations: React.FC<Dw1MapLocationsProps> = ({
   locations,
   additionalClassName,
-}): JSX.Element | null => {
-  return !isEmpty(locations ?? []) ? (
+}): JSX.Element | null =>
+  !isEmpty(locations ?? []) ? (
     <DataScroller
       value={locations}
       itemTemplate={(location: Location) => (
@@ -28,6 +28,5 @@ const Dw1MapLocations: React.FC<Dw1MapLocationsProps> = ({
       buffer={0.5}
     />
   ) : null;
-};
 
 export default Dw1MapLocations;

@@ -29,18 +29,16 @@ const Dw1Listing: React.FC<ListingProps> = ({
   editorComponent,
 }) => {
   const { t, message } = useListingContext();
-  const mapImage = (rowData: ApiData) => {
-    return (
-      <div className="container" style={{ display: 'flex' }}>
-        <Image
-          src={`assets/img/${imageColumn}/${rowData._id}.png`}
-          alt={`${imageColumn} img`}
-          width="50"
-          height="50"
-        />
-      </div>
-    );
-  };
+  const mapImage = (rowData: ApiData): JSX.Element => (
+    <div className="container" style={{ display: 'flex' }}>
+      <Image
+        src={`assets/img/${imageColumn}/${rowData._id}.png`}
+        alt={`${imageColumn} img`}
+        width="50"
+        height="50"
+      />
+    </div>
+  );
 
   const appendImageColumn = (columnsToEdit: ColumnProps[]) => {
     const elementExists = columns.find((col) => col.columnKey === 'image');
@@ -101,46 +99,42 @@ const Dw1Listing: React.FC<ListingProps> = ({
       });
   };
 
-  const leftToolbarTemplate = () => {
-    return (
-      <>
-        {VALUES.PERMISSIONS.ENABLE_CRUD && crudData && (
-          <React.Fragment>
-            <Button
-              icon="pi pi-plus"
-              label={
-                t('baseComponent.listing.new') ?? 'baseComponent.listing.new'
-              }
-              onClick={addData}
-              style={{ float: 'left' }}
-            />
-          </React.Fragment>
-        )}
-      </>
-    );
-  };
+  const leftToolbarTemplate = (): JSX.Element => (
+    <>
+      {VALUES.PERMISSIONS.ENABLE_CRUD && crudData && (
+        <React.Fragment>
+          <Button
+            icon="pi pi-plus"
+            label={
+              t('baseComponent.listing.new') ?? 'baseComponent.listing.new'
+            }
+            onClick={addData}
+            style={{ float: 'left' }}
+          />
+        </React.Fragment>
+      )}
+    </>
+  );
 
-  const actionTemplate = (rowData: ApiData) => {
-    return (
-      <div>
-        <Button
-          icon="pi pi-pencil"
-          onClick={() => editData(rowData)}
-          tooltip={
-            t('baseComponent.listing.update') ?? 'baseComponent.listing.update'
-          }
-        />
-        <Button
-          className="p-button-warning"
-          icon="pi pi-trash"
-          onClick={() => deleteData(rowData)}
-          tooltip={
-            t('baseComponent.listing.delete') ?? 'baseComponent.listing.delete'
-          }
-        />
-      </div>
-    );
-  };
+  const actionTemplate = (rowData: ApiData): JSX.Element => (
+    <div>
+      <Button
+        icon="pi pi-pencil"
+        onClick={() => editData(rowData)}
+        tooltip={
+          t('baseComponent.listing.update') ?? 'baseComponent.listing.update'
+        }
+      />
+      <Button
+        className="p-button-warning"
+        icon="pi pi-trash"
+        onClick={() => deleteData(rowData)}
+        tooltip={
+          t('baseComponent.listing.delete') ?? 'baseComponent.listing.delete'
+        }
+      />
+    </div>
+  );
 
   return (
     <div className="container is-fluid">

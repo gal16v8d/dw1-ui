@@ -82,7 +82,6 @@ const Dw1Listing: React.FC<ListingProps> = ({
   };
 
   const editData = (rowData: ApiData) => {
-    console.log('editData', rowData);
     crudData &&
       crudData.setSelectedData({
         data: rowData,

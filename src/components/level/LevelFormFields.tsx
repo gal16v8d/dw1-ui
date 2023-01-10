@@ -18,7 +18,10 @@ export const levelFormFields = (
         <label htmlFor="name">{`${t('levelListing.l_name')}*`}</label>
         <div className="control">
           <input
-            {...useForm.register('name', { required: true })}
+            {...useForm.register('name', {
+              required: true,
+              shouldUnregister: true,
+            })}
             className="input"
             type="text"
             name="name"

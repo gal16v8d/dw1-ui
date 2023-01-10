@@ -18,7 +18,10 @@ export const exchangeFormFields = (
         <label htmlFor="who">{`${t('exchangeListing.l_who')}*`}</label>
         <div className="control">
           <input
-            {...useForm.register('who', { required: true })}
+            {...useForm.register('who', {
+              required: true,
+              shouldUnregister: true,
+            })}
             className="input"
             type="text"
             name="who"
@@ -34,7 +37,10 @@ export const exchangeFormFields = (
         <label htmlFor="base">{`${t('exchangeListing.l_base')}*`}</label>
         <div className="control">
           <input
-            {...useForm.register('base', { required: true })}
+            {...useForm.register('base', {
+              required: true,
+              shouldUnregister: true,
+            })}
             className="input"
             type="text"
             name="base"
@@ -52,6 +58,7 @@ export const exchangeFormFields = (
           <input
             {...useForm.register('result', {
               required: true,
+              shouldUnregister: true,
             })}
             className="input"
             type="text"

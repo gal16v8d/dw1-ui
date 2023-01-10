@@ -14,15 +14,16 @@ export const cardFormFields = (
   exchangeable: boolean,
   setExchangeable: React.Dispatch<React.SetStateAction<boolean>>
 ): JSX.Element => {
-  console.log('card form fields', selectedData);
-  // FIXME for some reason form is not taking selectedData updates
   return (
     <>
       <div className="field">
         <label htmlFor="name">{`${t('cardListing.l_name')}*`}</label>
         <div className="control">
           <input
-            {...useForm.register('name', { required: true })}
+            {...useForm.register('name', {
+              required: true,
+              shouldUnregister: true,
+            })}
             className="input"
             type="text"
             name="name"
@@ -41,6 +42,7 @@ export const cardFormFields = (
             {...useForm.register('number', {
               required: true,
               pattern: /^[\s\d]*$/,
+              shouldUnregister: true,
             })}
             className="input"
             type="text"
@@ -60,6 +62,7 @@ export const cardFormFields = (
             {...useForm.register('point', {
               required: false,
               pattern: /^[\s\d]*$/,
+              shouldUnregister: true,
             })}
             className="input"
             type="text"
@@ -79,6 +82,7 @@ export const cardFormFields = (
             {...useForm.register('price', {
               required: false,
               pattern: /^[\s\d]*$/,
+              shouldUnregister: true,
             })}
             className="input"
             type="text"
@@ -95,7 +99,10 @@ export const cardFormFields = (
             {t('cardListing.l_exchangeable')}
           </label>
           <input
-            {...useForm.register('exchangeable', { required: false })}
+            {...useForm.register('exchangeable', {
+              required: false,
+              shouldUnregister: true,
+            })}
             type="checkbox"
             name="exchangeable"
             defaultChecked={exchangeable}

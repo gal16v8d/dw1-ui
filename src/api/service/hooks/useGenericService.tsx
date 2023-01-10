@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import ApiData from 'api/model/mongo/types/ApiData.types';
 import ApiError from 'api/model/responses/ApiError';
 import GenericService from 'api/service/GenericService';
@@ -20,8 +19,8 @@ const useGetAll = (
     cacheTime?: number;
     refetchOnMount?: boolean;
   }
-): UseQueryResult<ApiData[]> => {
-  return useQuery({
+): UseQueryResult<ApiData[]> =>
+  useQuery({
     queryKey: queryKey,
     queryFn: async () => {
       return await service.getAll(expanded);
@@ -38,11 +37,14 @@ const useGetAll = (
     refetchOnMount:
       payload?.refetchOnMount === undefined || payload.refetchOnMount,
   });
-};
 
 const useSave = (
   apiObject: string,
-  service: GenericService
+  service: GenericService,
+  payload?: {
+    onSuccess?: () => void;
+    onError?: (error: ApiError) => void;
+  }
 ): UseMutationResult<
   void,
   ApiError,
@@ -50,16 +52,23 @@ const useSave = (
     data: unknown;
   },
   unknown
-> => {
-  return useMutation(({ data }: { data: unknown }) => service.save(data), {
-    onError: (err: ApiError) =>
-      console.log(`Could not create the ${apiObject}`, err?.message),
+> =>
+  useMutation({
+    mutationFn: ({ data }: { data: unknown }) => service.save(data),
+    onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
+    onError: (err: ApiError) => {
+      console.log(`Could not create the ${apiObject}`, err?.message);
+      return payload?.onError && payload?.onError(err);
+    },
   });
-};
 
 const useUpdate = (
   apiObject: string,
-  service: GenericService
+  service: GenericService,
+  payload?: {
+    onSuccess?: () => void;
+    onError?: (error: ApiError) => void;
+  }
 ): UseMutationResult<
   unknown,
   ApiError,
@@ -68,19 +77,24 @@ const useUpdate = (
     data: unknown;
   },
   unknown
-> => {
-  return useMutation(
-    ({ id, data }: { id: string; data: unknown }) => service.update(id, data),
-    {
-      onError: (err: ApiError) =>
-        console.log(`Could not update the ${apiObject}`, err?.message),
-    }
-  );
-};
+> =>
+  useMutation({
+    mutationFn: ({ id, data }: { id: string; data: unknown }) =>
+      service.update(id, data),
+    onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
+    onError: (err: ApiError) => {
+      console.log(`Could not update the ${apiObject}`, err?.message);
+      return payload?.onError && payload?.onError(err);
+    },
+  });
 
 const useDelete = (
   apiObject: string,
-  service: GenericService
+  service: GenericService,
+  payload?: {
+    onSuccess?: () => void;
+    onError?: (error: ApiError) => void;
+  }
 ): UseMutationResult<
   void,
   ApiError,
@@ -88,11 +102,14 @@ const useDelete = (
     id: string;
   },
   unknown
-> => {
-  return useMutation(({ id }: { id: string }) => service.delete(id), {
-    onError: (err: ApiError) =>
-      console.log(`Could not delete the ${apiObject}`, err?.message),
+> =>
+  useMutation({
+    mutationFn: ({ id }: { id: string }) => service.delete(id),
+    onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
+    onError: (err: ApiError) => {
+      console.log(`Could not delete the ${apiObject}`, err?.message);
+      return payload?.onError && payload?.onError(err);
+    },
   });
-};
 
 export { useGetAll, useSave, useUpdate, useDelete };

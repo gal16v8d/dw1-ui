@@ -1,4 +1,5 @@
 import ApiData from 'api/model/mongo/types/ApiData.types';
+import ApiError from 'api/model/responses/ApiError';
 import GenericService from 'api/service/GenericService';
 import {
   useDelete,
@@ -51,9 +52,24 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   const { t, message } = useListingContext();
   const [displayDialog, setDisplayDialog] = useState<boolean>(false);
   const currentId = selectedData?.data?._id ?? '';
-  const postApi = useSave(apiObject, service);
-  const putApi = useUpdate(apiObject, service);
-  const deleteApi = useDelete(apiObject, service);
+  const postApi = useSave(apiObject, service, {
+    onSuccess: () =>
+      goBackToList(`${apiObject} was stored successfully!`, 'success'),
+    onError: (err: ApiError) => goBackToList(err?.message ?? '', 'warn'),
+  });
+  const putApi = useUpdate(apiObject, service, {
+    onSuccess: () =>
+      goBackToList(`${apiObject} was updated successfully!`, 'success'),
+    onError: (err: ApiError) => goBackToList(err?.message ?? '', 'warn'),
+  });
+  const deleteApi = useDelete(apiObject, service, {
+    onSuccess: () =>
+      goBackToList(
+        `${apiObject} with id: ${currentId} was removed!`,
+        'success'
+      ),
+    onError: (err: ApiError) => goBackToList(err?.message ?? '', 'warn'),
+  });
 
   const goBackToList = async (detail: string, severity: 'success' | 'warn') => {
     setDisplayDialog(false);
@@ -62,17 +78,9 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   };
 
   const performDelete = async () => {
-    await deleteApi
-      .mutateAsync({
-        id: currentId,
-      })
-      .then(() =>
-        goBackToList(
-          `${apiObject} with id: ${currentId} was removed!`,
-          'success'
-        )
-      )
-      .catch((e) => goBackToList(e?.message ?? '', 'warn'));
+    await deleteApi.mutateAsync({
+      id: currentId,
+    });
   };
 
   useEffect(() => {
@@ -84,26 +92,16 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   }, [selectedData]);
 
   const performCreate = async (rowData: unknown) => {
-    await postApi
-      .mutateAsync({
-        data: rowData,
-      })
-      .then(() =>
-        goBackToList(`${apiObject} was stored successfully!`, 'success')
-      )
-      .catch((e) => goBackToList(e?.message ?? '', 'warn'));
+    await postApi.mutateAsync({
+      data: rowData,
+    });
   };
 
   const performUpdate = async (rowData: unknown) => {
-    await putApi
-      .mutateAsync({
-        id: currentId,
-        data: rowData,
-      })
-      .then(() =>
-        goBackToList(`${apiObject} was updated successfully!`, 'success')
-      )
-      .catch((e) => goBackToList(e?.message ?? '', 'warn'));
+    await putApi.mutateAsync({
+      id: currentId,
+      data: rowData,
+    });
   };
 
   const store = async (data: unknown) => {

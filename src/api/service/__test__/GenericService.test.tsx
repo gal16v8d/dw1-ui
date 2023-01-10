@@ -12,6 +12,8 @@ describe('http service test', () => {
 
   it('fetch error', async () => {
     errorHandlerGetCall(VALUES.API_OBJECT.CARD.ROUTE);
-    await expect(service.getAll()).rejects.toThrowError('DW1-Api is down');
+    await expect(service.getAll()).rejects.toThrowError(
+      'Request failed with status code 500'
+    );
   });
 });

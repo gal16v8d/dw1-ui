@@ -8,6 +8,7 @@ import { Toolbar } from 'primereact/toolbar';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import React from 'react';
 import Dw1Spinner from './Dw1Spinner';
+import { Messages } from 'primereact/messages';
 
 interface ListingProps {
   apiData?: ApiData[];
@@ -18,7 +19,6 @@ interface ListingProps {
     setSelectedData: React.Dispatch<React.SetStateAction<any>>;
   };
   editorComponent?: JSX.Element;
-  messageComponent?: JSX.Element;
 }
 
 const Dw1Listing: React.FC<ListingProps> = ({
@@ -27,9 +27,8 @@ const Dw1Listing: React.FC<ListingProps> = ({
   imageColumn,
   crudData,
   editorComponent,
-  messageComponent,
 }) => {
-  const { t } = useListingContext();
+  const { t, message } = useListingContext();
   const mapImage = (rowData: ApiData) => {
     return (
       <div className="container" style={{ display: 'flex' }}>
@@ -146,7 +145,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
   return (
     <div className="container is-fluid">
       <br />
-      {messageComponent}
+      {<Messages ref={message} />}
       <div className="content-section implementation">
         {!apiData ? (
           <Dw1Spinner />

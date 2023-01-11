@@ -1,9 +1,13 @@
+import { API_BASE_CONFIG } from 'config/ApiBaseConfig';
 import VALUES from 'constants/Dw1Constants';
-import GenericService from '../GenericService';
 import { errorHandlerGetCall } from 'mocks/errors/errorHandler';
+import GenericService from '../GenericService';
 
 describe('http service test', () => {
-  const service = new GenericService(VALUES.API_OBJECT.CARD.ROUTE);
+  const cardConfig = API_BASE_CONFIG.find(
+    (v) => v.name === VALUES.API_OBJECT.CARD
+  );
+  const service = new GenericService(cardConfig?.route ?? '');
 
   it('fetch success', async () => {
     const result = await service.getAll();
@@ -11,7 +15,7 @@ describe('http service test', () => {
   });
 
   it('fetch error', async () => {
-    errorHandlerGetCall(VALUES.API_OBJECT.CARD.ROUTE);
+    errorHandlerGetCall(cardConfig?.route ?? '');
     await expect(service.getAll()).rejects.toThrowError(
       'Request failed with status code 500'
     );

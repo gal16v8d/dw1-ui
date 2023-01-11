@@ -1,16 +1,16 @@
-import VALUES from 'constants/Dw1Constants';
-import { NavigateFunction } from 'react-router-dom';
+import { API_BASE_CONFIG } from 'config/ApiBaseConfig';
 import { TFunction } from 'i18next';
+import { NavigateFunction } from 'react-router-dom';
 
 const mapApiToMenu = (
   t: TFunction<'translation', undefined>,
   navigate: NavigateFunction
 ) =>
-  Object.values(VALUES.API_OBJECT).map((data) => {
+  API_BASE_CONFIG.map((data) => {
     return {
-      label: t(`menu.${data.NAME}`),
+      label: t(`menu.${data.name}`),
       icon: 'pi pi-arrow-right',
-      command: () => navigate(data.ROUTE),
+      command: () => navigate(data.route),
     };
   });
 

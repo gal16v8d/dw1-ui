@@ -1,17 +1,15 @@
 import Location from 'api/model/mongo/Location';
+import CrudData from 'api/model/requests/CrudData';
 import { TFunction } from 'i18next';
 import { UseFormReturn } from 'react-hook-form';
 
 export const locationFormFields = (
   t: TFunction<'translation', undefined>,
   useForm: UseFormReturn<Location>,
-  selectedData: {
-    data?: Location;
-    creating: boolean;
-    updating: boolean;
-    deleting: boolean;
-  }
+  selectedData: CrudData
 ) => {
+  const data = selectedData?.data as Location;
+
   return (
     <>
       <div className="field">
@@ -26,7 +24,7 @@ export const locationFormFields = (
             type="text"
             name="name"
             placeholder={`${t('locationListing.l_name')}*`}
-            defaultValue={selectedData?.data?.name ?? ''}
+            defaultValue={data?.name ?? ''}
           />
           {useForm.formState.errors.name && (
             <small className="p-error">{t('form.error.required')}</small>

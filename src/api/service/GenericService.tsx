@@ -1,4 +1,3 @@
-import ApiData from 'api/model/mongo/types/ApiData.types';
 import axios from 'axios';
 import VALUES from 'constants/Dw1Constants';
 
@@ -7,7 +6,7 @@ class GenericService {
     this.baseUri = `${VALUES.API.BASE_URL}${baseUri}`;
   }
 
-  public getAll = async (expanded?: boolean): Promise<ApiData[]> => {
+  public getAll = async (expanded?: boolean): Promise<unknown[]> => {
     const response = await axios.get(
       `${this.baseUri}?expanded=${expanded ?? false}`
     );
@@ -19,7 +18,7 @@ class GenericService {
     return response?.data;
   };
 
-  public update = async (id: string, data: unknown): Promise<ApiData> => {
+  public update = async (id: string, data: unknown): Promise<unknown> => {
     const response = await axios.put(`${this.baseUri}/${id}`, data);
     return response?.data;
   };

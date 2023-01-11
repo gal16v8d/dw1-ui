@@ -1,17 +1,15 @@
 import Level from 'api/model/mongo/Level';
+import CrudData from 'api/model/requests/CrudData';
 import { TFunction } from 'i18next';
 import { UseFormReturn } from 'react-hook-form';
 
 export const levelFormFields = (
   t: TFunction<'translation', undefined>,
   useForm: UseFormReturn<Level>,
-  selectedData: {
-    data?: Level;
-    creating: boolean;
-    updating: boolean;
-    deleting: boolean;
-  }
+  selectedData: CrudData
 ) => {
+  const data = selectedData?.data as Level;
+
   return (
     <>
       <div className="field">
@@ -26,7 +24,7 @@ export const levelFormFields = (
             type="text"
             name="name"
             placeholder={`${t('levelListing.l_name')}*`}
-            defaultValue={selectedData?.data?.name ?? ''}
+            defaultValue={data?.name ?? ''}
           />
           {useForm.formState.errors.name && (
             <small className="p-error">{t('form.error.required')}</small>

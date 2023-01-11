@@ -1,22 +1,23 @@
-import ApiData from 'api/model/mongo/types/ApiData.types';
+import PkData from 'api/model/mongo/PkData';
+import CrudData from 'api/model/requests/CrudData';
 import VALUES from 'constants/Dw1Constants';
 import { Button } from 'primereact/button';
 import { Column, ColumnProps } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
 import { Image } from 'primereact/image';
+import { Messages } from 'primereact/messages';
 import { Toolbar } from 'primereact/toolbar';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import React from 'react';
 import Dw1Spinner from './Dw1Spinner';
-import { Messages } from 'primereact/messages';
 
 interface ListingProps {
-  apiData?: ApiData[];
+  apiData?: unknown[];
   columns: ColumnProps[];
   imageColumn?: string;
   crudData?: {
-    selectedData: any;
-    setSelectedData: React.Dispatch<React.SetStateAction<any>>;
+    selectedData: CrudData;
+    setSelectedData: React.Dispatch<React.SetStateAction<CrudData>>;
   };
   editorComponent?: JSX.Element;
 }
@@ -29,10 +30,10 @@ const Dw1Listing: React.FC<ListingProps> = ({
   editorComponent,
 }) => {
   const { t, message } = useListingContext();
-  const mapImage = (rowData: ApiData): JSX.Element => (
+  const mapImage = (rowData: unknown): JSX.Element => (
     <div className="container" style={{ display: 'flex' }}>
       <Image
-        src={`assets/img/${imageColumn}/${rowData._id}.png`}
+        src={`assets/img/${imageColumn}/${(rowData as PkData)._id}.png`}
         alt={`${imageColumn} img`}
         width="50"
         height="50"
@@ -79,7 +80,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
       });
   };
 
-  const editData = (rowData: ApiData) => {
+  const editData = (rowData: unknown) => {
     crudData &&
       crudData.setSelectedData({
         data: rowData,
@@ -89,7 +90,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
       });
   };
 
-  const deleteData = (rowData: ApiData) => {
+  const deleteData = (rowData: unknown) => {
     crudData &&
       crudData.setSelectedData({
         data: rowData,
@@ -99,9 +100,12 @@ const Dw1Listing: React.FC<ListingProps> = ({
       });
   };
 
+  const crudEnabled = (): boolean =>
+    VALUES.PERMISSIONS.ENABLE_CRUD && !!editorComponent;
+
   const leftToolbarTemplate = (): JSX.Element => (
     <>
-      {VALUES.PERMISSIONS.ENABLE_CRUD && crudData && (
+      {crudEnabled() && (
         <React.Fragment>
           <Button
             icon="pi pi-plus"
@@ -116,7 +120,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
     </>
   );
 
-  const actionTemplate = (rowData: ApiData): JSX.Element => (
+  const actionTemplate = (rowData: unknown): JSX.Element => (
     <div>
       <Button
         icon="pi pi-pencil"
@@ -154,7 +158,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
               loading={!apiData}
             >
               {mapToTableColumns()}
-              {VALUES.PERMISSIONS.ENABLE_CRUD && crudData && (
+              {crudEnabled() && (
                 <Column
                   body={actionTemplate}
                   style={{ textAlign: 'center', width: '8em' }}

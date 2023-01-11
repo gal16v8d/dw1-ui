@@ -1,17 +1,15 @@
 import Exchange from 'api/model/mongo/Exchange';
+import CrudData from 'api/model/requests/CrudData';
 import { TFunction } from 'i18next';
 import { UseFormReturn } from 'react-hook-form';
 
 export const exchangeFormFields = (
   t: TFunction<'translation', undefined>,
   useForm: UseFormReturn<Exchange>,
-  selectedData: {
-    data?: Exchange;
-    creating: boolean;
-    updating: boolean;
-    deleting: boolean;
-  }
+  selectedData: CrudData
 ) => {
+  const data = selectedData?.data as Exchange;
+
   return (
     <>
       <div className="field">
@@ -26,7 +24,7 @@ export const exchangeFormFields = (
             type="text"
             name="who"
             placeholder={`${t('exchangeListing.l_who')}*`}
-            defaultValue={selectedData?.data?.who}
+            defaultValue={data?.who}
           />
           {useForm.formState.errors.who && (
             <small className="p-error">{t('form.error.required')}</small>
@@ -45,7 +43,7 @@ export const exchangeFormFields = (
             type="text"
             name="base"
             placeholder={`${t('exchangeListing.l_base')}*`}
-            defaultValue={selectedData?.data?.base}
+            defaultValue={data?.base}
           />
           {useForm.formState.errors.base && (
             <small className="p-error">{t('form.error.required')}</small>
@@ -64,7 +62,7 @@ export const exchangeFormFields = (
             type="text"
             name="result"
             placeholder={`${t('exchangeListing.l_result')}*`}
-            defaultValue={selectedData?.data?.result}
+            defaultValue={data?.result}
           />
           {useForm.formState.errors.result && (
             <small className="p-error">{t('form.error.required')}</small>

@@ -1,4 +1,3 @@
-import ApiData from 'api/model/mongo/types/ApiData.types';
 import ApiError from 'api/model/responses/ApiError';
 import GenericService from 'api/service/GenericService';
 import {
@@ -13,13 +12,13 @@ const useGetAll = (
   service: GenericService,
   expanded?: boolean,
   payload?: {
-    onSuccess?: (response: ApiData[]) => void;
+    onSuccess?: (response: unknown[]) => void;
     onError?: (error: ApiError) => void;
     enabled?: boolean;
     cacheTime?: number;
     refetchOnMount?: boolean;
   }
-): UseQueryResult<ApiData[]> =>
+): UseQueryResult<unknown[], ApiError> =>
   useQuery({
     queryKey: queryKey,
     queryFn: async () => {
@@ -27,7 +26,7 @@ const useGetAll = (
     },
     cacheTime: payload?.cacheTime ?? undefined,
     enabled: payload?.enabled === undefined || payload?.enabled,
-    onSuccess: (response: ApiData[]) => {
+    onSuccess: (response: unknown[]) => {
       payload?.onSuccess && payload.onSuccess(response);
     },
     onError: (error: ApiError) => {

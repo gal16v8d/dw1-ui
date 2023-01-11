@@ -1,4 +1,5 @@
-import ApiData from 'api/model/mongo/types/ApiData.types';
+import PkData from 'api/model/mongo/PkData';
+import CrudData from 'api/model/requests/CrudData';
 import ApiError from 'api/model/responses/ApiError';
 import GenericService from 'api/service/GenericService';
 import {
@@ -11,7 +12,7 @@ import { Dialog } from 'primereact/dialog';
 import { Messages, MessagesSeverityType } from 'primereact/messages';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import React, { RefObject, useEffect, useState } from 'react';
-import { UseFormReturn } from 'react-hook-form';
+import { UseFormHandleSubmit } from 'react-hook-form';
 import {
   QueryObserverResult,
   RefetchOptions,
@@ -19,19 +20,14 @@ import {
 } from 'react-query';
 
 interface Dw1BaseFormProps {
-  selectedData: {
-    data?: any;
-    creating: boolean;
-    updating: boolean;
-    deleting: boolean;
-  };
+  selectedData: CrudData;
   apiObject: string;
   service: GenericService;
-  useForm: UseFormReturn<any>;
+  handleSubmit: UseFormHandleSubmit<object>;
   formElements: JSX.Element;
   refetch: <TPageData>(
     options?: (RefetchOptions & RefetchQueryFilters<TPageData>) | undefined
-  ) => Promise<QueryObserverResult<ApiData[], unknown>>;
+  ) => Promise<QueryObserverResult<unknown[], unknown>>;
   showMessage: (
     message: RefObject<Messages>,
     summary: string,
@@ -44,14 +40,20 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   selectedData,
   apiObject,
   service,
-  useForm,
+  handleSubmit,
   formElements,
   refetch,
   showMessage,
 }): JSX.Element => {
   const { t, message } = useListingContext();
   const [displayDialog, setDisplayDialog] = useState<boolean>(false);
-  const currentId = selectedData?.data?._id ?? '';
+  const currentId = (selectedData?.data as PkData)?._id ?? '';
+  const goBackToList = async (detail: string, severity: 'success' | 'warn') => {
+    setDisplayDialog(false);
+    await refetch();
+    showMessage(message, severity, severity, detail);
+  };
+
   const postApi = useSave(apiObject, service, {
     onSuccess: () =>
       goBackToList(`${apiObject} was stored successfully!`, 'success'),
@@ -70,12 +72,6 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
       ),
     onError: (err: ApiError) => goBackToList(err?.message ?? '', 'warn'),
   });
-
-  const goBackToList = async (detail: string, severity: 'success' | 'warn') => {
-    setDisplayDialog(false);
-    await refetch();
-    showMessage(message, severity, severity, detail);
-  };
 
   const performDelete = async (): Promise<void> =>
     await deleteApi.mutateAsync({
@@ -143,7 +139,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
         onHide={() => setDisplayDialog(false)}
       >
         <div className="p-grid p-fluid">
-          <form onSubmit={useForm.handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             {formElements}
             {dialogOptions}
           </form>

@@ -1,19 +1,15 @@
 import Card from 'api/model/mongo/Card';
+import CrudData from 'api/model/requests/CrudData';
 import { TFunction } from 'i18next';
 import { UseFormReturn } from 'react-hook-form';
 
 export const cardFormFields = (
   t: TFunction<'translation', undefined>,
   useForm: UseFormReturn<Card>,
-  selectedData: {
-    data?: Card;
-    creating: boolean;
-    updating: boolean;
-    deleting: boolean;
-  },
-  exchangeable: boolean,
-  setExchangeable: React.Dispatch<React.SetStateAction<boolean>>
+  selectedData: CrudData
 ): JSX.Element => {
+  const data = selectedData?.data as Card;
+
   return (
     <>
       <div className="field">
@@ -28,7 +24,7 @@ export const cardFormFields = (
             type="text"
             name="name"
             placeholder={`${t('cardListing.l_name')}*`}
-            defaultValue={selectedData?.data?.name}
+            defaultValue={data?.name}
           />
           {useForm.formState.errors.name && (
             <small className="p-error">{t('form.error.required')}</small>
@@ -48,7 +44,7 @@ export const cardFormFields = (
             type="text"
             name="number"
             placeholder={`${t('cardListing.l_number')}*`}
-            defaultValue={selectedData?.data?.number}
+            defaultValue={data?.number}
           />
           {useForm.formState.errors.number && (
             <small className="p-error">{t('form.error.required_number')}</small>
@@ -68,7 +64,7 @@ export const cardFormFields = (
             type="text"
             name="point"
             placeholder={t('cardListing.l_point') ?? 'cardListing.l_point'}
-            defaultValue={selectedData?.data?.point}
+            defaultValue={data?.point}
           />
           {useForm.formState.errors.point && (
             <small className="p-error">{t('form.error.required_number')}</small>
@@ -88,7 +84,7 @@ export const cardFormFields = (
             type="text"
             name="price"
             placeholder={t('cardListing.l_price') ?? 'cardListing.l_price'}
-            defaultValue={selectedData?.data?.price}
+            defaultValue={data?.price}
           />
           {useForm.formState.errors.price && (
             <small className="p-error">{t('form.error.required_number')}</small>
@@ -105,8 +101,7 @@ export const cardFormFields = (
             })}
             type="checkbox"
             name="exchangeable"
-            defaultChecked={exchangeable}
-            onChange={(e) => setExchangeable(e.target.checked)}
+            defaultChecked={data?.exchangeable ?? false}
           />
         </div>
       </div>

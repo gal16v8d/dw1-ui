@@ -118,6 +118,11 @@
     "l_locations": "Ubicaciones",
     "l_note": "Nota"
   },
+  "restaurantFoodListing": {
+    "l_name": "Nombre",
+    "l_price": "Precio",
+    "l_effects": "Efectos"
+  },
   "statusListing": {
     "l_description": "Descripción",
     "l_name": "Nombre"

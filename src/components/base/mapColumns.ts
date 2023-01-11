@@ -12,6 +12,7 @@ import { medalColumns } from 'components/medal/MedalColumns';
 import { menuColumns } from 'components/menu/MenuColumns';
 import { meritPointColumns } from 'components/meritPoint/MeritPointColumns';
 import { recruitColumns } from 'components/recruit/RecruitColumns';
+import { restaurantFoodColumns } from 'components/restaurantFood/RestaurantFoodColumns';
 import { statusColumns } from 'components/status/StatusColumns';
 import { techColumns } from 'components/tech/TechColumns';
 import VALUES from 'constants/Dw1Constants';
@@ -48,6 +49,8 @@ export const mapColumns = (
       return meritPointColumns(t);
     case VALUES.API_OBJECT.RECRUIT:
       return recruitColumns(t);
+    case VALUES.API_OBJECT.RESTAURANT_FOOD:
+      return restaurantFoodColumns(t);
     case VALUES.API_OBJECT.STATUS:
       return statusColumns(t);
     case VALUES.API_OBJECT.TECH:

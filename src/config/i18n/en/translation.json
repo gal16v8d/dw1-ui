@@ -118,6 +118,11 @@
     "l_locations": "Locations",
     "l_note": "Note"
   },
+  "restaurantFoodListing": {
+    "l_name": "Name",
+    "l_price": "Price",
+    "l_effects": "Effects"
+  },
   "statusListing": {
     "l_description": "Description",
     "l_name": "Name"

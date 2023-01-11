@@ -3,7 +3,7 @@ import Dw1YesOrNo from 'components/ui/Dw1YesOrNo';
 import { TFunction } from 'i18next';
 import { ColumnProps } from 'primereact/column';
 
-const mapExchangeable = (rowData: Card) => (
+const mapExchangeable = (rowData: Card): JSX.Element => (
   <Dw1YesOrNo value={rowData?.exchangeable} />
 );
 

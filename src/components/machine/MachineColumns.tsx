@@ -5,8 +5,8 @@ import isEmpty from 'lodash/isEmpty';
 import { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
-const mapProducts = (rowData: Machine) => {
-  return !isEmpty(rowData?.product ?? []) ? (
+const mapProducts = (rowData: Machine): JSX.Element | null =>
+  !isEmpty(rowData?.product ?? []) ? (
     <DataScroller
       value={rowData.product}
       itemTemplate={(product: { name: string; price: number }) => (
@@ -21,11 +21,10 @@ const mapProducts = (rowData: Machine) => {
       buffer={0.5}
     />
   ) : null;
-};
 
-const mapRandom = (rowData: Machine) => {
-  return <Dw1YesOrNo value={rowData?.random} />;
-};
+const mapRandom = (rowData: Machine): JSX.Element => (
+  <Dw1YesOrNo value={rowData?.random} />
+);
 
 export const machineColumns = (
   t: TFunction<'translation', undefined>

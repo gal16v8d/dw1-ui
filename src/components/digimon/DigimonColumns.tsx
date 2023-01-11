@@ -8,8 +8,8 @@ import { Chip } from 'primereact/chip';
 import { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
-const mapTechs = (rowData: Digimon) => {
-  return !isEmpty(rowData?.tech ?? []) ? (
+const mapTechs = (rowData: Digimon): JSX.Element | null =>
+  !isEmpty(rowData?.tech ?? []) ? (
     <DataScroller
       value={rowData.tech}
       itemTemplate={(tech: Tech) => (
@@ -19,33 +19,28 @@ const mapTechs = (rowData: Digimon) => {
       buffer={0.5}
     />
   ) : null;
-};
 
-const mapRecruitable = (rowData: Digimon) => {
-  return <Dw1YesOrNo value={!!rowData?.recruitable} />;
-};
+const mapRecruitable = (rowData: Digimon): JSX.Element => (
+  <Dw1YesOrNo value={!!rowData?.recruitable} />
+);
 
-const mapRaisable = (rowData: Digimon) => {
-  return <Dw1YesOrNo value={!!rowData?.raisable} />;
-};
+const mapRaisable = (rowData: Digimon): JSX.Element => (
+  <Dw1YesOrNo value={!!rowData?.raisable} />
+);
 
-const mapLocationHappy = (rowData: Digimon) => {
-  return (
-    <Dw1MapLocations
-      locations={rowData?.locationHappy}
-      additionalClassName={'good-chip'}
-    />
-  );
-};
+const mapLocationHappy = (rowData: Digimon): JSX.Element => (
+  <Dw1MapLocations
+    locations={rowData?.locationHappy}
+    additionalClassName={'good-chip'}
+  />
+);
 
-const mapLocationSad = (rowData: Digimon) => {
-  return (
-    <Dw1MapLocations
-      locations={rowData?.locationSad}
-      additionalClassName={'bad-chip'}
-    />
-  );
-};
+const mapLocationSad = (rowData: Digimon): JSX.Element => (
+  <Dw1MapLocations
+    locations={rowData?.locationSad}
+    additionalClassName={'bad-chip'}
+  />
+);
 
 export const digimonColumns = (
   t: TFunction<'translation', undefined>

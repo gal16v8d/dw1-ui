@@ -6,17 +6,15 @@ import { Chip } from 'primereact/chip';
 import { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
-const mapLocations = (rowData: Item) => {
-  return (
-    <Dw1MapLocations
-      locations={rowData?.location}
-      additionalClassName={'good-chip'}
-    />
-  );
-};
+const mapLocations = (rowData: Item): JSX.Element => (
+  <Dw1MapLocations
+    locations={rowData?.location}
+    additionalClassName={'good-chip'}
+  />
+);
 
-const mapEffects = (rowData: Item) => {
-  return !isEmpty(rowData?.effect ?? []) ? (
+const mapEffects = (rowData: Item): JSX.Element | null =>
+  !isEmpty(rowData?.effect ?? []) ? (
     <DataScroller
       value={rowData.effect}
       itemTemplate={(effect: string) => (
@@ -31,7 +29,6 @@ const mapEffects = (rowData: Item) => {
       buffer={0.5}
     />
   ) : null;
-};
 
 export const itemColumns = (
   t: TFunction<'translation', undefined>

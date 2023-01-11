@@ -3,14 +3,12 @@ import Dw1MapLocations from 'components/ui/Dw1MapLocations';
 import { TFunction } from 'i18next';
 import { ColumnProps } from 'primereact/column';
 
-const mapLocations = (rowData: Recruit) => {
-  return (
-    <Dw1MapLocations
-      locations={rowData?.location}
-      additionalClassName={'good-chip'}
-    />
-  );
-};
+const mapLocations = (rowData: Recruit): JSX.Element => (
+  <Dw1MapLocations
+    locations={rowData?.location}
+    additionalClassName={'good-chip'}
+  />
+);
 
 export const recruitColumns = (
   t: TFunction<'translation', undefined>

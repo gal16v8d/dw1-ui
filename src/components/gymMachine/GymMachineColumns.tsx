@@ -3,15 +3,14 @@ import { TFunction } from 'i18next';
 import { ColumnProps } from 'primereact/column';
 import { Image } from 'primereact/image';
 
-const mapTrainProps = (rowData: GymMachine) => {
-  return rowData.train.map((value) => (
+const mapTrainProps = (rowData: GymMachine): JSX.Element[] =>
+  rowData.train.map((value) => (
     <Image
       key={`${rowData._id}-train-${value}`}
       src={`assets/img/parameters/${value}.png`}
       alt={value}
     />
   ));
-};
 
 export const gymMachineColumns = (
   t: TFunction<'translation', undefined>

@@ -1,8 +1,8 @@
 import Dw1App from 'components/Dw1App';
 import { Dw1ListingProvider } from 'provider/listing/Dw1ListingProvider';
 import React from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import './App.css';
 
 const App: React.FC = () => {

@@ -5,7 +5,7 @@ import {
   UseMutationResult,
   useQuery,
   UseQueryResult,
-} from 'react-query';
+} from '@tanstack/react-query';
 
 const useGetAll = (
   queryKey: string,
@@ -20,7 +20,7 @@ const useGetAll = (
   }
 ): UseQueryResult<unknown[], ApiError> =>
   useQuery({
-    queryKey: queryKey,
+    queryKey: [queryKey],
     queryFn: async () => {
       return await service.getAll(expanded);
     },

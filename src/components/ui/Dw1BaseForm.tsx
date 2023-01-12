@@ -17,7 +17,7 @@ import {
   QueryObserverResult,
   RefetchOptions,
   RefetchQueryFilters,
-} from 'react-query';
+} from '@tanstack/react-query';
 
 interface Dw1BaseFormProps {
   selectedData: CrudData;

@@ -40,6 +40,8 @@
     "menu": "Menú",
     "meritPoint": "Puntos de Merito",
     "recruit": "Reclutar",
+    "restaurant": "Restaurante",
+    "restaurantFood": "Comida Restaurante",
     "status": "Estatus",
     "tech": "Técnica"
   },
@@ -117,6 +119,10 @@
     "l_job": "Trabajo",
     "l_locations": "Ubicaciones",
     "l_note": "Nota"
+  },
+  "restaurantListing": {
+    "l_digimon": "Digimon",
+    "l_food": "Comida"
   },
   "restaurantFoodListing": {
     "l_name": "Nombre",

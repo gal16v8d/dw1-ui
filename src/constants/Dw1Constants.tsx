@@ -18,6 +18,7 @@ const VALUES = {
     MENU: 'menu',
     MERIT_POINT: 'meritPoint',
     RECRUIT: 'recruit',
+    RESTAURANT: 'restaurant',
     RESTAURANT_FOOD: 'restaurantFood',
     STATUS: 'status',
     TECH: 'tech',

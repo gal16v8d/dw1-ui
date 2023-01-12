@@ -97,6 +97,13 @@ export const API_BASE_CONFIG: ApiConfig[] = [
     route: `/${VALUES.API_OBJECT.RECRUIT}s`,
   },
   {
+    name: VALUES.API_OBJECT.RESTAURANT,
+    expanded: true,
+    imageCol: false,
+    queryKey: `${VALUES.API_OBJECT.RESTAURANT}s`,
+    route: `/${VALUES.API_OBJECT.RESTAURANT}s`,
+  },
+  {
     name: VALUES.API_OBJECT.RESTAURANT_FOOD,
     expanded: false,
     imageCol: false,

@@ -8,15 +8,18 @@ type LocationClassName = 'good-chip' | 'bad-chip';
 
 interface Dw1MapLocationsProps {
   locations?: Location[];
+  identifier: string;
   additionalClassName: LocationClassName;
 }
 
 const Dw1MapLocations: React.FC<Dw1MapLocationsProps> = ({
   locations,
+  identifier,
   additionalClassName,
 }): JSX.Element | null =>
   !isEmpty(locations ?? []) ? (
     <DataScroller
+      data-testid={`ds-${identifier}`}
       value={locations}
       itemTemplate={(location: Location) => (
         <Chip

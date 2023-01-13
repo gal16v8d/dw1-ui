@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Badge component and match snapshot 1`] = `
+<body>
+  <div>
+    <span
+      class="p-badge p-component p-badge-success p-mr-2"
+    >
+      yes
+    </span>
+  </div>
+</body>
+`;

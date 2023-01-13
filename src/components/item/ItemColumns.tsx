@@ -9,6 +9,7 @@ import { DataScroller } from 'primereact/datascroller';
 const mapLocations = (rowData: Item): JSX.Element => (
   <Dw1MapLocations
     locations={rowData?.location}
+    identifier={'item-location'}
     additionalClassName={'good-chip'}
   />
 );

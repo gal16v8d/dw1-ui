@@ -31,6 +31,7 @@ const mapRaisable = (rowData: Digimon): JSX.Element => (
 const mapLocationHappy = (rowData: Digimon): JSX.Element => (
   <Dw1MapLocations
     locations={rowData?.locationHappy}
+    identifier={'digimon-happy-location'}
     additionalClassName={'good-chip'}
   />
 );
@@ -38,6 +39,7 @@ const mapLocationHappy = (rowData: Digimon): JSX.Element => (
 const mapLocationSad = (rowData: Digimon): JSX.Element => (
   <Dw1MapLocations
     locations={rowData?.locationSad}
+    identifier={'digimon-sad-location'}
     additionalClassName={'bad-chip'}
   />
 );

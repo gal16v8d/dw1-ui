@@ -6,6 +6,7 @@ import { ColumnProps } from 'primereact/column';
 const mapLocations = (rowData: Recruit): JSX.Element => (
   <Dw1MapLocations
     locations={rowData?.location}
+    identifier={'recruit-location'}
     additionalClassName={'good-chip'}
   />
 );

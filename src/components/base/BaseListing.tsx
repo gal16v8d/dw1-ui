@@ -43,6 +43,7 @@ const BaseListing: React.FC<ListingProps> = ({ apiObject }) => {
     return (
       formData && (
         <Dw1BaseForm
+          data-testid={`dw1-form-${apiObject.name}`}
           selectedData={selectedData}
           refetch={refetch}
           showMessage={showMessage}
@@ -57,6 +58,7 @@ const BaseListing: React.FC<ListingProps> = ({ apiObject }) => {
 
   return (
     <Dw1Listing
+      data-testid={`dw1-listing-${apiObject.name}`}
       apiData={data}
       columns={mapColumns(apiObject, t)}
       imageColumn={apiObject.imageCol ? apiObject.imagePath : undefined}

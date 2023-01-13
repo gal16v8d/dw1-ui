@@ -1,13 +1,13 @@
 import { Button } from 'primereact/button';
 import { Menu } from 'primereact/menu';
 import { Sidebar } from 'primereact/sidebar';
+import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { buildMenuOptions } from './Dw1OptionMenu';
-import { useTranslation } from 'react-i18next';
 
 const Dw1Sidebar = (): JSX.Element => {
-  const { t } = useTranslation();
+  const { t } = useListingContext();
   const navigate = useNavigate();
   const [visibleLeft, setVisibleLeft] = useState<boolean>(false);
 
@@ -18,6 +18,7 @@ const Dw1Sidebar = (): JSX.Element => {
       </Sidebar>
 
       <Button
+        data-testid="dw1-sidebar-btn"
         icon="pi pi-list"
         onClick={() => setVisibleLeft(true)}
         className="p-mr-2"

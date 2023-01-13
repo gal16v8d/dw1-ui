@@ -1,3 +1,8 @@
+import {
+  QueryObserverResult,
+  RefetchOptions,
+  RefetchQueryFilters,
+} from '@tanstack/react-query';
 import PkData from 'api/model/mongo/PkData';
 import CrudData from 'api/model/requests/CrudData';
 import ApiError from 'api/model/responses/ApiError';
@@ -11,16 +16,18 @@ import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { Messages, MessagesSeverityType } from 'primereact/messages';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
-import React, { RefObject, useEffect, useState } from 'react';
-import { UseFormHandleSubmit } from 'react-hook-form';
 import {
-  QueryObserverResult,
-  RefetchOptions,
-  RefetchQueryFilters,
-} from '@tanstack/react-query';
+  Dispatch,
+  RefObject,
+  SetStateAction,
+  useEffect,
+  useState,
+} from 'react';
+import { UseFormHandleSubmit } from 'react-hook-form';
 
 interface Dw1BaseFormProps {
   selectedData: CrudData;
+  setSelectedData: Dispatch<SetStateAction<CrudData>>;
   apiObject: string;
   service: GenericService;
   handleSubmit: UseFormHandleSubmit<object>;
@@ -38,6 +45,7 @@ interface Dw1BaseFormProps {
 
 const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   selectedData,
+  setSelectedData,
   apiObject,
   service,
   handleSubmit,
@@ -108,7 +116,15 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
 
   const onSubmit = async (data: unknown): Promise<void> => await store(data);
 
-  const onCancel = (): void => setDisplayDialog(false);
+  const onCancel = (): void => {
+    setSelectedData({
+      data: undefined,
+      creating: false,
+      updating: false,
+      deleting: false,
+    });
+    setDisplayDialog(false);
+  };
 
   const dialogOptions = (
     <div className="field is-grouped">
@@ -136,7 +152,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
         style={{ width: '70vw' }}
         header={apiObject}
         modal={true}
-        onHide={() => setDisplayDialog(false)}
+        onHide={onCancel}
       >
         <div className="p-grid p-fluid">
           <form onSubmit={handleSubmit(onSubmit)}>

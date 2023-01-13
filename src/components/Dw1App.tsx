@@ -7,7 +7,7 @@ import Dw1Spinner from './ui/Dw1Spinner';
 import PageFooter from './ui/layout/PageFooter';
 import PageHeader from './ui/layout/PageHeader';
 
-const BaseListing = lazy(() => import('./base/BaseListing'));
+const Dw1Listing = lazy(() => import('./ui/Dw1Listing'));
 
 const Dw1App = (): JSX.Element => {
   return (
@@ -23,7 +23,7 @@ const Dw1App = (): JSX.Element => {
                 <Route
                   key={`route-${v.name}`}
                   path={v.route}
-                  element={<BaseListing apiObject={v} />}
+                  element={<Dw1Listing apiObject={v} />}
                 />
               );
             })}

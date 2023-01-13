@@ -1,5 +1,12 @@
+import ApiConfig from 'api/model/config/ApiConfig';
 import PkData from 'api/model/mongo/PkData';
 import CrudData from 'api/model/requests/CrudData';
+import GenericService from 'api/service/GenericService';
+import { useGetAll } from 'api/service/hooks/useGenericService';
+import { mapColumns } from 'components/base/mapColumns';
+import { mapForm } from 'components/base/mapForm';
+import Dw1BaseForm from 'components/ui/Dw1BaseForm';
+import Dw1Spinner from 'components/ui/Dw1Spinner';
 import VALUES from 'constants/Dw1Constants';
 import { Button } from 'primereact/button';
 import { Column, ColumnProps } from 'primereact/column';
@@ -8,28 +15,63 @@ import { Image } from 'primereact/image';
 import { Messages } from 'primereact/messages';
 import { Toolbar } from 'primereact/toolbar';
 import { useListingContext } from 'provider/listing/Dw1ListingProvider';
-import React from 'react';
-import Dw1Spinner from './Dw1Spinner';
+import { FC, Fragment, useMemo, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { showMessage } from 'util/ErrorHandler';
 
 interface ListingProps {
-  apiData?: unknown[];
-  columns: ColumnProps[];
-  imageColumn?: string;
-  crudData?: {
-    selectedData: CrudData;
-    setSelectedData: React.Dispatch<React.SetStateAction<CrudData>>;
-  };
-  editorComponent?: JSX.Element;
+  apiObject: ApiConfig;
 }
 
-const Dw1Listing: React.FC<ListingProps> = ({
-  apiData,
-  columns,
-  imageColumn,
-  crudData,
-  editorComponent,
-}) => {
+const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
   const { t, message } = useListingContext();
+  const service = new GenericService(apiObject.route);
+
+  const { data, refetch } = useGetAll(
+    apiObject.queryKey,
+    service,
+    apiObject.expanded,
+    {
+      onError: (error: { message: string }) => {
+        showMessage(message, 'warn', 'warn', error?.message);
+      },
+    }
+  );
+
+  const [selectedData, setSelectedData] = useState<CrudData>({
+    creating: false,
+    updating: false,
+    deleting: false,
+  });
+
+  const form = useForm<object>();
+
+  const editComponent: JSX.Element | undefined = useMemo(() => {
+    const formData = mapForm(apiObject, t, form, selectedData);
+    return (
+      formData && (
+        <Dw1BaseForm
+          data-testid={`dw1-form-${apiObject.name}`}
+          selectedData={selectedData}
+          setSelectedData={setSelectedData}
+          refetch={refetch}
+          showMessage={showMessage}
+          apiObject={apiObject.name}
+          service={service}
+          handleSubmit={form.handleSubmit}
+          formElements={formData}
+        />
+      )
+    );
+  }, [apiObject, selectedData]);
+
+  const columns: ColumnProps[] = useMemo(
+    () => mapColumns(apiObject, t),
+    [apiObject, t]
+  );
+
+  const imageColumn = apiObject.imageCol ? apiObject.imagePath : undefined;
+
   const mapImage = (rowData: unknown): JSX.Element => (
     <div className="container" style={{ display: 'flex' }}>
       <Image
@@ -71,42 +113,39 @@ const Dw1Listing: React.FC<ListingProps> = ({
   };
 
   const addData = () => {
-    crudData &&
-      crudData.setSelectedData({
-        data: undefined,
-        creating: true,
-        updating: false,
-        deleting: false,
-      });
+    setSelectedData({
+      data: undefined,
+      creating: true,
+      updating: false,
+      deleting: false,
+    });
   };
 
   const editData = (rowData: unknown) => {
-    crudData &&
-      crudData.setSelectedData({
-        data: rowData,
-        creating: false,
-        updating: true,
-        deleting: false,
-      });
+    setSelectedData({
+      data: rowData,
+      creating: false,
+      updating: true,
+      deleting: false,
+    });
   };
 
   const deleteData = (rowData: unknown) => {
-    crudData &&
-      crudData.setSelectedData({
-        data: rowData,
-        creating: false,
-        updating: false,
-        deleting: true,
-      });
+    setSelectedData({
+      data: rowData,
+      creating: false,
+      updating: false,
+      deleting: true,
+    });
   };
 
   const crudEnabled = (): boolean =>
-    VALUES.PERMISSIONS.ENABLE_CRUD && !!editorComponent;
+    VALUES.PERMISSIONS.ENABLE_CRUD && !!editComponent;
 
   const leftToolbarTemplate = (): JSX.Element => (
     <>
       {crudEnabled() && (
-        <React.Fragment>
+        <Fragment>
           <Button
             icon="pi pi-plus"
             label={
@@ -115,7 +154,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
             onClick={addData}
             style={{ float: 'left' }}
           />
-        </React.Fragment>
+        </Fragment>
       )}
     </>
   );
@@ -145,17 +184,17 @@ const Dw1Listing: React.FC<ListingProps> = ({
       <br />
       {<Messages ref={message} />}
       <div className="content-section implementation">
-        {!apiData ? (
+        {!data ? (
           <Dw1Spinner />
         ) : (
           <>
             <Toolbar className="p-mb-4" left={leftToolbarTemplate}></Toolbar>
             <DataTable
-              value={apiData}
+              value={data}
               paginator={true}
               rows={VALUES.TABLE.ROWS}
               rowsPerPageOptions={VALUES.TABLE.ROW_OPTIONS}
-              loading={!apiData}
+              loading={!data}
             >
               {mapToTableColumns()}
               {crudEnabled() && (
@@ -166,7 +205,7 @@ const Dw1Listing: React.FC<ListingProps> = ({
                 />
               )}
             </DataTable>
-            {VALUES.PERMISSIONS.ENABLE_CRUD && editorComponent}
+            {VALUES.PERMISSIONS.ENABLE_CRUD && editComponent}
           </>
         )}
       </div>

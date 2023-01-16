@@ -18,15 +18,13 @@ const Dw1App = (): JSX.Element => {
           <Dw1Sidebar />
           <Routes>
             <Route path={'/'} element={<Home />} />
-            {API_BASE_CONFIG.map((v) => {
-              return (
-                <Route
-                  key={`route-${v.name}`}
-                  path={v.route}
-                  element={<Dw1Listing apiObject={v} />}
-                />
-              );
-            })}
+            {API_BASE_CONFIG.map((v) => (
+              <Route
+                key={`route-${v.name}`}
+                path={v.route}
+                element={<Dw1Listing apiObject={v} />}
+              />
+            ))}
           </Routes>
         </BrowserRouter>
       </Suspense>

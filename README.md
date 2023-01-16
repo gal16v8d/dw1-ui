@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# DW1-UI [powered by React App]
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Basically, its a really basic UI wiki view for all the data related to Digimon World 1 (1999) PS1 game.
+I am still feeding the database, so it may get some data updates soon.
+This project uses [React](https://reactjs.org/), [React-Query](https://tanstack.com/query/v4), [PrimeReact](https://www.primefaces.org/primereact/), [Bulma](https://bulma.io/) and [React-i18next](https://react.i18next.com/)
+among other cool technologies.
+This UI consumes a service that currently is available at [Railway](https://railway.app/) and then stores the data in cache, I am not keeping live the backend due some costs after starter plan is fully consumed, so feel free to
+ping if you see its not working.
 
 ## Available Scripts
 
@@ -42,5 +48,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Stay in touch
+
+- Author - [gal16v8d](https://github.com/gal16v8d)
+
+## License
+
+Nest is [MIT licensed](LICENSE).

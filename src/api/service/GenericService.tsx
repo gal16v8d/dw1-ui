@@ -1,9 +1,8 @@
 import axios from 'axios';
-import VALUES from 'constants/Dw1Constants';
 
 class GenericService {
   constructor(private readonly baseUri: string) {
-    this.baseUri = `${VALUES.API.BASE_URL}${baseUri}`;
+    this.baseUri = `/api${baseUri}`;
   }
 
   public getAll = async (expanded?: boolean): Promise<unknown[]> => {

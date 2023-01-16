@@ -35,6 +35,10 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
       onError: (error: { message: string }) => {
         showMessage(message, 'warn', 'warn', error?.message);
       },
+      // Api is not updated so often, so this can be Infinity
+      // to avoid multiple fetch to Db
+      cacheTime: Infinity,
+      staleTime: Infinity,
     }
   );
 
@@ -56,7 +60,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
           setSelectedData={setSelectedData}
           refetch={refetch}
           showMessage={showMessage}
-          apiObject={apiObject.name}
+          apiObject={apiObject}
           service={service}
           handleSubmit={form.handleSubmit}
           formElements={formData}

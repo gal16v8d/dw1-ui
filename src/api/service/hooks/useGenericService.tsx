@@ -16,6 +16,7 @@ const useGetAll = (
     onError?: (error: ApiError) => void;
     enabled?: boolean;
     cacheTime?: number;
+    staleTime?: number;
     refetchOnMount?: boolean;
   }
 ): UseQueryResult<unknown[], ApiError> =>
@@ -25,12 +26,13 @@ const useGetAll = (
       return await service.getAll(expanded);
     },
     cacheTime: payload?.cacheTime ?? undefined,
+    staleTime: payload?.cacheTime ?? undefined,
     enabled: payload?.enabled === undefined || payload?.enabled,
     onSuccess: (response: unknown[]) => {
       payload?.onSuccess && payload.onSuccess(response);
     },
     onError: (error: ApiError) => {
-      console.log(error?.message);
+      console.warn(error?.message);
       payload?.onError && payload.onError(error);
     },
     refetchOnMount:
@@ -56,7 +58,7 @@ const useSave = (
     mutationFn: ({ data }: { data: unknown }) => service.save(data),
     onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
     onError: (err: ApiError) => {
-      console.log(`Could not create the ${apiObject}`, err?.message);
+      console.warn(`Could not create the ${apiObject}`, err?.message);
       return payload?.onError && payload?.onError(err);
     },
   });
@@ -82,7 +84,7 @@ const useUpdate = (
       service.update(id, data),
     onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
     onError: (err: ApiError) => {
-      console.log(`Could not update the ${apiObject}`, err?.message);
+      console.warn(`Could not update the ${apiObject}`, err?.message);
       return payload?.onError && payload?.onError(err);
     },
   });
@@ -106,7 +108,7 @@ const useDelete = (
     mutationFn: ({ id }: { id: string }) => service.delete(id),
     onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
     onError: (err: ApiError) => {
-      console.log(`Could not delete the ${apiObject}`, err?.message);
+      console.warn(`Could not delete the ${apiObject}`, err?.message);
       return payload?.onError && payload?.onError(err);
     },
   });

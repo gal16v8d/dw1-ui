@@ -3,6 +3,7 @@ import {
   RefetchOptions,
   RefetchQueryFilters,
 } from '@tanstack/react-query';
+import ApiConfig from 'api/model/config/ApiConfig';
 import PkData from 'api/model/mongo/PkData';
 import CrudData from 'api/model/requests/CrudData';
 import ApiError from 'api/model/responses/ApiError';
@@ -24,11 +25,12 @@ import {
   useState,
 } from 'react';
 import { UseFormHandleSubmit } from 'react-hook-form';
+import { useQueryClient } from '@tanstack/react-query';
 
 interface Dw1BaseFormProps {
   selectedData: CrudData;
   setSelectedData: Dispatch<SetStateAction<CrudData>>;
-  apiObject: string;
+  apiObject: ApiConfig;
   service: GenericService;
   handleSubmit: UseFormHandleSubmit<object>;
   formElements: JSX.Element;
@@ -54,28 +56,30 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   showMessage,
 }): JSX.Element => {
   const { t, message } = useListingContext();
+  const queryClient = useQueryClient();
   const [displayDialog, setDisplayDialog] = useState<boolean>(false);
   const currentId = (selectedData?.data as PkData)?._id ?? '';
   const goBackToList = async (detail: string, severity: 'success' | 'warn') => {
     setDisplayDialog(false);
+    await queryClient.invalidateQueries({ queryKey: [apiObject.queryKey] });
     await refetch();
     showMessage(message, severity, severity, detail);
   };
 
-  const postApi = useSave(apiObject, service, {
+  const postApi = useSave(apiObject.name, service, {
     onSuccess: () =>
-      goBackToList(`${apiObject} was stored successfully!`, 'success'),
+      goBackToList(`${apiObject.name} was stored successfully!`, 'success'),
     onError: (err: ApiError) => goBackToList(err?.message ?? '', 'warn'),
   });
-  const putApi = useUpdate(apiObject, service, {
+  const putApi = useUpdate(apiObject.name, service, {
     onSuccess: () =>
-      goBackToList(`${apiObject} was updated successfully!`, 'success'),
+      goBackToList(`${apiObject.name} was updated successfully!`, 'success'),
     onError: (err: ApiError) => goBackToList(err?.message ?? '', 'warn'),
   });
-  const deleteApi = useDelete(apiObject, service, {
+  const deleteApi = useDelete(apiObject.name, service, {
     onSuccess: () =>
       goBackToList(
-        `${apiObject} with id: ${currentId} was removed!`,
+        `${apiObject.name} with id: ${currentId} was removed!`,
         'success'
       ),
     onError: (err: ApiError) => goBackToList(err?.message ?? '', 'warn'),
@@ -150,7 +154,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
       <Dialog
         visible={displayDialog}
         style={{ width: '70vw' }}
-        header={apiObject}
+        header={apiObject.name}
         modal={true}
         onHide={onCancel}
       >

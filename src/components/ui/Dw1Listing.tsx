@@ -36,7 +36,8 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
         showMessage(message, 'warn', 'warn', error?.message);
       },
       // Api is not updated so often, so this can be Infinity
-      // to avoid multiple fetch to Db
+      // to avoid multiple fetch to Db, and avoid to consume a lot of
+      // railway backend free tier
       cacheTime: Infinity,
       staleTime: Infinity,
     }

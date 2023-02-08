@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "617e2b75f13ac5c863aae50b",
+    "name": "Meat",
+    "description": "Your Digimon is hungry!  Feed him by going into the item menu and giving him some food item.  Digimon like sirloin best, and it decreases tiredness in your digimon.  One sirloin or meat may not satisfy your Digimon's hunger right away.  your digimon will tell you if he is full after he eats.  If he shows a sign of happiness, such as roaring or making other noise, that means he is full.  If not, then wait a little while, and his hunger bubble should come up again. Feed your digimon until he is full!",
+    "__v": 0
+  },
+  {
+    "_id": "617e2c59f13ac5c863aae50e",
+    "name": "Poop",
+    "description": "Yes, I'm sorry to say that's what it is! Hurry and take your Digimon to the closest toilet, before he has an accident! If you are unable to get your Digimon to a toilet, then he will go where ever you are, and your virus gauge will increase by one.  If the virus gauge gets too high, your Digimon may become the smelliest of the Digimon: Sukamon! If you have gotten to the point where you can buy a portable potty, then carrying a few of those around with you isn't too bad of an idea!",
+    "__v": 0
+  },
+  {
+    "_id": "617e2cfff13ac5c863aae510",
+    "name": "Sleep",
+    "description": "When the Z's appear, your Digimon is ready to be tucked in for the night. Your Digimon can sleep anywhere, and his HP and MP will be totally refilled.  Sleeping is also the only opportunity that you have to save your game progress.",
+    "__v": 0
+  },
+  {
+    "_id": "617e2d79f13ac5c863aae512",
+    "name": "Sweat",
+    "description": "When a tear drop shaped sweat bead appears in the thought balloon, you've overworked your Digimon! This is a bad status for a digimon to have, as it decreases happiness and shortens lifespan. To prevent this status from happening, feed your digimon sirloin which decreases tiredness, and to visit either Punimon or Centarumon from time to time. Both digimon can relieve your digimon of tiredness.",
+    "__v": 0
+  },
+  {
+    "_id": "617e2dc4f13ac5c863aae514",
+    "name": "Band-aid",
+    "description": "If your digimon finishes a battle with a low HP, he may get injured. If this occurs, you can use either medicine or a bandage to heal your digimon. This shouldn't happen often if you pay close attention to the battles you're in and keep plenty of recovery items handy.",
+    "__v": 0
+  },
+  {
+    "_id": "617e2e7bf13ac5c863aae516",
+    "name": "Hypodermic Needle",
+    "description": "Oh no! Your digimon is sick! This can occur if you neglect your digimon, such as not feeding it or not letting it sleep. Bad people! Don't neglect your digimon! Heal him by giving him medicine, or by visiting Centarumon's clinic.",
+    "__v": 0
+  },
+  {
+    "_id": "617e2e9ef13ac5c863aae518",
+    "name": "Growing",
+    "description": "Your digimon is about to digivolve.",
+    "__v": 0
+  },
+  {
+    "_id": "618b2d50cfb2f58b8a54b8e4",
+    "name": "Flower",
+    "description": "Your digimon is mad, so flower status appears, then your digimon will see a butterfly and gain happiness until it changes from mad to happy.",
+    "__v": 0
+  }
+]

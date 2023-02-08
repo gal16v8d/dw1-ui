@@ -1,0 +1,912 @@
+[
+  {
+    "_id": "617e034de10135af46d027c4",
+    "number": 1,
+    "name": "Fire Tower",
+    "power": 155,
+    "mp": 81,
+    "rang": "L",
+    "spec": "Stun",
+    "element": {
+      "_id": "617df0fe7c7d76fa476d7fc0",
+      "name": "Fire"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e055a66592a10e59ecc23",
+    "number": 2,
+    "name": "Prominence Beam",
+    "power": 444,
+    "mp": 183,
+    "rang": "L",
+    "spec": "Flat",
+    "element": {
+      "_id": "617df0fe7c7d76fa476d7fc0",
+      "name": "Fire"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e057866592a10e59ecc25",
+    "number": 3,
+    "name": "Spit Fire",
+    "power": 66,
+    "mp": 30,
+    "rang": "L",
+    "element": {
+      "_id": "617df0fe7c7d76fa476d7fc0",
+      "name": "Fire"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e059c66592a10e59ecc27",
+    "number": 4,
+    "name": "Red Inferno",
+    "power": 210,
+    "mp": 171,
+    "rang": "W",
+    "element": {
+      "_id": "617df0fe7c7d76fa476d7fc0",
+      "name": "Fire"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e05b766592a10e59ecc29",
+    "number": 5,
+    "name": "Magma Bomb",
+    "power": 279,
+    "mp": 132,
+    "rang": "L",
+    "element": {
+      "_id": "617df0fe7c7d76fa476d7fc0",
+      "name": "Fire"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e05df66592a10e59ecc2b",
+    "number": 6,
+    "name": "Heat Laser",
+    "power": 84,
+    "mp": 105,
+    "rang": "W",
+    "spec": "Flat",
+    "element": {
+      "_id": "617df0fe7c7d76fa476d7fc0",
+      "name": "Fire"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e060166592a10e59ecc2d",
+    "number": 7,
+    "name": "Infinity Burn",
+    "power": 488,
+    "mp": 264,
+    "rang": "W",
+    "spec": "Stun",
+    "element": {
+      "_id": "617df0fe7c7d76fa476d7fc0",
+      "name": "Fire"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e062166592a10e59ecc2f",
+    "number": 8,
+    "name": "Meltdown",
+    "power": 400,
+    "mp": 318,
+    "rang": "W",
+    "spec": "Stun",
+    "element": {
+      "_id": "617df0fe7c7d76fa476d7fc0",
+      "name": "Fire"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e064666592a10e59ecc31",
+    "number": 1,
+    "name": "Tremar",
+    "power": 178,
+    "mp": 168,
+    "rang": "W",
+    "element": {
+      "_id": "617dfcabd66f95af1a430a36",
+      "name": "Battle"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e068474ec2ce57e199833",
+    "number": 2,
+    "name": "Muscle Charge",
+    "power": 0,
+    "mp": 66,
+    "rang": "A",
+    "element": {
+      "_id": "617dfcabd66f95af1a430a36",
+      "name": "Battle"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e069974ec2ce57e199835",
+    "number": 3,
+    "name": "War Cry",
+    "power": 0,
+    "mp": 42,
+    "rang": "A",
+    "element": {
+      "_id": "617dfcabd66f95af1a430a36",
+      "name": "Battle"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e06c074ec2ce57e199837",
+    "number": 4,
+    "name": "Sonic Jab",
+    "power": 52,
+    "mp": 18,
+    "rang": "S",
+    "element": {
+      "_id": "617dfcabd66f95af1a430a36",
+      "name": "Battle"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e06e074ec2ce57e199839",
+    "number": 5,
+    "name": "Dynamite Kick",
+    "power": 193,
+    "mp": 99,
+    "rang": "S",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcabd66f95af1a430a36",
+      "name": "Battle"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e070d74ec2ce57e19983b",
+    "number": 6,
+    "name": "Counter",
+    "power": 285,
+    "mp": 165,
+    "rang": "S",
+    "spec": "Conf",
+    "element": {
+      "_id": "617dfcabd66f95af1a430a36",
+      "name": "Battle"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e072774ec2ce57e19983d",
+    "number": 7,
+    "name": "Megaton Punch",
+    "power": 320,
+    "mp": 186,
+    "rang": "S",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcabd66f95af1a430a36",
+      "name": "Battle"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e074d74ec2ce57e19983f",
+    "number": 8,
+    "name": "Buster Dive",
+    "power": 500,
+    "mp": 258,
+    "rang": "L",
+    "spec": "Conf",
+    "element": {
+      "_id": "617dfcabd66f95af1a430a36",
+      "name": "Battle"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e07b974ec2ce57e199841",
+    "number": 1,
+    "name": "Thunder Justice",
+    "power": 586,
+    "mp": 330,
+    "rang": "L",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcbfd66f95af1a430a38",
+      "name": "Air"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e07dc74ec2ce57e199843",
+    "number": 2,
+    "name": "Spinning Shot",
+    "power": 389,
+    "mp": 150,
+    "rang": "L",
+    "element": {
+      "_id": "617dfcbfd66f95af1a430a38",
+      "name": "Air"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e07f874ec2ce57e199845",
+    "number": 3,
+    "name": "Electric Cloud",
+    "power": 120,
+    "mp": 69,
+    "rang": "L",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcbfd66f95af1a430a38",
+      "name": "Air"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e081474ec2ce57e199847",
+    "number": 4,
+    "name": "Megalo Spark",
+    "power": 382,
+    "mp": 174,
+    "rang": "L",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcbfd66f95af1a430a38",
+      "name": "Air"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e083174ec2ce57e199849",
+    "number": 5,
+    "name": "Static Elect",
+    "power": 85,
+    "mp": 45,
+    "rang": "S",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcbfd66f95af1a430a38",
+      "name": "Air"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e085774ec2ce57e19984b",
+    "number": 6,
+    "name": "Wind Cutter",
+    "power": 178,
+    "mp": 93,
+    "rang": "L",
+    "element": {
+      "_id": "617dfcbfd66f95af1a430a38",
+      "name": "Air"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e087e74ec2ce57e19984d",
+    "number": 7,
+    "name": "Confused Storm",
+    "power": 225,
+    "mp": 216,
+    "rang": "W",
+    "spec": "Conf",
+    "element": {
+      "_id": "617dfcbfd66f95af1a430a38",
+      "name": "Air"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e089974ec2ce57e19984f",
+    "number": 8,
+    "name": "Hurricane",
+    "power": 366,
+    "mp": 255,
+    "rang": "W",
+    "spec": "Conf",
+    "element": {
+      "_id": "617dfcbfd66f95af1a430a38",
+      "name": "Air"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e08c374ec2ce57e199851",
+    "number": 1,
+    "name": "Poison Powder",
+    "power": 117,
+    "mp": 171,
+    "rang": "W",
+    "spec": "Pois",
+    "element": {
+      "_id": "617dfcc7d66f95af1a430a3a",
+      "name": "Earth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e091874ec2ce57e199853",
+    "number": 2,
+    "name": "Bug",
+    "power": 500,
+    "mp": 354,
+    "rang": "L",
+    "spec": "Flat",
+    "element": {
+      "_id": "617dfcc7d66f95af1a430a3a",
+      "name": "Earth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e093474ec2ce57e199855",
+    "number": 3,
+    "name": "Mass Morph",
+    "power": 0,
+    "mp": 30,
+    "rang": "A",
+    "element": {
+      "_id": "617dfcc7d66f95af1a430a3a",
+      "name": "Earth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e097174ec2ce57e199857",
+    "number": 4,
+    "name": "Insect Plague",
+    "power": 58,
+    "mp": 96,
+    "rang": "L",
+    "spec": "Pois",
+    "element": {
+      "_id": "617dfcc7d66f95af1a430a3a",
+      "name": "Earth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e09a174ec2ce57e199859",
+    "number": 5,
+    "name": "Charm Perfume",
+    "power": 180,
+    "mp": 210,
+    "rang": "W",
+    "spec": "Conf",
+    "element": {
+      "_id": "617dfcc7d66f95af1a430a3a",
+      "name": "Earth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e09fc74ec2ce57e19985b",
+    "number": 6,
+    "name": "Poison Claw",
+    "power": 62,
+    "mp": 51,
+    "rang": "S",
+    "spec": "Pois",
+    "element": {
+      "_id": "617dfcc7d66f95af1a430a3a",
+      "name": "Earth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0a1d74ec2ce57e19985d",
+    "number": 7,
+    "name": "Danger Sting",
+    "power": 157,
+    "mp": 102,
+    "rang": "S",
+    "spec": "Flat",
+    "element": {
+      "_id": "617dfcc7d66f95af1a430a3a",
+      "name": "Earth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0a4974ec2ce57e19985f",
+    "number": 8,
+    "name": "Green Trap",
+    "power": 310,
+    "mp": 147,
+    "rang": "L",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcc7d66f95af1a430a3a",
+      "name": "Earth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0ad974ec2ce57e199861",
+    "number": 1,
+    "name": "Giga Freeze",
+    "power": 264,
+    "mp": 120,
+    "rang": "L",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcd0d66f95af1a430a3c",
+      "name": "Ice"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0af474ec2ce57e199863",
+    "number": 2,
+    "name": "Ice Statue",
+    "power": 424,
+    "mp": 186,
+    "rang": "L",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcd0d66f95af1a430a3c",
+      "name": "Ice"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0b0f74ec2ce57e199865",
+    "number": 3,
+    "name": "Winter Blast",
+    "power": 120,
+    "mp": 165,
+    "rang": "W",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcd0d66f95af1a430a3c",
+      "name": "Ice"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0b3274ec2ce57e199867",
+    "number": 4,
+    "name": "Ice Needle",
+    "power": 126,
+    "mp": 78,
+    "rang": "L",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfcd0d66f95af1a430a3c",
+      "name": "Ice"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0b4e74ec2ce57e199869",
+    "number": 5,
+    "name": "Water Blit",
+    "power": 211,
+    "mp": 102,
+    "rang": "L",
+    "element": {
+      "_id": "617dfcd0d66f95af1a430a3c",
+      "name": "Ice"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0b8674ec2ce57e19986b",
+    "number": 6,
+    "name": "Aqua Magic",
+    "power": 0,
+    "mp": 36,
+    "rang": "A",
+    "element": {
+      "_id": "617dfcd0d66f95af1a430a3c",
+      "name": "Ice"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0bab74ec2ce57e19986d",
+    "number": 7,
+    "name": "Aurora Freeze",
+    "power": 430,
+    "mp": 258,
+    "rang": "W",
+    "spec": "Flat",
+    "element": {
+      "_id": "617dfcd0d66f95af1a430a3c",
+      "name": "Ice"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0bc874ec2ce57e19986f",
+    "number": 8,
+    "name": "Tear Drop",
+    "power": 60,
+    "mp": 42,
+    "rang": "L",
+    "spec": "Flat",
+    "element": {
+      "_id": "617dfcd0d66f95af1a430a3c",
+      "name": "Ice"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0c6374ec2ce57e199871",
+    "number": 1,
+    "name": "Power Crane",
+    "power": 226,
+    "mp": 126,
+    "rang": "L",
+    "element": {
+      "_id": "617dfcd9d66f95af1a430a3e",
+      "name": "Mech"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0c8e74ec2ce57e199873",
+    "number": 2,
+    "name": "All Range Beam",
+    "power": 573,
+    "mp": 330,
+    "rang": "W",
+    "element": {
+      "_id": "617dfcd9d66f95af1a430a3e",
+      "name": "Mech"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0cbd74ec2ce57e199875",
+    "number": 3,
+    "name": "Metal Sprinter",
+    "power": 150,
+    "mp": 165,
+    "rang": "W",
+    "element": {
+      "_id": "617dfcd9d66f95af1a430a3e",
+      "name": "Mech"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0cd674ec2ce57e199877",
+    "number": 4,
+    "name": "Pulse Laser",
+    "power": 389,
+    "mp": 168,
+    "rang": "L",
+    "element": {
+      "_id": "617dfcd9d66f95af1a430a3e",
+      "name": "Mech"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0cf574ec2ce57e199879",
+    "number": 5,
+    "name": "Delete Program",
+    "power": 430,
+    "mp": 219,
+    "rang": "L",
+    "spec": "Flat",
+    "element": {
+      "_id": "617dfcd9d66f95af1a430a3e",
+      "name": "Mech"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0d1a74ec2ce57e19987b",
+    "number": 6,
+    "name": "DG Dimension",
+    "power": 722,
+    "mp": 420,
+    "rang": "W",
+    "element": {
+      "_id": "617dfcd9d66f95af1a430a3e",
+      "name": "Mech"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0d3374ec2ce57e19987d",
+    "number": 7,
+    "name": "Full Potential",
+    "power": 0,
+    "mp": 99,
+    "rang": "A",
+    "element": {
+      "_id": "617dfcd9d66f95af1a430a3e",
+      "name": "Mech"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0d5674ec2ce57e19987f",
+    "number": 8,
+    "name": "Reverse Prog",
+    "power": 256,
+    "mp": 297,
+    "rang": "L",
+    "spec": "Flat",
+    "element": {
+      "_id": "617dfcd9d66f95af1a430a3e",
+      "name": "Mech"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0db674ec2ce57e199881",
+    "number": 1,
+    "name": "Odor Spray",
+    "power": 88,
+    "mp": 75,
+    "rang": "L",
+    "spec": "Stun",
+    "element": {
+      "_id": "617dfce1d66f95af1a430a40",
+      "name": "Filth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0dd474ec2ce57e199883",
+    "number": 2,
+    "name": "Poop Spd Toss",
+    "power": 122,
+    "mp": 96,
+    "rang": "L",
+    "spec": "Pois",
+    "element": {
+      "_id": "617dfce1d66f95af1a430a40",
+      "name": "Filth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0df474ec2ce57e199885",
+    "number": 3,
+    "name": "Big Poop Toss",
+    "power": 211,
+    "mp": 192,
+    "rang": "L",
+    "spec": "Conf",
+    "element": {
+      "_id": "617dfce1d66f95af1a430a40",
+      "name": "Filth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0e0e74ec2ce57e199887",
+    "number": 4,
+    "name": "Big Rnd Toss",
+    "power": 211,
+    "mp": 282,
+    "rang": "W",
+    "spec": "Conf",
+    "element": {
+      "_id": "617dfce1d66f95af1a430a40",
+      "name": "Filth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0e2c74ec2ce57e199889",
+    "number": 5,
+    "name": "Poop Rnd Toss",
+    "power": 75,
+    "mp": 120,
+    "rang": "W",
+    "spec": "Pois",
+    "element": {
+      "_id": "617dfce1d66f95af1a430a40",
+      "name": "Filth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0e4a74ec2ce57e19988b",
+    "number": 6,
+    "name": "Rnd Spd Toss",
+    "power": 122,
+    "mp": 216,
+    "rang": "W",
+    "spec": "Pois",
+    "element": {
+      "_id": "617dfce1d66f95af1a430a40",
+      "name": "Filth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0e7274ec2ce57e19988d",
+    "number": 7,
+    "name": "Horizontal Kick",
+    "power": 53,
+    "mp": 24,
+    "rang": "S",
+    "element": {
+      "_id": "617dfce1d66f95af1a430a40",
+      "name": "Filth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "617e0ea174ec2ce57e19988f",
+    "number": 8,
+    "name": "Ult Poop Hell",
+    "power": 333,
+    "mp": 333,
+    "rang": "W",
+    "spec": "Flat",
+    "element": {
+      "_id": "617dfce1d66f95af1a430a40",
+      "name": "Filth"
+    },
+    "__v": 0,
+    "final": false
+  },
+  {
+    "_id": "61885c3a001996234cd5c8f3",
+    "name": "Bubble",
+    "power": 11,
+    "mp": 0,
+    "rang": "L",
+    "final": false,
+    "__v": 0
+  },
+  {
+    "_id": "61885c72001996234cd5c8fa",
+    "name": "Pepper Breath",
+    "power": 89,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  },
+  {
+    "_id": "61885c99001996234cd5c8fc",
+    "name": "Super Thunder St",
+    "power": 100,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  },
+  {
+    "_id": "61885cf9001996234cd5c8fe",
+    "name": "Boom Bubble",
+    "power": 85,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  },
+  {
+    "_id": "61885d1d001996234cd5c900",
+    "name": "Electric Shock",
+    "power": 92,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  },
+  {
+    "_id": "61885d7f001996234cd5c906",
+    "name": "Variable Darts",
+    "power": 153,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  },
+  {
+    "_id": "61885d98001996234cd5c908",
+    "name": "Hand Of Fate",
+    "power": 166,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  },
+  {
+    "_id": "61885db1001996234cd5c90a",
+    "name": "Death Claw",
+    "power": 180,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  },
+  {
+    "_id": "61885df9001996234cd5c90f",
+    "name": "Energy Bomb",
+    "power": 214,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  },
+  {
+    "_id": "61885e0a001996234cd5c911",
+    "name": "Blaze Blast",
+    "power": 174,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  },
+  {
+    "_id": "61885e25001996234cd5c913",
+    "name": "Abduction Beam",
+    "power": 222,
+    "mp": 0,
+    "final": true,
+    "__v": 0
+  }
+]

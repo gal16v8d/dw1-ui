@@ -43,5 +43,552 @@
     "price": 2500,
     "exchangeable": true,
     "__v": 0
+  },
+  {
+    "_id": "617e15ab865f0a80c9b3f938",
+    "number": 5,
+    "name": "Myotismon",
+    "point": 100,
+    "price": 2500,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e15c4865f0a80c9b3f93a",
+    "number": 6,
+    "name": "MetalGreymon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e15d2865f0a80c9b3f93c",
+    "number": 7,
+    "name": "Mamemon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e15de865f0a80c9b3f93e",
+    "number": 8,
+    "name": "Monzaemon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e15ea865f0a80c9b3f940",
+    "number": 9,
+    "name": "SkullGreymon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1601865f0a80c9b3f942",
+    "number": 10,
+    "name": "MetalMamemon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e160a865f0a80c9b3f944",
+    "number": 11,
+    "name": "Vademon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1615865f0a80c9b3f946",
+    "number": 12,
+    "name": "Andromon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e161f865f0a80c9b3f948",
+    "number": 13,
+    "name": "Giromon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e162a865f0a80c9b3f94a",
+    "number": 14,
+    "name": "Etemon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e163c865f0a80c9b3f94c",
+    "number": 15,
+    "name": "Megadramon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1646865f0a80c9b3f94e",
+    "number": 16,
+    "name": "Piximon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1650865f0a80c9b3f950",
+    "number": 17,
+    "name": "Digitamamon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e165c865f0a80c9b3f952",
+    "number": 18,
+    "name": "Gekomon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e166c865f0a80c9b3f954",
+    "number": 19,
+    "name": "WaruMonzaemon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e167b865f0a80c9b3f956",
+    "number": 20,
+    "name": "Jijimon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e16d9865f0a80c9b3f958",
+    "number": 21,
+    "name": "King of Sukamon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e16e4865f0a80c9b3f95a",
+    "number": 22,
+    "name": "Cherrymon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e16f3865f0a80c9b3f95c",
+    "number": 23,
+    "name": "Guardromon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1700865f0a80c9b3f95e",
+    "number": 24,
+    "name": "Hagurumon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e170a865f0a80c9b3f960",
+    "number": 25,
+    "name": "Brachiomon",
+    "point": 30,
+    "price": 750,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1721865f0a80c9b3f962",
+    "number": 26,
+    "name": "Greymon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e172a865f0a80c9b3f964",
+    "number": 27,
+    "name": "Devimon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1737865f0a80c9b3f966",
+    "number": 28,
+    "name": "Airdramon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e174b865f0a80c9b3f968",
+    "number": 29,
+    "name": "Tyrannomon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1757865f0a80c9b3f96a",
+    "number": 30,
+    "name": "Meramon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e17b2865f0a80c9b3f96c",
+    "number": 31,
+    "name": "Seadramon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e17be865f0a80c9b3f96e",
+    "number": 32,
+    "name": "Kabuterimon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e17c9865f0a80c9b3f970",
+    "number": 33,
+    "name": "Angemon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e17d3865f0a80c9b3f972",
+    "number": 34,
+    "name": "Birdramon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e17e0865f0a80c9b3f974",
+    "number": 35,
+    "name": "Garurumon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e17ea865f0a80c9b3f976",
+    "number": 36,
+    "name": "Frigimon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e17f3865f0a80c9b3f978",
+    "number": 37,
+    "name": "Whamon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e17fc865f0a80c9b3f97a",
+    "number": 38,
+    "name": "Unimon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1808865f0a80c9b3f97c",
+    "number": 39,
+    "name": "Ogremon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1812865f0a80c9b3f97e",
+    "number": 40,
+    "name": "Shellmon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1820865f0a80c9b3f980",
+    "number": 41,
+    "name": "Centarumon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1833865f0a80c9b3f982",
+    "number": 42,
+    "name": "Bakemon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1840865f0a80c9b3f984",
+    "number": 43,
+    "name": "Drimogemon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1851865f0a80c9b3f986",
+    "number": 44,
+    "name": "Monochromon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e185b865f0a80c9b3f988",
+    "number": 45,
+    "name": "Leomon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1866865f0a80c9b3f98a",
+    "number": 46,
+    "name": "Coelamon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1875865f0a80c9b3f98c",
+    "number": 47,
+    "name": "Kokatorimon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1887865f0a80c9b3f98e",
+    "number": 48,
+    "name": "Kuwagamon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1894865f0a80c9b3f990",
+    "number": 49,
+    "name": "Mojyamon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e18a0865f0a80c9b3f992",
+    "number": 50,
+    "name": "Ninjamon",
+    "point": 10,
+    "price": 250,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e18ba865f0a80c9b3f994",
+    "number": 51,
+    "name": "Penguinmon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e18c4865f0a80c9b3f996",
+    "number": 52,
+    "name": "Otamamon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e18cf865f0a80c9b3f998",
+    "number": 53,
+    "name": "Tentomon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e18da865f0a80c9b3f99a",
+    "number": 54,
+    "name": "Yanmamon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e18e6865f0a80c9b3f99c",
+    "number": 55,
+    "name": "Gotsumon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e18f4865f0a80c9b3f99e",
+    "number": 56,
+    "name": "Flarerizamon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1901865f0a80c9b3f9a0",
+    "number": 57,
+    "name": "ToyAgumon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e190e865f0a80c9b3f9a2",
+    "number": 58,
+    "name": "DemiMeramon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e191a865f0a80c9b3f9a4",
+    "number": 59,
+    "name": "Tankmon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1927865f0a80c9b3f9a6",
+    "number": 60,
+    "name": "Goburimon",
+    "point": 5,
+    "price": 50,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e193b865f0a80c9b3f9a8",
+    "number": 61,
+    "name": "Numemon",
+    "point": 1,
+    "price": 25,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1945865f0a80c9b3f9aa",
+    "number": 62,
+    "name": "Vegiemon",
+    "point": 1,
+    "price": 25,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1951865f0a80c9b3f9ac",
+    "number": 63,
+    "name": "Sukamon",
+    "point": 1,
+    "price": 25,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1970865f0a80c9b3f9ae",
+    "number": 64,
+    "name": "Nanimon",
+    "point": 1,
+    "price": 25,
+    "exchangeable": true,
+    "__v": 0
+  },
+  {
+    "_id": "617e1982865f0a80c9b3f9b0",
+    "number": 65,
+    "name": "Machinedramon",
+    "exchangeable": false,
+    "__v": 0
   }
 ]

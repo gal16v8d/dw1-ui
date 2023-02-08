@@ -1,0 +1,86 @@
+[
+  {
+    "_id": "61886362560f61533c962ae4",
+    "base": "Digimushroom",
+    "result": "Med Recovery",
+    "who": "Mojyamon #1",
+    "__v": 0
+  },
+  {
+    "_id": "61886376560f61533c962ae6",
+    "base": "Super carrot",
+    "result": "Omnipotent",
+    "who": "Mojyamon #1",
+    "__v": 0
+  },
+  {
+    "_id": "61886391560f61533c962ae8",
+    "base": "Happymushroom",
+    "result": "Hair Grower",
+    "who": "Mojyamon #1",
+    "__v": 0
+  },
+  {
+    "_id": "618863b0560f61533c962aeb",
+    "base": "Giant Meat",
+    "result": "Auto Pilot",
+    "who": "Mojyamon #2",
+    "__v": 0
+  },
+  {
+    "_id": "618863c5560f61533c962aed",
+    "base": "Black Trout",
+    "result": "Restore",
+    "who": "Mojyamon #2",
+    "__v": 0
+  },
+  {
+    "_id": "618863d9560f61533c962aef",
+    "base": "Hispeed Disk",
+    "result": "Medicine",
+    "who": "Mojyamon #2",
+    "__v": 0
+  },
+  {
+    "_id": "61886433560f61533c962af1",
+    "base": "Omnipotent",
+    "result": "S. Off. Disk",
+    "who": "Mojyamon #3",
+    "__v": 0
+  },
+  {
+    "_id": "61886448560f61533c962af3",
+    "base": "Med Recovery",
+    "result": "S. Def. Disk",
+    "who": "Mojyamon #3",
+    "__v": 0
+  },
+  {
+    "_id": "6188645f560f61533c962af5",
+    "base": "Digianchovy",
+    "result": "S. Spd. Disk",
+    "who": "Mojyamon #3",
+    "__v": 0
+  },
+  {
+    "_id": "61886482560f61533c962af7",
+    "base": "Meramon Card",
+    "result": "1500",
+    "who": "DemiMeramon",
+    "__v": 0
+  },
+  {
+    "_id": "618864b1560f61533c962afb",
+    "base": "King of Sukamon Card",
+    "result": "Etemon Card",
+    "who": "Sukamon",
+    "__v": 0
+  },
+  {
+    "_id": "61886511560f61533c962afd",
+    "base": "WaruMonzaemon,Hagurumon,ToyAgumon Cards",
+    "result": "X-Bandage",
+    "who": "ClearAgumon",
+    "__v": 0
+  }
+]

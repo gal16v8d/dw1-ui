@@ -1,0 +1,107 @@
+[
+  {
+    "_id": "61886c1c4ab07f3cb5a8f1c0",
+    "name": "Clock",
+    "description": "In the top right corner of the game screen, you will see an alarm clock. This clock will chart your time through Digimon World. The clock runs on a 24-hour system, and you will find that certain events occur during the day while others happen at night. The clock's hand moves around once every hour. The white dot that circulates the outside of the clock will tell you what time it is.  When the dot is at the top of the circle, it is night. When it is at the bottom, it is daytime. You can tell what time of day it is by the pictures on the clock. Red denotes sunset and purple denotes sunrise.",
+    "__v": 0,
+    "type": "Option"
+  },
+  {
+    "_id": "61886c744ab07f3cb5a8f1c2",
+    "name": "Happiness Gauge",
+    "description": "In the bottom right corner of the game screen, you will find a happiness gauge.  It is the upper gauge with the happy face on it. When this meter is high, your Digimon will be happy and live longer, but there is also a chance that it will be spoiled.  If happiness is high and discipline is low, your Digimon may not accept items that you give it, such as stat chips or auto pilots.",
+    "__v": 0,
+    "type": "Option"
+  },
+  {
+    "_id": "61886cb44ab07f3cb5a8f1c4",
+    "name": "Discipline Gauge",
+    "description": "In the bottom right corner of the game screen, below the happiness gauge, you will find the discipline gauge. When this meter is high, your Digimon will be more obedient and take almost any item that you give him, but your Digimon may get tired easily and his lifespan will be shortened.",
+    "__v": 0,
+    "type": "Option"
+  },
+  {
+    "_id": "61886d704ab07f3cb5a8f1c6",
+    "name": "Item Command",
+    "description": "You will find the item command in the menu screen.  When selected, you will be able to see a list of all the items that you currently have, and be able to use some of these items. When you begin the game, you have a capacity for 10 different kinds of items. If you wish to get more capacity you'll need to get some keychain.",
+    "__v": 0,
+    "type": "Option"
+  },
+  {
+    "_id": "61886e074ab07f3cb5a8f1c8",
+    "name": "Digimon Command",
+    "description": "You will find the Digimon command in the menu screen.  When selected, you will be able to see your Digimon's statistics, his age, his weight, his Digimon type, his active hours, and his current condition. You will also be able to set his techniques for battle on this screen. Watch this screen carefully throughout the game; you will want to monitor your Digimon's weight often. Your Digimon will be one of three types: virus, data or vaccine. Types in Digimon World are not like Pokémon: one type doesn't dominate another.  What they will do, though, is prevent some battles. Sometimes, a Digimon of the same type will not want to battle with you, and leaves the scene without a fight. As for techniques, always make sure that your Digimon has three techniques to choose from, for an easier time in battles.",
+    "__v": 0,
+    "type": "Option"
+  },
+  {
+    "_id": "61886e6a4ab07f3cb5a8f1ca",
+    "name": "Player Command",
+    "description": "You will find the player command in the menu screen.  The player menu gives you your current Tamer rank, the number of Digimon you have trained, how much money you have, the current amount of time you have played, and any special items or medals you have collected. To raise your rank, train many high level Digimon, and your rank will go up from time to time. You can also find a list of Digimon cards that you have in the player menu, and can view your cards.",
+    "__v": 0,
+    "type": "Option"
+  },
+  {
+    "_id": "61886ea34ab07f3cb5a8f1cc",
+    "name": "Praise Command",
+    "description": "You can praise your digimon, but it normally will affect in a negative way the discipline gauge.",
+    "__v": 0,
+    "type": "Option"
+  },
+  {
+    "_id": "61886f2a4ab07f3cb5a8f1ce",
+    "name": "Scold Command",
+    "description": "You can scold your digimon, scold can decrease happiness gauge and increase discipline gauge if you do it without any reason, so be sure that you scold your digimon just if it refuse to eat an item or if it makes poo in the wrong place, in that case you can get happiness gauge and discipline gauge up.",
+    "__v": 0,
+    "type": "Option"
+  },
+  {
+    "_id": "61886f9b4ab07f3cb5a8f1d0",
+    "name": "Sleep Command",
+    "description": "When your Digimon's sleepy, let him rest!!!  Besides, it fills up both his HP and MP, which can be very helpful if you're in a tight spot. Your Digimon has its own active hours, and will sleep when that time period is over. Usually, your Digimon will have a certain sleeping pattern that it follows. Plan your training and adventures around this fact!",
+    "__v": 0,
+    "type": "Option"
+  },
+  {
+    "_id": "61887a98a9791517dd17de45",
+    "name": "Your Call",
+    "type": "Battle",
+    "description": "Tells the Digimon to choose his own attacks from the ones that are set, and to judge when to attack and when to defend.",
+    "__v": 0
+  },
+  {
+    "_id": "61887acfa9791517dd17de47",
+    "name": "Attack",
+    "type": "Battle",
+    "description": "With this command, your Digimon will attack the enemy constantly, and neglect to keep a safe distance or defend.  This is best used against a slower or weaker enemy. Available when your digimon gets +100 of Brain",
+    "__v": 0
+  },
+  {
+    "_id": "61887b69a9791517dd17de4a",
+    "name": "Moderate",
+    "type": "Battle",
+    "description": "With this command, your Digimon will attack the enemy constantly, keeping a safe distance between each attack. Available when your digimon gets +200 of Brain",
+    "__v": 0
+  },
+  {
+    "_id": "61887b97a9791517dd17de4c",
+    "name": "Distance",
+    "type": "Battle",
+    "description": "With this command, your Digimon will keep a safe distance from enemy. Available when your digimon gets +200 of Brain",
+    "__v": 0
+  },
+  {
+    "_id": "61887bf1a9791517dd17de4e",
+    "name": "Defend",
+    "type": "Battle",
+    "description": "With this command, your Digimon will keep quiet and on guard avoiding most of enemy damage. This tells your Digimon to stop attacking and focus on defending itself. This is useful if you are trying to learn a new technique, because you want the enemy to use his attack on you. Available when your digimon gets +300 of Brain",
+    "__v": 0
+  },
+  {
+    "_id": "61887d12a9791517dd17de50",
+    "name": "Controlled Attack",
+    "type": "Battle",
+    "description": "With +500 of brain, you will lose 'Attack' command, but get instead the specific attacks enabled for your digimon. In other words, you gain control of your Digimon's attacks. The regular attack button disappears and you are given three new ones in its place.  Each one may have a different symbol on it, but they are the attacks that you have set.  You may choose to tell your Digimon to only attack with that one attack by selecting it. If you are not happy with this, then return to 'Your Call' and your Digimon will alternate attacks.",
+    "__v": 0
+  }
+]

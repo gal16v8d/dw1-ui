@@ -1,0 +1,134 @@
+[
+  {
+    "_id": "632e072ff84e52550126070d",
+    "digimon": {
+      "_id": "618b49b300f3449853aa95ff",
+      "name": "Garurumon"
+    },
+    "restaurantFood": [
+      {
+        "_id": "632e03d4f84e525501260708",
+        "name": "T-Bone Steak"
+      },
+      {
+        "_id": "632e0779f84e525501260711",
+        "name": "Dx-steak"
+      },
+      {
+        "_id": "632e08a0f84e525501260715",
+        "name": "Phantom Steak"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e1e74f84e525501260728",
+    "digimon": {
+      "_id": "618b4c2500f3449853aa9615",
+      "name": "Meramon"
+    },
+    "restaurantFood": [
+      {
+        "_id": "632e1de7f84e525501260721",
+        "name": "Red Ramen"
+      },
+      {
+        "_id": "632e1e04f84e525501260723",
+        "name": "Hot Curry"
+      },
+      {
+        "_id": "632e1e29f84e525501260725",
+        "name": "Hot Pot"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e5ac6f52044679a0b2d79",
+    "digimon": {
+      "_id": "618b4ef800f3449853aa963f",
+      "name": "Tyrannomon"
+    },
+    "restaurantFood": [
+      {
+        "_id": "632e57d4f52044679a0b2d6f",
+        "name": "Dragon Noodle"
+      },
+      {
+        "_id": "632e58ebf52044679a0b2d71",
+        "name": "Zaurus Pizza"
+      },
+      {
+        "_id": "632e5a8ff52044679a0b2d76",
+        "name": "J Burguer"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e62f3f52044679a0b2d84",
+    "digimon": {
+      "_id": "618b4f1c00f3449853aa9643",
+      "name": "Vademon"
+    },
+    "restaurantFood": [
+      {
+        "_id": "632e622af52044679a0b2d7c",
+        "name": "Space Salad"
+      },
+      {
+        "_id": "632e62d4f52044679a0b2d81",
+        "name": "Ufo Soup"
+      },
+      {
+        "_id": "632e6282f52044679a0b2d7e",
+        "name": "Galaxy Course"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e648cf52044679a0b2d8e",
+    "digimon": {
+      "_id": "618b48eb00f3449853aa95f5",
+      "name": "Digitamamon"
+    },
+    "restaurantFood": [
+      {
+        "_id": "632e6411f52044679a0b2d87",
+        "name": "Boiled Egg"
+      },
+      {
+        "_id": "632e642ef52044679a0b2d89",
+        "name": "Omelet"
+      },
+      {
+        "_id": "632e6452f52044679a0b2d8b",
+        "name": "Egg Bowl"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e65abf52044679a0b2d97",
+    "digimon": {
+      "_id": "618b498f00f3449853aa95fb",
+      "name": "Frigimon"
+    },
+    "restaurantFood": [
+      {
+        "_id": "632e6508f52044679a0b2d90",
+        "name": "Snow Shake"
+      },
+      {
+        "_id": "632e651ef52044679a0b2d92",
+        "name": "Ice Cream"
+      },
+      {
+        "_id": "632e654ff52044679a0b2d94",
+        "name": "Snow Cone"
+      }
+    ],
+    "__v": 0
+  }
+]

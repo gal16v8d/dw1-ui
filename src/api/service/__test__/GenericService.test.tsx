@@ -11,7 +11,7 @@ describe('http service test', () => {
 
   it('fetch success', async () => {
     const result = await service.getAll();
-    expect(result).toHaveLength(5);
+    expect(result).toHaveLength(66);
   });
 
   it('fetch error', async () => {

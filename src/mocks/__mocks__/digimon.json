@@ -1,0 +1,816 @@
+[
+  {
+    "_id": "6188893df6dcfb8ef285b371",
+    "name": "Agumon",
+    "level": {
+      "_id": "61883e28b30cb8ebc11cf86c",
+      "name": "Rookie"
+    },
+    "type": "vaccine",
+    "active": "day",
+    "techFinal": {
+      "_id": "61885c72001996234cd5c8fa",
+      "name": "Pepper Breath"
+    },
+    "tech": [
+      {
+        "_id": "617e034de10135af46d027c4",
+        "name": "Fire Tower"
+      },
+      {
+        "_id": "617e057866592a10e59ecc25",
+        "name": "Spit Fire"
+      },
+      {
+        "_id": "617e059c66592a10e59ecc27",
+        "name": "Red Inferno"
+      },
+      {
+        "_id": "617e05b766592a10e59ecc29",
+        "name": "Magma Bomb"
+      },
+      {
+        "_id": "617e05df66592a10e59ecc2b",
+        "name": "Heat Laser"
+      },
+      {
+        "_id": "617e068474ec2ce57e199833",
+        "name": "Muscle Charge"
+      },
+      {
+        "_id": "617e06c074ec2ce57e199837",
+        "name": "Sonic Jab"
+      }
+    ],
+    "locationHappy": [
+      {
+        "_id": "6186e7c6cfef8dddcd1a3e4b",
+        "name": "Drill Tunel"
+      }
+    ],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "itemDrop": {
+      "_id": "6186d67868070fb90f749da1",
+      "name": "Sm. Recovery"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "61888cad58f2147fd1496251",
+    "name": "Elecmon",
+    "level": {
+      "_id": "61883e28b30cb8ebc11cf86c",
+      "name": "Rookie"
+    },
+    "type": "data",
+    "active": "day",
+    "techFinal": {
+      "_id": "61885c99001996234cd5c8fc",
+      "name": "Super Thunder St"
+    },
+    "tech": [
+      {
+        "_id": "617e068474ec2ce57e199833",
+        "name": "Muscle Charge"
+      },
+      {
+        "_id": "617e06e074ec2ce57e199839",
+        "name": "Dynamite Kick"
+      },
+      {
+        "_id": "617e070d74ec2ce57e19983b",
+        "name": "Counter"
+      },
+      {
+        "_id": "617e07f874ec2ce57e199845",
+        "name": "Electric Cloud"
+      },
+      {
+        "_id": "617e081474ec2ce57e199847",
+        "name": "Megalo Spark"
+      },
+      {
+        "_id": "617e083174ec2ce57e199849",
+        "name": "Static Elect"
+      },
+      {
+        "_id": "617e085774ec2ce57e19984b",
+        "name": "Wind Cutter"
+      }
+    ],
+    "locationHappy": [
+      {
+        "_id": "617896f16c22811011573829",
+        "name": "Foot of Mt. Panorama"
+      },
+      {
+        "_id": "617896db6c22811011573825",
+        "name": "Mt. Panorama Spore Area"
+      },
+      {
+        "_id": "617896e46c22811011573827",
+        "name": "Mt. Panorama Plains"
+      },
+      {
+        "_id": "61789ff10fffe6b849ef3fc3",
+        "name": "Path Thru Mt. Panorama"
+      },
+      {
+        "_id": "617896fc6c2281101157382b",
+        "name": "Gear Savanna"
+      }
+    ],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b401800f3449853aa95da",
+    "name": "Airdramon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b402900f3449853aa95dc",
+    "name": "Andromon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b404000f3449853aa95de",
+    "name": "Angemon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b404c00f3449853aa95e0",
+    "name": "Bakemon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b406b00f3449853aa95e2",
+    "name": "Betamon",
+    "level": {
+      "_id": "61883e28b30cb8ebc11cf86c",
+      "name": "Rookie"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b411f00f3449853aa95e4",
+    "name": "Birdramon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b415f00f3449853aa95ed",
+    "name": "Biyomon",
+    "level": {
+      "_id": "61883e28b30cb8ebc11cf86c",
+      "name": "Rookie"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b48c500f3449853aa95ef",
+    "name": "Centarumon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b48d300f3449853aa95f1",
+    "name": "Coelamon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b48d900f3449853aa95f3",
+    "name": "Devimon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b48eb00f3449853aa95f5",
+    "name": "Digitamamon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b48ff00f3449853aa95f7",
+    "name": "Drimogemon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b492600f3449853aa95f9",
+    "name": "Etemon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b498f00f3449853aa95fb",
+    "name": "Frigimon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b49a100f3449853aa95fd",
+    "name": "Gabumon",
+    "level": {
+      "_id": "61883e28b30cb8ebc11cf86c",
+      "name": "Rookie"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b49b300f3449853aa95ff",
+    "name": "Garurumon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b49dd00f3449853aa9601",
+    "name": "Gekomon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": false,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b49f100f3449853aa9603",
+    "name": "Giromon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4a0400f3449853aa9605",
+    "name": "Greymon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4a9000f3449853aa9607",
+    "name": "Kabuterimon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4a9b00f3449853aa9609",
+    "name": "Kokatorimon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4ac900f3449853aa960b",
+    "name": "Kunemon",
+    "level": {
+      "_id": "61883e28b30cb8ebc11cf86c",
+      "name": "Rookie"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4afa00f3449853aa960d",
+    "name": "Kuwagamon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4b0200f3449853aa960f",
+    "name": "Leomon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4bdd00f3449853aa9611",
+    "name": "Mamemon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4c0b00f3449853aa9613",
+    "name": "Megadramon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4c2500f3449853aa9615",
+    "name": "Meramon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4c5300f3449853aa9617",
+    "name": "MetalGreymon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4c5d00f3449853aa9619",
+    "name": "MetalMamemon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4ce300f3449853aa961b",
+    "name": "Mojyamon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4d0800f3449853aa9623",
+    "name": "Monochromon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4d1f00f3449853aa9625",
+    "name": "Monzaemon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4d3600f3449853aa9627",
+    "name": "Nanimon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4d8200f3449853aa9629",
+    "name": "Ninjamon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4d8e00f3449853aa962b",
+    "name": "Numemon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4d9500f3449853aa962d",
+    "name": "Ogremon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4daf00f3449853aa962f",
+    "name": "Palmon",
+    "level": {
+      "_id": "61883e28b30cb8ebc11cf86c",
+      "name": "Rookie"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4db600f3449853aa9631",
+    "name": "Patamon",
+    "level": {
+      "_id": "61883e28b30cb8ebc11cf86c",
+      "name": "Rookie"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4dbd00f3449853aa9633",
+    "name": "Penguinmon",
+    "level": {
+      "_id": "61883e28b30cb8ebc11cf86c",
+      "name": "Rookie"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4ddb00f3449853aa9635",
+    "name": "Piximon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4df200f3449853aa9637",
+    "name": "Seadramon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4df800f3449853aa9639",
+    "name": "Shellmon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4e3300f3449853aa963b",
+    "name": "SkullGreymon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4e4600f3449853aa963d",
+    "name": "Sukamon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4ef800f3449853aa963f",
+    "name": "Tyrannomon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4f0200f3449853aa9641",
+    "name": "Unimon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4f1c00f3449853aa9643",
+    "name": "Vademon",
+    "level": {
+      "_id": "6188545e2aaedb3053119c1c",
+      "name": "Ultimate"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4f3600f3449853aa9645",
+    "name": "Vegiemon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  },
+  {
+    "_id": "618b4f3b00f3449853aa9647",
+    "name": "Whamon",
+    "level": {
+      "_id": "61883e2eb30cb8ebc11cf86e",
+      "name": "Champion"
+    },
+    "tech": [],
+    "locationHappy": [],
+    "locationSad": [],
+    "raisable": true,
+    "recruitable": true,
+    "__v": 0
+  }
+]

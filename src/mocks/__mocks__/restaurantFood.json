@@ -1,0 +1,195 @@
+[
+  {
+    "_id": "632e03d4f84e525501260708",
+    "name": "T-Bone Steak",
+    "price": 1000,
+    "effect": ["HP +10", "Brn +1", "Discipline Up", "Tiredness Down"],
+    "__v": 0
+  },
+  {
+    "_id": "632e0779f84e525501260711",
+    "name": "Dx-steak",
+    "price": 2500,
+    "effect": [
+      "HP +30",
+      "Brn +2",
+      "Happiness Up",
+      "Discipline Up",
+      "Tiredness Down"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e08a0f84e525501260715",
+    "name": "Phantom Steak",
+    "price": 5000,
+    "effect": [
+      "HP +50",
+      "Brn +3",
+      "Happiness Up",
+      "Discipline Up",
+      "Tiredness Down"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e1de7f84e525501260721",
+    "name": "Red Ramen",
+    "price": 400,
+    "effect": ["Off +1", "Brn +1", "Happiness Up", "Tiredness Down"],
+    "__v": 0
+  },
+  {
+    "_id": "632e1e04f84e525501260723",
+    "name": "Hot Curry",
+    "price": 1200,
+    "effect": ["Off +3", "Brn +2", "Happiness Up", "Tiredness Down"],
+    "__v": 0
+  },
+  {
+    "_id": "632e1e29f84e525501260725",
+    "name": "Hot Pot",
+    "price": 3500,
+    "effect": [
+      "Off +5",
+      "Brn +3",
+      "Happiness Up",
+      "Discipline Up",
+      "Tiredness Down"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e57d4f52044679a0b2d6f",
+    "name": "Dragon Noodle",
+    "price": 400,
+    "effect": ["Def +1", "Spd +1", "Happiness Up", "Tiredness Down"],
+    "__v": 0
+  },
+  {
+    "_id": "632e58ebf52044679a0b2d71",
+    "name": "Zaurus Pizza",
+    "price": 1000,
+    "effect": ["Def +3", "Spd +2", "Happiness Up", "Tiredness Down"],
+    "__v": 0
+  },
+  {
+    "_id": "632e5a8ff52044679a0b2d76",
+    "name": "J Burguer",
+    "price": 2500,
+    "effect": [
+      "Def +5",
+      "Spd +3",
+      "Happiness Up",
+      "Discipline Up",
+      "Tiredness Down"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e622af52044679a0b2d7c",
+    "name": "Space Salad",
+    "price": 1500,
+    "effect": [
+      "HP +10",
+      "MP +10",
+      "Off +1",
+      "Def +1",
+      "Spd +1",
+      "Brn +1",
+      "Happiness Up",
+      "Discipline Up",
+      "Tiredness Down"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e6282f52044679a0b2d7e",
+    "name": "Galaxy Course",
+    "price": 9000,
+    "effect": [
+      "HP +30",
+      "MP +30",
+      "Off +3",
+      "Def +3",
+      "Spd +3",
+      "Brn +3",
+      "Happiness Up",
+      "Discipline Up",
+      "Tiredness Down"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e62d4f52044679a0b2d81",
+    "name": "Ufo Soup",
+    "price": 4000,
+    "effect": [
+      "HP +20",
+      "MP +20",
+      "Off +2",
+      "Def +2",
+      "Spd +2",
+      "Brn +2",
+      "Happiness Up",
+      "Discipline Up",
+      "Tiredness Down"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e6411f52044679a0b2d87",
+    "name": "Boiled Egg",
+    "price": 1000,
+    "effect": ["MP +10", "Def +1", "Brn +1", "Happiness Up", "Tiredness Down"],
+    "__v": 0
+  },
+  {
+    "_id": "632e642ef52044679a0b2d89",
+    "name": "Omelet",
+    "price": 2500,
+    "effect": ["MP +20", "Def +2", "Brn +2", "Happiness Up", "Tiredness Down"],
+    "__v": 0
+  },
+  {
+    "_id": "632e6452f52044679a0b2d8b",
+    "name": "Egg Bowl",
+    "price": 6000,
+    "effect": [
+      "MP +30",
+      "Def +3",
+      "Brn +3",
+      "Happiness Up",
+      "Discipline Up",
+      "Tiredness Down"
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "632e6508f52044679a0b2d90",
+    "name": "Snow Shake",
+    "price": 300,
+    "effect": ["MP +10", "Spd +1", "Happiness Up", "Tiredness Down"],
+    "__v": 0
+  },
+  {
+    "_id": "632e651ef52044679a0b2d92",
+    "name": "Ice Cream",
+    "price": 700,
+    "effect": ["MP +30", "Spd +2", "Happiness Up", "Tiredness Down"],
+    "__v": 0
+  },
+  {
+    "_id": "632e654ff52044679a0b2d94",
+    "name": "Snow Cone",
+    "price": 1600,
+    "effect": [
+      "MP +50",
+      "Spd +3",
+      "Happiness Up",
+      "Discipline Up",
+      "Tiredness Down"
+    ],
+    "__v": 0
+  }
+]

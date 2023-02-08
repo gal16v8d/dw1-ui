@@ -1,0 +1,1334 @@
+[
+  {
+    "location": [],
+    "_id": "61783cc3980f82c383d1078d",
+    "name": "Meat",
+    "effect": ["Weight +1"],
+    "note": "Goburimon/SnowGoburimon/Sharmamon/Tsukaimon/Flarerizamon can drop this"
+  },
+  {
+    "_id": "61783dc1980f82c383d1078f",
+    "name": "Moldy Meat",
+    "effect": ["Weight +2", "Sickness"],
+    "location": [
+      {
+        "_id": "61783d9d980f82c383d1078e",
+        "name": "Amida Forest"
+      }
+    ]
+  },
+  {
+    "_id": "617895e86c22811011573814",
+    "name": "Giant Meat",
+    "effect": ["Weight +2"],
+    "location": [],
+    "__v": 0,
+    "note": "J-Mojyamon can drop this"
+  },
+  {
+    "_id": "617896236c22811011573816",
+    "name": "Sirloin",
+    "effect": ["Weight +3", "Hapiness ++", "Tiredness --"],
+    "location": [],
+    "__v": 0,
+    "note": "Hyogamon can drop this"
+  },
+  {
+    "_id": "617896886c2281101157381a",
+    "name": "DigiMushroom",
+    "effect": ["Weight +1", "Energy +12"],
+    "location": [
+      {
+        "_id": "6178339d980f82c383d1078b",
+        "name": "Native Forest"
+      },
+      {
+        "_id": "61783d9d980f82c383d1078e",
+        "name": "Amida Forest"
+      },
+      {
+        "_id": "61788db5f74a592dc5d65934",
+        "name": "Mangrove Region"
+      },
+      {
+        "_id": "61788dccf74a592dc5d65936",
+        "name": "Tropical Jungle"
+      },
+      {
+        "_id": "617896a26c2281101157381d",
+        "name": "Overdell"
+      },
+      {
+        "_id": "617896ac6c2281101157381f",
+        "name": "Overdell Cemetery"
+      },
+      {
+        "_id": "617896b96c22811011573821",
+        "name": "Great Canyon Entrance"
+      },
+      {
+        "_id": "617896c76c22811011573823",
+        "name": "Ancient Glacial Region"
+      },
+      {
+        "_id": "617896db6c22811011573825",
+        "name": "Mt. Panorama Spore Area"
+      },
+      {
+        "_id": "617896e46c22811011573827",
+        "name": "Mt. Panorama Plains"
+      },
+      {
+        "_id": "617896f16c22811011573829",
+        "name": "Foot of Mt. Panorama"
+      },
+      {
+        "_id": "617896fc6c2281101157382b",
+        "name": "Gear Savanna"
+      },
+      {
+        "_id": "617897026c2281101157382d",
+        "name": "Geko Swamp"
+      },
+      {
+        "_id": "617897106c2281101157382f",
+        "name": "Misty Trees"
+      },
+      {
+        "_id": "6178971f6c22811011573831",
+        "name": "Great Canyon Top. Area"
+      },
+      {
+        "_id": "617897256c22811011573833",
+        "name": "Great Canyon Bot. Area"
+      },
+      {
+        "_id": "617897366c22811011573835",
+        "name": "Freezeland"
+      },
+      {
+        "_id": "618b57a7fe7fbf61e1f28b43",
+        "name": "Kunemon's Bed"
+      },
+      {
+        "_id": "618c6d31b325f35b3a058093",
+        "name": "Coela Point"
+      },
+      {
+        "_id": "61947dc2676593323cb894ab",
+        "name": "Digimon Bridge"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a0330fffe6b849ef3fc6",
+    "name": "HappyMushroom",
+    "effect": [
+      "Weight +1",
+      "Energy +15",
+      "Hapiness +30",
+      "Tiredness -30",
+      "Sickness 30%"
+    ],
+    "location": [
+      {
+        "_id": "6178339d980f82c383d1078b",
+        "name": "Native Forest"
+      },
+      {
+        "_id": "61788db5f74a592dc5d65934",
+        "name": "Mangrove Region"
+      },
+      {
+        "_id": "61788dccf74a592dc5d65936",
+        "name": "Tropical Jungle"
+      },
+      {
+        "_id": "617896ac6c2281101157381f",
+        "name": "Overdell Cemetery"
+      },
+      {
+        "_id": "617896b96c22811011573821",
+        "name": "Great Canyon Entrance"
+      },
+      {
+        "_id": "617896c76c22811011573823",
+        "name": "Ancient Glacial Region"
+      },
+      {
+        "_id": "617896db6c22811011573825",
+        "name": "Mt. Panorama Spore Area"
+      },
+      {
+        "_id": "617896e46c22811011573827",
+        "name": "Mt. Panorama Plains"
+      },
+      {
+        "_id": "61789ff10fffe6b849ef3fc3",
+        "name": "Path Thru Mt. Panorama"
+      },
+      {
+        "_id": "617896fc6c2281101157382b",
+        "name": "Gear Savanna"
+      },
+      {
+        "_id": "617897026c2281101157382d",
+        "name": "Geko Swamp"
+      },
+      {
+        "_id": "617897106c2281101157382f",
+        "name": "Misty Trees"
+      },
+      {
+        "_id": "617897256c22811011573833",
+        "name": "Great Canyon Bot. Area"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a0950fffe6b849ef3fca",
+    "name": "IceMushroom",
+    "effect": ["Weight +2", "Energy +19", "Discipline +50"],
+    "location": [
+      {
+        "_id": "617897366c22811011573835",
+        "name": "Freezeland"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a14e0fffe6b849ef3fcc",
+    "name": "DeluxeMushroom",
+    "effect": [
+      "Weight +4",
+      "Energy +38",
+      "HP +100",
+      "MP +100",
+      "Off +10",
+      "Def +10",
+      "Spd +10",
+      "Brn +10"
+    ],
+    "location": [
+      {
+        "_id": "6178339d980f82c383d1078b",
+        "name": "Native Forest"
+      },
+      {
+        "_id": "61788dccf74a592dc5d65936",
+        "name": "Tropical Jungle"
+      },
+      {
+        "_id": "617896a26c2281101157381d",
+        "name": "Overdell"
+      },
+      {
+        "_id": "61789ff10fffe6b849ef3fc3",
+        "name": "Path Thru Mt. Panorama"
+      },
+      {
+        "_id": "6178971f6c22811011573831",
+        "name": "Great Canyon Top. Area"
+      },
+      {
+        "_id": "617897256c22811011573833",
+        "name": "Great Canyon Bot. Area"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a1940fffe6b849ef3fce",
+    "name": "Blue Apple",
+    "effect": ["Weight +3", "Energy +30", "Happiness +50"],
+    "location": [
+      {
+        "_id": "6178339d980f82c383d1078b",
+        "name": "Native Forest"
+      },
+      {
+        "_id": "618b57a7fe7fbf61e1f28b43",
+        "name": "Kunemon's Bed"
+      },
+      {
+        "_id": "61947dc2676593323cb894ab",
+        "name": "Digimon Bridge"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a3f6b170ed7d18b26350",
+    "name": "Orange Banana",
+    "effect": [
+      "Weight +2",
+      "Energy +24",
+      "Restore HP +1000",
+      "Restore MP +1000"
+    ],
+    "location": [
+      {
+        "_id": "61783d9d980f82c383d1078e",
+        "name": "Amida Forest"
+      },
+      {
+        "_id": "61788dccf74a592dc5d65936",
+        "name": "Tropical Jungle"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a4f2b170ed7d18b26352",
+    "name": "Super Veggy",
+    "effect": ["Weight +2", "Energy +16", "Restore MP +9999"],
+    "location": [
+      {
+        "_id": "617896ac6c2281101157381f",
+        "name": "Overdell Cemetery"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a52fb170ed7d18b26354",
+    "name": "Steak",
+    "effect": ["Energy +32", "Sickness 20%", "Restore HP +1000"],
+    "location": [
+      {
+        "_id": "617896ac6c2281101157381f",
+        "name": "Overdell Cemetery"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a59db170ed7d18b26356",
+    "name": "Red Berry",
+    "effect": [
+      "Weight +2",
+      "Energy +25",
+      "Happiness +20",
+      "Discipline +20",
+      "Tiredness -20"
+    ],
+    "location": [
+      {
+        "_id": "617896c76c22811011573823",
+        "name": "Ancient Glacial Region"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a6d6e816f82cca53a5c9",
+    "name": "Sage Fruit",
+    "effect": ["Weight +2", "Energy +20", "Brn +20"],
+    "location": [
+      {
+        "_id": "6178a6a3e816f82cca53a5c6",
+        "name": "Ancient Speedy Region"
+      },
+      {
+        "_id": "617897366c22811011573835",
+        "name": "Freezeland"
+      }
+    ],
+    "__v": 0,
+    "note": "Piddomon can drop this"
+  },
+  {
+    "_id": "6178a70de816f82cca53a5cb",
+    "name": "Big Berry",
+    "effect": ["Weight +10", "Energy +100"],
+    "location": [
+      {
+        "_id": "61789ff10fffe6b849ef3fc3",
+        "name": "Path Thru Mt. Panorama"
+      },
+      {
+        "_id": "617896f16c22811011573829",
+        "name": "Foot of Mt. Panorama"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a73ae816f82cca53a5cd",
+    "name": "Power Ice",
+    "effect": ["Weight +2", "Energy +20", "Def +20"],
+    "location": [
+      {
+        "_id": "617896fc6c2281101157382b",
+        "name": "Gear Savanna"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a786e816f82cca53a5cf",
+    "name": "Sweet Nut",
+    "effect": ["Weight +2", "Energy +20", "Restore HP +9999"],
+    "location": [
+      {
+        "_id": "617896fc6c2281101157382b",
+        "name": "Gear Savanna"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a7fde816f82cca53a5d1",
+    "name": "Chain Melon",
+    "effect": [
+      "Weight +3",
+      "Energy +50",
+      "Happiness +50",
+      "Tiredness -50",
+      "Sickness 5%",
+      "Lifetime +20"
+    ],
+    "location": [
+      {
+        "_id": "617896fc6c2281101157382b",
+        "name": "Gear Savanna"
+      }
+    ],
+    "__v": 0,
+    "note": "Jijimon gives it after beat Machinedramon"
+  },
+  {
+    "_id": "6178a9160ae8ada9ed2efc49",
+    "name": "Spiny Green",
+    "effect": ["Weight +1", "Energy +9", "Tiredness -50"],
+    "location": [
+      {
+        "_id": "617897026c2281101157382d",
+        "name": "Geko Swamp"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a9370ae8ada9ed2efc4b",
+    "name": "Muscle Yam",
+    "effect": ["Weight +2", "Energy +20", "HP +200"],
+    "location": [
+      {
+        "_id": "617897026c2281101157382d",
+        "name": "Geko Swamp"
+      }
+    ],
+    "__v": 0,
+    "note": "MoriShellmon can drop this"
+  },
+  {
+    "_id": "6178a9770ae8ada9ed2efc4d",
+    "name": "Digipine",
+    "effect": ["Weight +2", "Energy +22", "Boost Training Effect 50%"],
+    "location": [
+      {
+        "_id": "617897106c2281101157382f",
+        "name": "Misty Trees"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178a9b10ae8ada9ed2efc4f",
+    "name": "Calm Berry",
+    "effect": ["Weight +2", "Energy +20", "MP +200"],
+    "location": [
+      {
+        "_id": "617897106c2281101157382f",
+        "name": "Misty Trees"
+      }
+    ],
+    "__v": 0,
+    "note": "BlueMeramon can drop this"
+  },
+  {
+    "_id": "6178aa280ae8ada9ed2efc51",
+    "name": "Prickly Pear",
+    "effect": ["Weight -5", "Energy +33"],
+    "location": [
+      {
+        "_id": "6178971f6c22811011573831",
+        "name": "Great Canyon Top. Area"
+      },
+      {
+        "_id": "617897256c22811011573833",
+        "name": "Great Canyon Bot. Area"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "6178aa6e0ae8ada9ed2efc56",
+    "name": "Gold Acorn",
+    "effect": ["Weight +4", "Energy +40"],
+    "location": [
+      {
+        "_id": "6178aa4a0ae8ada9ed2efc53",
+        "name": "Beetle Land"
+      }
+    ],
+    "note": "Can be sold for 4000 bits",
+    "__v": 0
+  },
+  {
+    "_id": "6178aac00ae8ada9ed2efc58",
+    "name": "Power Fruit",
+    "effect": ["Weight +2", "Off +20"],
+    "location": [
+      {
+        "_id": "617896c76c22811011573823",
+        "name": "Ancient Glacial Region"
+      }
+    ],
+    "note": "Vermilion can drop this",
+    "__v": 0
+  },
+  {
+    "_id": "6178c2a85fdf879610fc3c1c",
+    "name": "Super Carrot",
+    "effect": ["Weight -2", "Increase Train for MP,Off,Brn"],
+    "location": [],
+    "note": "RedVegiemon can drop this",
+    "__v": 0
+  },
+  {
+    "_id": "6178c2d15fdf879610fc3c1e",
+    "name": "Hawk Radish",
+    "effect": ["Weight +3", "Increase Train for HP,Def,Spd"],
+    "location": [],
+    "note": "Weedmon can drop this",
+    "__v": 0
+  },
+  {
+    "_id": "6178c3225fdf879610fc3c20",
+    "name": "DigiAnchovy",
+    "effect": ["Weight +1"],
+    "location": [],
+    "note": "Can be exchanged with Mojyamon, can be used for play curly",
+    "__v": 0
+  },
+  {
+    "_id": "6178c3aa5fdf879610fc3c22",
+    "name": "Black Trout",
+    "effect": ["Weight -2", "HP +10", "MP +10", "All others +1"],
+    "location": [],
+    "note": "Can be exchanged with Mojyamon, can be used for play curly",
+    "__v": 0
+  },
+  {
+    "_id": "6178c3ce5fdf879610fc3c24",
+    "name": "DigiSnapper",
+    "effect": ["Weight +1"],
+    "location": [],
+    "note": "Can be used for play curly",
+    "__v": 0
+  },
+  {
+    "_id": "6178c4165fdf879610fc3c26",
+    "name": "DigiSeabass",
+    "effect": [
+      "Weight +4",
+      "Lifetime +3",
+      "Sickness ++",
+      "Restore HP",
+      "Restore MP"
+    ],
+    "location": [],
+    "note": "Can be used for play curly",
+    "__v": 0
+  },
+  {
+    "_id": "6178c4455fdf879610fc3c28",
+    "name": "DigiCatfish",
+    "effect": ["Weight +5"],
+    "location": [],
+    "note": "Useful to attract DigiSeabass, Can be used for play curly",
+    "__v": 0
+  },
+  {
+    "effect": [],
+    "_id": "6186d67868070fb90f749da1",
+    "name": "Sm. Recovery",
+    "location": [],
+    "note": "Recovers 500 HP",
+    "__v": 0
+  },
+  {
+    "effect": [],
+    "_id": "6186d68668070fb90f749da3",
+    "name": "Med. Recovery",
+    "location": [],
+    "note": "Recovers 1500 HP",
+    "__v": 0
+  },
+  {
+    "effect": [],
+    "_id": "6186d69768070fb90f749da5",
+    "name": "Lrg. Recovery",
+    "location": [],
+    "note": "Recovers 5000 HP",
+    "__v": 0
+  },
+  {
+    "effect": [],
+    "_id": "6186d6b268070fb90f749da7",
+    "name": "Sup. Recovery",
+    "location": [],
+    "note": "Full HP recovery",
+    "__v": 0
+  },
+  {
+    "effect": [],
+    "_id": "6186d6d168070fb90f749da9",
+    "name": "MP Floppy",
+    "location": [],
+    "note": "Recovers 500 MP",
+    "__v": 0
+  },
+  {
+    "effect": [],
+    "_id": "6186d6e568070fb90f749dab",
+    "name": "Medium MP Floppy",
+    "location": [],
+    "note": "Recovers 1500 MP",
+    "__v": 0
+  },
+  {
+    "effect": [],
+    "_id": "6186d6f568070fb90f749dad",
+    "name": "Large MP Floppy",
+    "location": [],
+    "note": "Recovers 5000 MP",
+    "__v": 0
+  },
+  {
+    "_id": "6186d89b2bf0cb6a9a7882e1",
+    "name": "Various",
+    "effect": [],
+    "location": [],
+    "note": "Restores your digimon's status",
+    "__v": 0
+  },
+  {
+    "_id": "6186d8af2bf0cb6a9a7882e3",
+    "name": "Protection",
+    "effect": [],
+    "location": [],
+    "note": "Protects your digimon's status",
+    "__v": 0
+  },
+  {
+    "_id": "6186d92a2bf0cb6a9a7882e5",
+    "name": "Omnipotent",
+    "effect": [],
+    "location": [],
+    "note": "Restores some HP and MP, and cures error",
+    "__v": 0
+  },
+  {
+    "_id": "6186d9442bf0cb6a9a7882e7",
+    "name": "Double Floppy",
+    "effect": [],
+    "location": [],
+    "note": "Restores both 1500 HP and MP",
+    "__v": 0
+  },
+  {
+    "_id": "6186da8acfef8dddcd1a3da9",
+    "name": "Restore Floppy",
+    "effect": [],
+    "location": [],
+    "note": "Restores your digimon from coma with half HP",
+    "__v": 0
+  },
+  {
+    "_id": "6186da97cfef8dddcd1a3dab",
+    "name": "Sup. Restore Floppy",
+    "effect": [],
+    "location": [],
+    "note": "Restores your digimon from coma with full HP",
+    "__v": 0
+  },
+  {
+    "_id": "6186dab1cfef8dddcd1a3dad",
+    "name": "Bandage",
+    "effect": [],
+    "location": [],
+    "note": "Heals injuries and some sickness",
+    "__v": 0
+  },
+  {
+    "_id": "6186dac5cfef8dddcd1a3daf",
+    "name": "Medicine",
+    "effect": [],
+    "location": [],
+    "note": "Heals injuries and sickness",
+    "__v": 0
+  },
+  {
+    "_id": "6186dae9cfef8dddcd1a3db1",
+    "name": "Offense Disk",
+    "effect": [],
+    "location": [],
+    "note": "Raise stat during that battle only",
+    "__v": 0
+  },
+  {
+    "_id": "6186daefcfef8dddcd1a3db3",
+    "name": "Hispeed Disk",
+    "effect": [],
+    "location": [],
+    "note": "Raise stat during that battle only",
+    "__v": 0
+  },
+  {
+    "_id": "6186daf4cfef8dddcd1a3db5",
+    "name": "Defense Disk",
+    "effect": [],
+    "location": [],
+    "note": "Raise stat during that battle only",
+    "__v": 0
+  },
+  {
+    "_id": "6186db16cfef8dddcd1a3db7",
+    "name": "Super Offense Disk",
+    "effect": [],
+    "location": [],
+    "note": "Raise greatly stat during that battle only",
+    "__v": 0
+  },
+  {
+    "_id": "6186db1dcfef8dddcd1a3db9",
+    "name": "Super Speed Disk",
+    "effect": [],
+    "location": [],
+    "note": "Raise greatly stat during that battle only",
+    "__v": 0
+  },
+  {
+    "_id": "6186db22cfef8dddcd1a3dbb",
+    "name": "Super Defense Disk",
+    "effect": [],
+    "location": [],
+    "note": "Raise greatly stat during that battle only",
+    "__v": 0
+  },
+  {
+    "_id": "6186db74cfef8dddcd1a3dbd",
+    "name": "Omnipotent Disk",
+    "effect": [],
+    "location": [],
+    "note": "Raise all stat during that battle only",
+    "__v": 0
+  },
+  {
+    "_id": "6186db99cfef8dddcd1a3dc1",
+    "name": "Offense Chip",
+    "effect": [],
+    "location": [],
+    "note": "Raise stat +50",
+    "__v": 0
+  },
+  {
+    "_id": "6186db9fcfef8dddcd1a3dc3",
+    "name": "Quick Chip",
+    "effect": [],
+    "location": [],
+    "note": "Raise stat +50",
+    "__v": 0
+  },
+  {
+    "_id": "6186dba3cfef8dddcd1a3dc5",
+    "name": "Defense Chip",
+    "effect": [],
+    "location": [],
+    "note": "Raise stat +50",
+    "__v": 0
+  },
+  {
+    "_id": "6186dba8cfef8dddcd1a3dc7",
+    "name": "Brain Chip",
+    "effect": [],
+    "location": [],
+    "note": "Raise stat +50",
+    "__v": 0
+  },
+  {
+    "_id": "6186dbbecfef8dddcd1a3dc9",
+    "name": "HP Chip",
+    "effect": [],
+    "location": [],
+    "note": "Raise stat +500",
+    "__v": 0
+  },
+  {
+    "_id": "6186dbc3cfef8dddcd1a3dcb",
+    "name": "MP Chip",
+    "effect": [],
+    "location": [],
+    "note": "Raise stat +500",
+    "__v": 0
+  },
+  {
+    "_id": "6186dbfccfef8dddcd1a3dcd",
+    "name": "Devi Chip A",
+    "effect": [],
+    "location": [],
+    "note": "Off and Brains +100, short life span",
+    "__v": 0
+  },
+  {
+    "_id": "6186dc0ecfef8dddcd1a3dcf",
+    "name": "Devi Chip D",
+    "effect": [],
+    "location": [],
+    "note": "Def and Speed +100, short life span",
+    "__v": 0
+  },
+  {
+    "_id": "6186dc1ecfef8dddcd1a3dd1",
+    "name": "Devi Chip E",
+    "effect": [],
+    "location": [],
+    "note": "HP and MP +1000, short life span",
+    "__v": 0
+  },
+  {
+    "_id": "6186dc3bcfef8dddcd1a3dd3",
+    "name": "Auto Pilot",
+    "effect": [],
+    "location": [],
+    "note": "Takes you to File City from anywhere",
+    "__v": 0
+  },
+  {
+    "_id": "6186dc57cfef8dddcd1a3dd5",
+    "name": "Portable Potty",
+    "effect": [],
+    "location": [],
+    "note": "Digimon can potty anywhere",
+    "__v": 0
+  },
+  {
+    "_id": "6186dc76cfef8dddcd1a3dd7",
+    "name": "Trn Manual",
+    "effect": [],
+    "location": [],
+    "note": "Boosts training effect if item is in bag",
+    "__v": 0
+  },
+  {
+    "_id": "6186dc8ccfef8dddcd1a3dd9",
+    "name": "Enemy Repel",
+    "effect": [],
+    "location": [],
+    "note": "Repels enemies to stay away if item is in bag",
+    "__v": 0
+  },
+  {
+    "_id": "6186dca5cfef8dddcd1a3ddb",
+    "name": "Enemy Bell",
+    "effect": [],
+    "location": [],
+    "note": "Attract enemies if item is in bag",
+    "__v": 0
+  },
+  {
+    "_id": "6186dcbecfef8dddcd1a3ddd",
+    "name": "Rest Pillow",
+    "effect": [],
+    "location": [],
+    "note": "More recovery during rest if item is in bag",
+    "__v": 0
+  },
+  {
+    "_id": "6186dce7cfef8dddcd1a3ddf",
+    "name": "Health Shoe",
+    "effect": [],
+    "location": [],
+    "note": "Walk then HP and MP go up if item is in bag",
+    "__v": 0
+  },
+  {
+    "_id": "6186de97cfef8dddcd1a3de1",
+    "name": "Beetle Pearl",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to H-Kabuterimon",
+    "__v": 0
+  },
+  {
+    "_id": "6186debccfef8dddcd1a3de3",
+    "name": "Black Wing",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Devimon",
+    "__v": 0
+  },
+  {
+    "_id": "6186ded4cfef8dddcd1a3de5",
+    "name": "Blue Crystal",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Garurumon",
+    "__v": 0
+  },
+  {
+    "_id": "6186dee8cfef8dddcd1a3de7",
+    "name": "Chainsaw",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Giromon",
+    "__v": 0
+  },
+  {
+    "_id": "6186df05cfef8dddcd1a3de9",
+    "name": "Coral Charm",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to MegaSeadramon",
+    "__v": 0
+  },
+  {
+    "_id": "6186df1fcfef8dddcd1a3deb",
+    "name": "Cyber Part",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Andromon",
+    "__v": 0
+  },
+  {
+    "_id": "6186df68cfef8dddcd1a3ded",
+    "name": "Fatal Bone",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to SkullGreymon",
+    "__v": 0
+  },
+  {
+    "_id": "6186dfaccfef8dddcd1a3def",
+    "name": "Fertilizer",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Vegiemon",
+    "__v": 0
+  },
+  {
+    "_id": "6186dfc6cfef8dddcd1a3df1",
+    "name": "Fireball",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Meramon",
+    "__v": 0
+  },
+  {
+    "_id": "6186dfdecfef8dddcd1a3df3",
+    "name": "Flaming Mane",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Leomon",
+    "__v": 0
+  },
+  {
+    "_id": "6186dff0cfef8dddcd1a3df5",
+    "name": "Flaming Wings",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Birdramon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e025cfef8dddcd1a3df7",
+    "name": "Giga Hand",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Gigadramon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e043cfef8dddcd1a3df9",
+    "name": "Gold Banana",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Etemon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e058cfef8dddcd1a3dfb",
+    "name": "Grey Claws",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Greymon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e070cfef8dddcd1a3dfd",
+    "name": "Hair Grower",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Mojyamon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e09bcfef8dddcd1a3dff",
+    "name": "Hard Scale",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Coelamon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e0b6cfef8dddcd1a3e01",
+    "name": "Horn Helmet",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Kabuterimon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e0d5cfef8dddcd1a3e03",
+    "name": "Ice Crystal",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Frigimon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e0f2cfef8dddcd1a3e05",
+    "name": "Iron Hoof",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Centarumon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e10bcfef8dddcd1a3e07",
+    "name": "Koga Laws",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Ninjamon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e11bcfef8dddcd1a3e09",
+    "name": "Mega Hand",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Megadramon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e149cfef8dddcd1a3e0b",
+    "name": "Metal Armor",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to MetalMamemon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e15ecfef8dddcd1a3e0d",
+    "name": "Metal Part",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to MetalGreymon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e229cfef8dddcd1a3e0f",
+    "name": "Mono Stone",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Monochromon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e237cfef8dddcd1a3e11",
+    "name": "Mysty Egg",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Digitamamon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e250cfef8dddcd1a3e13",
+    "name": "North Star",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Whamon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e261cfef8dddcd1a3e15",
+    "name": "Rainbowhorn",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Airdramon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e27bcfef8dddcd1a3e17",
+    "name": "Ray Gun",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Vademon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e290cfef8dddcd1a3e19",
+    "name": "Red Ruby",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Phoenixmon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e2a2cfef8dddcd1a3e1b",
+    "name": "Red Shell",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Shellmon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e2b4cfef8dddcd1a3e1d",
+    "name": "Rooster",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Kokatorimon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e2c5cfef8dddcd1a3e1f",
+    "name": "Scissor Jaw",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Kuwagamon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e2dbcfef8dddcd1a3e21",
+    "name": "Silver Ball",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Mamemon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e34acfef8dddcd1a3e23",
+    "name": "Small Spear",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Piximon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e35fcfef8dddcd1a3e25",
+    "name": "Spiked Club",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Ogremon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e370cfef8dddcd1a3e27",
+    "name": "Steel Drill",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Drimogemon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e381cfef8dddcd1a3e29",
+    "name": "Sun Glasses",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Nanimon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e39dcfef8dddcd1a3e2b",
+    "name": "Torn Tatter",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Bakemon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e3b2cfef8dddcd1a3e2d",
+    "name": "Unihorn",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Unimon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e3c5cfef8dddcd1a3e2f",
+    "name": "Water Bottle",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Seadramon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e3ddcfef8dddcd1a3e31",
+    "name": "White Fang",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Tyrannomon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e3edcfef8dddcd1a3e33",
+    "name": "White Wing",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Angemon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e3fecfef8dddcd1a3e35",
+    "name": "X Bandage",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Monzaemon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e489cfef8dddcd1a3e37",
+    "name": "Rain Plant",
+    "effect": [],
+    "location": [],
+    "note": "Recover 1000 MP + other uses",
+    "__v": 0
+  },
+  {
+    "_id": "6186e4a2cfef8dddcd1a3e39",
+    "name": "Mansion Key",
+    "effect": [],
+    "location": [],
+    "note": "Key to Gray Lord's Mansion",
+    "__v": 0
+  },
+  {
+    "_id": "6186e4c0cfef8dddcd1a3e3b",
+    "name": "Blue Flute",
+    "effect": [],
+    "location": [],
+    "note": "Seadramon friendship proof",
+    "__v": 0
+  },
+  {
+    "_id": "6186e6b2cfef8dddcd1a3e3d",
+    "name": "Speed Leaf",
+    "effect": ["Speed +20", "Weigth +2"],
+    "location": [],
+    "__v": 0
+  },
+  {
+    "_id": "6186e703cfef8dddcd1a3e3f",
+    "name": "Moon Mirror",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to WereGarurumon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e777cfef8dddcd1a3e45",
+    "name": "Old fishrod",
+    "effect": [],
+    "location": [
+      {
+        "_id": "6186e766cfef8dddcd1a3e42",
+        "name": "Trash Mountain"
+      }
+    ],
+    "note": "Allows to fishing small fish",
+    "__v": 0
+  },
+  {
+    "_id": "6186e78ccfef8dddcd1a3e47",
+    "name": "Amazing rod",
+    "effect": [],
+    "location": [],
+    "note": "Allows to fishing all kind of fish",
+    "__v": 0
+  },
+  {
+    "_id": "6186e7a7cfef8dddcd1a3e49",
+    "name": "Leomonstone",
+    "effect": [],
+    "location": [],
+    "note": "Ancient message for Leomon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e844cfef8dddcd1a3e4d",
+    "name": "Frig Key",
+    "effect": [],
+    "location": [],
+    "note": "Key to Gray Lord's Mansion Fridge",
+    "__v": 0
+  },
+  {
+    "_id": "6186e868cfef8dddcd1a3e4f",
+    "name": "Noble Mane",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Panjyamon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e879cfef8dddcd1a3e51",
+    "name": "Metalbanana",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to MetalEtemon",
+    "__v": 0
+  },
+  {
+    "_id": "6186e890cfef8dddcd1a3e53",
+    "name": "AS Decoder",
+    "effect": [],
+    "location": [],
+    "note": "Decode old messages",
+    "__v": 0
+  },
+  {
+    "_id": "6186e952cfef8dddcd1a3e59",
+    "name": "Gear",
+    "effect": [],
+    "location": [
+      {
+        "_id": "6186e92bcfef8dddcd1a3e56",
+        "name": "Toy Town"
+      }
+    ],
+    "note": "Hagurumon founds in Toy Town",
+    "__v": 0
+  },
+  {
+    "_id": "6186e974cfef8dddcd1a3e5b",
+    "name": "Digitrout",
+    "effect": [],
+    "location": [],
+    "note": "TODO, check if can be catched in any lake",
+    "__v": 0
+  },
+  {
+    "_id": "6186ea36cfef8dddcd1a3e5d",
+    "name": "Electroring",
+    "effect": [],
+    "location": [],
+    "note": "Digivolve to Kaminarimon",
+    "__v": 0
+  }
+]

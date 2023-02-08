@@ -1,0 +1,210 @@
+[
+  {
+    "_id": "618b5746fe7fbf61e1f28b3e",
+    "digimon": {
+      "_id": "6188893df6dcfb8ef285b371",
+      "name": "Agumon"
+    },
+    "location": [
+      {
+        "_id": "6178339d980f82c383d1078b",
+        "name": "Native Forest"
+      }
+    ],
+    "job": "Item Keeper",
+    "note": "Upon entering Native Forest, you will meet up with an Agumon who will battle you.  You cannot escape this battle, and you must defeat Agumon before you can enter Native Forest any deeper. Defeat Agumon and he will join the city, opening up a convenient shop to hold any extra items that you may have.  Agumon can hold up to 100 different kinds of items, which comes in very handy since you can only carry 10 different items with you at a time.",
+    "__v": 0
+  },
+  {
+    "_id": "618c7150b325f35b3a05809c",
+    "digimon": {
+      "_id": "618b4ac900f3449853aa960b",
+      "name": "Kunemon"
+    },
+    "location": [
+      {
+        "_id": "618b57a7fe7fbf61e1f28b43",
+        "name": "Kunemon's Bed"
+      }
+    ],
+    "job": "Opens the path to the Digital Bridge",
+    "note": "In Native Forest, you will find an area called Kunemon's Bed which is located east of the Native Forest toilet. There, you will see Kunemon sitting on a large bush.  What's the problem?  Kunemon's hungry!  Feed him a food item from your inventory, and he will challenge you to a fight.  Win, and Kunemon will join the city.  Kunemon has about 900 HP, so make sure that your Digimon has comparable stats.  When you win, Kunemon opens a new path in the city's main square.  When you return to the city and talk to Kunemon, he will tell you about eating through the bushes to make the path.  This path leads you to the Digital Bridge area, which is a lot easier than walking all the way around Native Forest and back up to get to the bridge!.",
+    "__v": 0
+  },
+  {
+    "_id": "618c833cb325f35b3a05809e",
+    "digimon": {
+      "_id": "618b4daf00f3449853aa962f",
+      "name": "Palmon"
+    },
+    "location": [
+      {
+        "_id": "6178339d980f82c383d1078b",
+        "name": "Native Forest"
+      }
+    ],
+    "job": "Takes over Tanemon's farm and gives Giant Meat",
+    "note": "Palmon is hiding in Native Forest.  She says she's a flower. Find Palmon south of the Native Forest toilet. She will be facing away from you.  Talk to her, and she will tell you that she is a flower. Keep talking to her until she fights you. Defeat her, and Palmon will join the city and upgrade the meat farm for you, relieving a very happy Tanemon.  Tanemon will now be found lounging around in one of the planters, while Palmon runs the farm!  Palmon will give you three giant meats a day now, which should help feed those your Digimon. Palmon also can sell you Giant Meat if you need more than 3 pieces per day.",
+    "__v": 0
+  },
+  {
+    "_id": "618c84ce1a0fa299d27549fd",
+    "digimon": {
+      "_id": "618b48d300f3449853aa95f1",
+      "name": "Coelamon"
+    },
+    "location": [
+      {
+        "_id": "618c6d31b325f35b3a058093",
+        "name": "Coela Point"
+      }
+    ],
+    "job": "Manages the Item Stand, later found in the clinic",
+    "note": " One of the most important Digimon you will encounter in the game's early stages is Coelamon. Talk to Yuramon and Tsunomon, and they will tell you about a mysterious shadow that appears at Coela Point each afternoon.  Coela Point is the beach a couple screens south of Digimon Bridge. Head to Coela Point during the afternoon, and talk to the shadow that is swimming close to the shore. A Coelamon should emerge from the water, allowing you to cross to the other shore. Cross to the other side, then go north, following the shore. By the time you get to the bridge, it should have been repaired, and you will then be able to cross at any time. Go back to Coela Point and talk to Coelamon, and he will join the city. Coelamon opens an item stand in the city square, where you can buy the items small recovery, regular meat, and MP floppies.",
+    "__v": 0
+  },
+  {
+    "_id": "618c85f11a0fa299d27549ff",
+    "digimon": {
+      "_id": "618b492600f3449853aa95f9",
+      "name": "Etemon"
+    },
+    "location": [
+      {
+        "_id": "6178339d980f82c383d1078b",
+        "name": "Native Forest"
+      }
+    ],
+    "job": "Kicked out of city, near to the bridge, sells you Golden Banana",
+    "note": "To the east of Palmon's spot, you will find a tree that has a door on it. The door tells you that no one's home and to go away, but of course you're curious! Come to this door after the door Mount Infinity has been opened, and you'll find a surprise waiting for you in the tree! It's Etemon! Etemon does anywhere from 500-1000 points of damage to your Digimon before the battle even starts, so be prepared! As an ultimate Digimon, Etemon has about 6000 HP. After defeating him, Etemon will join the city, only to be kicked out by the other Digimon!  You can find him sulking near the Digimon Bridge, but also willing to sell you a Golden Banana, the Etemon digivolution item, for 50,000 bits.",
+    "__v": 0
+  },
+  {
+    "_id": "618c868a1a0fa299d2754a01",
+    "digimon": {
+      "_id": "618b4d8200f3449853aa9629",
+      "name": "Ninjamon"
+    },
+    "location": [
+      {
+        "_id": "6178339d980f82c383d1078b",
+        "name": "Native Forest"
+      }
+    ],
+    "job": "Gives you information about items",
+    "note": "The last Digimon of Native Forest isn't really in Native Forest, but rather is located near the Digimon Bridge. Ninjamon will appear randomly during the night if you walk south past the Bridge. He will challenge you to a battle, and if you can defeat him, he will join the city. Ninjamon hangs out in the secret item shop, and is always willing to give you information about items.",
+    "__v": 0
+  },
+  {
+    "_id": "632e71815a6bc61c179d7865",
+    "digimon": {
+      "_id": "618b4ddb00f3449853aa9635",
+      "name": "Piximon"
+    },
+    "location": [
+      {
+        "_id": "61788dccf74a592dc5d65936",
+        "name": "Tropical Jungle"
+      }
+    ],
+    "job": "Sell Trn Manual at shop",
+    "note": "can be found from time to time hovering around on the main screen of Tropical Jungle, south of the Digimon Bridge. You can tell if you're on the right screen if there are two Muchomon (during the daytime) or two J-Mojyamon (during the night), and if there are three directions to go from that screen.  Spotting Piximon is very rare. Piximon shows up at the same time every day, but that might be different in every game. Make sure that you pay attention to what time of day it is if you see him, so that if you can't defeat him then you know what time to return later.",
+    "__v": 0
+  },
+  {
+    "_id": "632e730c5a6bc61c179d786a",
+    "digimon": {
+      "_id": "618b4f3600f3449853aa9645",
+      "name": "Vegiemon"
+    },
+    "location": [
+      {
+        "_id": "61788dccf74a592dc5d65936",
+        "name": "Tropical Jungle"
+      }
+    ],
+    "job": "Takes over Palmon's farm and gives Sirloin, Super Carrot and Hawk Radish",
+    "note": "When you've heard from Tanemon about a strange plant that grows somewhere in the Tropical Jungle. If you go to the plant, which is located north of Piximon's screen then east from the Tropical Jungle toilet, you will find that the plant is dying of thirst! Don't you hope it rains soon?  If you can't solve the problem of helping the plant out, check near Tanemon's planter box on the 15th of the month. There will be a rain plant growing there, and you can take it to use on the tiny plant. Once you use the rain plant, a Vegiemon will grow from the tiny sprout!",
+    "__v": 0
+  },
+  {
+    "_id": "632e74765a6bc61c179d786f",
+    "digimon": {
+      "_id": "618b406b00f3449853aa95e2",
+      "name": "Betamon"
+    },
+    "location": [
+      {
+        "_id": "61788db5f74a592dc5d65934",
+        "name": "Mangrove Region"
+      }
+    ],
+    "job": "Build a fountain mid city and helps at the shop",
+    "note": "can be found in the east section of the Tropical Jungle, near the Mangrove Region.  To find Betamon, head east in Piximon's screen to the small wooden bridge. Cross the bridge but don't go to the next screen to the east. Instead, head north (up, not north towards Digimon Bridge) and you will come to an area with a ModokiBetamon. Pass the ModokiBetamon up and head west, where you will find Betamon.  Talk to him and he will join the city. Betamon helps Coelamon at the item shop, adding a few special items of his own.",
+    "__v": 0
+  },
+  {
+    "_id": "632e75805a6bc61c179d7874",
+    "digimon": {
+      "_id": "618b48c500f3449853aa95ef",
+      "name": "Centarumon"
+    },
+    "location": [
+      {
+        "_id": "61783d9d980f82c383d1078e",
+        "name": "Amida Forest"
+      }
+    ],
+    "job": "Opens up a clinic in the city",
+    "note": "can be found in the Amida Forest, which can be found by heading east from the small wooden bridge and then north from the screen with the readable sign. Centarumon isn't welcoming to strangers in his forest, and if he spots you in the Amida Forest, he will shoot you. He halves your Digimon's HP with each shot, until your Digimon is left with only 1 HP. When your Digimon has only 1 HP, you will be kicked out of the Amida Forest and forced to start all again. Your job is to head to the back of the Amida Forest, to find the door that is marked with an O instead of an X. So what's the trick to getting past Centarumon?  Well, one thing is, don't let him see you! Centarumon can't see you if you hide behind the northern part of the small rows, and thus you won't get shot as often.  If you do get shot, feed your Digimon a recovery floppy, so that he doesn't get injured and thrown out of the forest.  Once you do make it to the row marked with an O, Centarumon will greet you and join the city.",
+    "__v": 0
+  },
+  {
+    "_id": "632e7bd05a6bc61c179d7879",
+    "digimon": {
+      "_id": "618b4c2500f3449853aa9615",
+      "name": "Meramon"
+    },
+    "location": [
+      {
+        "_id": "6188648f560f61533c962af9",
+        "name": "Lava Cave"
+      }
+    ],
+    "job": "Open/Join to the Restaurant",
+    "note": "he challenges you and your Digimon to a battle. Meramon is an easy battle, and when you defeat him, he will join the city.  After you recruit Meramon, the Native Forest entrance to Mount Panorama is cleared and you are free to explore there.",
+    "__v": 0
+  },
+  {
+    "_id": "632e7d835a6bc61c179d7882",
+    "digimon": {
+      "_id": "618b48ff00f3449853aa95f7",
+      "name": "Drimogemon"
+    },
+    "location": [
+      {
+        "_id": "6186e7c6cfef8dddcd1a3e4b",
+        "name": "Drill Tunel"
+      }
+    ],
+    "job": "Treasure hunter",
+    "note": "Talk to the Drimogemon once he's done, and he'll join the city as its treasure hunter.  Drimogemon will find you treasure for either 1,000 or 5,000 bits. Give him 1,000 bits, and he will search for five days. Return anytime after five days and he will give you an item that he found.  For 5,000 bits, he will go for ten days. Generally, the 5,000 bit package will give you a better item, but sometimes Drimogemon brings back worthless items anyway, so it's all based on luck. When you go to pick up your item, make sure you have an empty space in your inventory, otherwise Drimogemon will say you have no room and will not even give you the item at another time! Be careful about that!",
+    "__v": 0
+  },
+  {
+    "_id": "632e80165a6bc61c179d788a",
+    "digimon": {
+      "_id": "618b4ef800f3449853aa963f",
+      "name": "Tyrannomon"
+    },
+    "location": [
+      {
+        "_id": "632e7ef05a6bc61c179d7887",
+        "name": "Ancient Dino Region"
+      }
+    ],
+    "job": "Open/Join to the Restaurant",
+    "note": "When you first enter the Ancient Dino Region, he will challenge you to a fight. When you defeat him, he'll talk to you for a bit, but then return to guard the doorway to the Ancient Speedy Zone. Find him at the doorway, and he will tell you about a mysterious meteorite that fell somewhere in the Speedy Zone. Tyrannomon will then move over, allowing you passage into the Speedy Zone. Be careful in the Speedy Zone! Make sure your Digimon is young; you don't want him fading away right in the middle of your mission. Also, make sure you have a good supply of food and a few portable potties, since your Digimon will want items more often. When you first enter the Speedy Zone, head north. Keep heading north until you see one solitary Saberdramon (the black Birdramon), and battle him. Defeat him and he will tell you that there is a hidden entrance in the previous screen. Return there, to the screen with the gigantic caging skeleton, and run along the left wall. You should find a small passageway that will take you to the meteorite. Follow the path north, and you will find the meteorite huddled in a corner.  Actually, it's a Meteormon, which recently fell from the sky. Once you beat him, return to Tyrannomon and tell him what happened. Tyrannomon's master will tell him to help you out by joining the city, and Tyrannomon will take up residence in restaurant: cooking up burgers and other tasty treats.",
+    "__v": 0
+  }
+]

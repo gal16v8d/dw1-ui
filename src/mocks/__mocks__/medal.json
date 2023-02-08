@@ -1,0 +1,107 @@
+[
+  {
+    "_id": "617e1d76a6bf8512724d50ee",
+    "number": 1,
+    "name": "Grade Cup",
+    "description": "Winning the  D, C, B, A, and S tournaments",
+    "__v": 0
+  },
+  {
+    "_id": "617e1dbea6bf8512724d50f0",
+    "number": 2,
+    "name": "Version Cup",
+    "description": "Winning the  0, 1, 2, 3, and 4 version tournaments",
+    "__v": 0
+  },
+  {
+    "_id": "617e1ea4a6bf8512724d50f2",
+    "number": 3,
+    "name": "Type Cup",
+    "description": "Winning all 'Type' Cups.  (Fire, Grapple, Thunder, Wind, Nature, Cool, Metallic, Filth)",
+    "__v": 0
+  },
+  {
+    "_id": "617e1edba6bf8512724d50f4",
+    "number": 4,
+    "name": "Special Cup",
+    "description": "Winning the Human (X), Animal (Y), and Dino Cup (Z)",
+    "__v": 0
+  },
+  {
+    "_id": "617e1f1aa6bf8512724d50f6",
+    "number": 5,
+    "name": "100 Times",
+    "description": "Winning Greymon's tournaments 100 times",
+    "__v": 0
+  },
+  {
+    "_id": "617e2059a6bf8512724d50f8",
+    "number": 10,
+    "name": "100 Fish",
+    "description": "100 fish caught",
+    "__v": 0
+  },
+  {
+    "_id": "617e208fa6bf8512724d50fa",
+    "number": 9,
+    "name": "Perfect Curling",
+    "description": "Got a perfect score in curling (10 pnts)",
+    "__v": 0
+  },
+  {
+    "_id": "617e21bfa6bf8512724d50fc",
+    "number": 8,
+    "name": "Max Abilities",
+    "description": "Maxed all of the digimons parameters",
+    "__v": 0
+  },
+  {
+    "_id": "617e21fba6bf8512724d50fe",
+    "number": 7,
+    "name": "Digimon Master",
+    "description": "Raised all 61 digimon",
+    "__v": 0
+  },
+  {
+    "_id": "617e2225a6bf8512724d5100",
+    "number": 6,
+    "name": "Technique Master",
+    "description": "Mastered 56 switch techniques",
+    "__v": 0
+  },
+  {
+    "_id": "617e2241a6bf8512724d5102",
+    "number": 11,
+    "name": "Ending",
+    "description": "Finished the game",
+    "__v": 0
+  },
+  {
+    "_id": "617e22a0a6bf8512724d5104",
+    "number": 12,
+    "name": "Town Flourishing",
+    "description": "Jijimon said the town is flourishing (Recruiting all of the Digimon)",
+    "__v": 0
+  },
+  {
+    "_id": "617e22c4a6bf8512724d5106",
+    "number": 13,
+    "name": "Card Complete",
+    "description": "Collected all digimon cards",
+    "__v": 0
+  },
+  {
+    "_id": "617e22f8a6bf8512724d5108",
+    "number": 14,
+    "name": "Bits Maxed",
+    "description": "Collected 999999 bits",
+    "__v": 0
+  },
+  {
+    "_id": "617e2324a6bf8512724d510a",
+    "number": 15,
+    "name": "10 Years",
+    "description": "Survived for 300 days (Playing for 10 Digimon years)",
+    "__v": 0
+  }
+]

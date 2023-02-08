@@ -1,0 +1,128 @@
+[
+  {
+    "_id": "6187f9dfa71a9899012b8bb4",
+    "point": 20,
+    "item": {
+      "_id": "6186d6b268070fb90f749da7",
+      "name": "Sup. Recovery"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fafded2970763042667c",
+    "point": 100,
+    "item": {
+      "_id": "6186da97cfef8dddcd1a3dab",
+      "name": "Sup. Restore Floppy"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fb3ced2970763042667e",
+    "point": 800,
+    "item": {
+      "_id": "6186db99cfef8dddcd1a3dc1",
+      "name": "Offense Chip"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fb4bed29707630426680",
+    "point": 800,
+    "item": {
+      "_id": "6186db9fcfef8dddcd1a3dc3",
+      "name": "Quick Chip"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fb5bed29707630426682",
+    "point": 800,
+    "item": {
+      "_id": "6186dba3cfef8dddcd1a3dc5",
+      "name": "Defense Chip"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fb64ed29707630426684",
+    "point": 800,
+    "item": {
+      "_id": "6186dba8cfef8dddcd1a3dc7",
+      "name": "Brain Chip"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fb71ed29707630426686",
+    "point": 800,
+    "item": {
+      "_id": "6186dbbecfef8dddcd1a3dc9",
+      "name": "HP Chip"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fb7eed29707630426688",
+    "point": 800,
+    "item": {
+      "_id": "6186dbc3cfef8dddcd1a3dcb",
+      "name": "MP Chip"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fbc9ed2970763042668a",
+    "point": 500,
+    "item": {
+      "_id": "6186e261cfef8dddcd1a3e15",
+      "name": "Rainbowhorn"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fbe2ed2970763042668c",
+    "point": 500,
+    "item": {
+      "_id": "6186e3c5cfef8dddcd1a3e2f",
+      "name": "Water Bottle"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fc0ded2970763042668e",
+    "point": 500,
+    "item": {
+      "_id": "6186e2a2cfef8dddcd1a3e1b",
+      "name": "Red Shell"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fc2bed29707630426690",
+    "point": 500,
+    "item": {
+      "_id": "6186e09bcfef8dddcd1a3dff",
+      "name": "Hard Scale"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fc45ed29707630426692",
+    "point": 500,
+    "item": {
+      "_id": "6186e0d5cfef8dddcd1a3e03",
+      "name": "Ice Crystal"
+    },
+    "__v": 0
+  },
+  {
+    "_id": "6187fc87ed29707630426694",
+    "point": 300,
+    "item": {
+      "_id": "6186e78ccfef8dddcd1a3e47",
+      "name": "Amazing rod"
+    },
+    "__v": 0
+  }
+]

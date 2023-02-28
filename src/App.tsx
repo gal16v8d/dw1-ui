@@ -5,6 +5,8 @@ import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client
 import Dw1App from 'components/Dw1App';
 import { Dw1ListingProvider } from 'provider/listing/Dw1ListingProvider';
 import React from 'react';
+import { useHotkeys } from 'react-hotkeys-hook';
+import { useDw1Store } from 'state/Dw1Store';
 import './App.css';
 
 const App: React.FC = () => {
@@ -22,6 +24,8 @@ const App: React.FC = () => {
   const persister = createSyncStoragePersister({
     storage: window.localStorage,
   });
+  const { updateDebugState, debugEnabled } = useDw1Store();
+  useHotkeys('shift+d', () => updateDebugState());
 
   return (
     <div
@@ -36,7 +40,7 @@ const App: React.FC = () => {
         <Dw1ListingProvider>
           <Dw1App />
         </Dw1ListingProvider>
-        {process.env.NODE_ENV === 'development' && (
+        {(process.env.NODE_ENV === 'development' || debugEnabled) && (
           <ReactQueryDevtools initialIsOpen={false} />
         )}
       </PersistQueryClientProvider>

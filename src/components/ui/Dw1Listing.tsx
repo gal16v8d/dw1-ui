@@ -18,6 +18,7 @@ import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { FC, Fragment, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { showMessage } from 'util/ErrorHandler';
+import Dw1DebugDisplay from './Dw1DebugDisplay';
 
 interface ListingProps {
   apiObject: ApiConfig;
@@ -193,6 +194,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
           <Dw1Spinner />
         ) : (
           <>
+            <Dw1DebugDisplay data={data} />
             <Toolbar className="p-mb-4" left={leftToolbarTemplate}></Toolbar>
             <DataTable
               value={data}

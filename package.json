@@ -27,11 +27,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.41.5",
+    "react-hotkeys-hook": "^4.3.5",
     "react-i18next": "^12.1.1",
+    "react-json-view": "^1.21.3",
     "react-router-dom": "^6.6.1",
     "react-scripts": "^5.0.1",
     "typescript": "^4.9.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.3.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.48.0",
@@ -90,5 +93,11 @@
   },
   "msw": {
     "workerDirectory": "public"
+  },
+  "overrides": {
+    "react-json-view": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }

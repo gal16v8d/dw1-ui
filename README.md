@@ -3,10 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Basically, its a really basic UI wiki view for all the data related to Digimon World 1 (1999) PS1 game.
 I am still feeding the database, so it may get some data updates soon.
-This project uses [React](https://reactjs.org/), [React-Query](https://tanstack.com/query/v4), [PrimeReact](https://www.primefaces.org/primereact/), [Bulma](https://bulma.io/) and [React-i18next](https://react.i18next.com/)
-among other cool technologies.
-This UI consumes a service that currently is available at [Railway](https://railway.app/) and then stores the data in cache, I am not keeping live the backend due some costs after starter plan is fully consumed, so feel free to
-ping if you see its not working.
+This UI consumes a service that currently is available at [Railway](https://railway.app/) and then stores the data in cache, I am not keeping live the backend due some costs after starter plan is fully consumed, but it can live through a flag that enable mocking using [MSW](https://mswjs.io/). It should be up, but if is not the case, feel free to ping.
 
 ## Available Scripts
 
@@ -56,4 +53,18 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+[MIT licensed](LICENSE).
+
+## List of cool technologies in use here
+
+- [Bulma](https://bulma.io/)
+- [Jest](https://jestjs.io/)
+- [Husky](https://typicode.github.io/husky/#/)
+- [Msw](https://mswjs.io/)
+- [Primereact](https://primereact.org/)
+- [React](https://reactjs.org/)
+- [React-Hotkeys](https://react-hotkeys-hook.vercel.app/)
+- [React-i18next](https://react.i18next.com/)
+- [React-Query](https://tanstack.com/query/v4/docs/react/adapters/react-query)
+- [React-Testing-Lib](https://testing-library.com/docs/react-testing-library/intro/)
+- [Zustand](https://docs.pmnd.rs/zustand/recipes/recipes)

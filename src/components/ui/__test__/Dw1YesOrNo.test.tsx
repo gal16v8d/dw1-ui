@@ -1,5 +1,5 @@
-import { renderWithBaseProviders, screen } from 'testutils/testutils';
-import { Dw1ListingProvider } from 'provider/listing/Dw1ListingProvider';
+import { Dw1ListingProvider } from '@/provider/listing/Dw1ListingProvider';
+import { renderWithBaseProviders, screen } from '@/testutils/testutils';
 import Dw1YesOrNo from '../Dw1YesOrNo';
 
 it('should render Badge component and match snapshot', () => {
@@ -22,5 +22,5 @@ it.each`
     </Dw1ListingProvider>
   );
   const badgeText = screen.getByText(expectedText);
-  expect(badgeText).toBeInTheDocument();
+  expect(badgeText).toBeDefined();
 });

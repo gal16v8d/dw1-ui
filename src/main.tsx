@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import './config/i18n/languageConfig';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 
-if (process.env.REACT_APP_ENABLE_MOCKS === 'true') {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { worker } = require('./mocks/browser');
-  worker.start();
+if (import.meta.env.VITE_ENABLE_MOCKS == 'true') {
+  import('./mocks/browser').then(({ worker }) => {
+    worker.start();
+  });
 }
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>

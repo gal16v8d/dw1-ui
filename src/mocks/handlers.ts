@@ -1,4 +1,4 @@
-import VALUES from 'constants/Dw1Constants';
+import VALUES from '@/constants/Dw1Constants';
 import { rest } from 'msw';
 import cardsJson from './__mocks__/cards.json';
 import digimonJson from './__mocks__/digimon.json';
@@ -19,55 +19,55 @@ import statusJson from './__mocks__/status.json';
 import techJson from './__mocks__/tech.json';
 
 const handlers = [
-  rest.get(`*${VALUES.API_OBJECT.CARD}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.CARD}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(cardsJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.DIGIMON}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.DIGIMON}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(digimonJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.ELEMENT}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.ELEMENT}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(elementJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.EXCHANGE}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.EXCHANGE}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(exchangeJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.GYM_MACHINE}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.GYM_MACHINE}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(gymMachineJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.ITEM}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.ITEM}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(itemJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.LEVEL}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.LEVEL}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(levelJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.LOCATION}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.LOCATION}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(locationJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.MACHINE}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.MACHINE}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(machineJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.MEDAL}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.MEDAL}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(medalJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.MENU}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.MENU}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(menuJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.MERIT_POINT}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.MERIT_POINT}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(meritPointJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.RECRUIT}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.RECRUIT}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(recruitJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.RESTAURANT}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.RESTAURANT}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(restaurantJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.RESTAURANT_FOOD}`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.RESTAURANT_FOOD}`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(restaurantFoodJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.STATUS}`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.STATUS}`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(statusJson))
   ),
-  rest.get(`*${VALUES.API_OBJECT.TECH}s`, (req, res, ctx) =>
+  rest.get(`*${VALUES.API_OBJECT.TECH}s`, (_req, res, ctx) =>
     res(ctx.status(200), ctx.json(techJson))
   ),
 ];

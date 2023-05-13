@@ -1,4 +1,4 @@
-import { useListingContext } from 'provider/listing/Dw1ListingProvider';
+import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
 import { Image } from 'primereact/image';
 
 const Home = (): JSX.Element => {

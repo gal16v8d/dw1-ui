@@ -1,16 +1,16 @@
+import Dw1App from '@/components/Dw1App';
+import { Dw1ListingProvider } from '@/provider/listing/Dw1ListingProvider';
+import { useDw1Store } from '@/state/Dw1Store';
 import { createSyncStoragePersister } from '@tanstack/query-sync-storage-persister';
 import { QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
-import Dw1App from 'components/Dw1App';
-import { Dw1ListingProvider } from 'provider/listing/Dw1ListingProvider';
 import React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
-import { useDw1Store } from 'state/Dw1Store';
 import './App.css';
 
 const App: React.FC = () => {
-  console.log(`Running DW1 UI Version: ${process.env.REACT_APP_VERSION}`);
+  console.log(`Running DW1 UI Version: ${import.meta.env.VITE_APP_VERSION}`);
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -40,7 +40,7 @@ const App: React.FC = () => {
         <Dw1ListingProvider>
           <Dw1App />
         </Dw1ListingProvider>
-        {(process.env.NODE_ENV === 'development' || debugEnabled) && (
+        {(import.meta.env.DEV || debugEnabled) && (
           <ReactQueryDevtools initialIsOpen={false} />
         )}
       </PersistQueryClientProvider>

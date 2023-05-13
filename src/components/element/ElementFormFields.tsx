@@ -1,5 +1,5 @@
-import Element from 'api/model/mongo/Element';
-import CrudData from 'api/model/requests/CrudData';
+import Element from '@/api/model/mongo/Element';
+import CrudData from '@/api/model/requests/CrudData';
 import { TFunction } from 'i18next';
 import { UseFormReturn } from 'react-hook-form';
 

@@ -1,5 +1,5 @@
-import Restaurant from 'api/model/mongo/Restaurant';
-import RestaurantFood from 'api/model/mongo/RestaurantFood';
+import Restaurant from '@/api/model/mongo/Restaurant';
+import RestaurantFood from '@/api/model/mongo/RestaurantFood';
 import { TFunction } from 'i18next';
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';

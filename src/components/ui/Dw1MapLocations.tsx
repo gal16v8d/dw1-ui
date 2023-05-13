@@ -1,4 +1,4 @@
-import Location from 'api/model/mongo/Location';
+import Location from '@/api/model/mongo/Location';
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import { DataScroller } from 'primereact/datascroller';

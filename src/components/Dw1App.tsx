@@ -1,4 +1,4 @@
-import { API_BASE_CONFIG } from 'config/ApiBaseConfig';
+import { API_BASE_CONFIG } from '@/config/ApiBaseConfig';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './home/Home';

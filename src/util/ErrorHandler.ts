@@ -1,11 +1,12 @@
-import VALUES from 'constants/Dw1Constants';
-import { Messages, MessagesSeverityType } from 'primereact/messages';
+import VALUES from '@/constants/Dw1Constants';
+import { severity } from '@/types/severity';
+import { Messages } from 'primereact/messages';
 import { RefObject } from 'react';
 
 const showMessage = (
   message: RefObject<Messages>,
   summary: string,
-  type: MessagesSeverityType,
+  type: severity,
   detail: string
 ): void =>
   message.current?.show({

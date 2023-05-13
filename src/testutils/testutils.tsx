@@ -1,8 +1,8 @@
-import { ReactElement } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactElement } from 'react';
 
+import i18n from '@/config/i18n/languageConfig';
 import { render as rltRender } from '@testing-library/react';
-import i18n from 'config/i18n/languageConfig';
 import { I18nextProvider } from 'react-i18next';
 
 const renderWithBaseProviders = (ui: ReactElement) => {
@@ -15,3 +15,4 @@ const renderWithBaseProviders = (ui: ReactElement) => {
 
 export * from '@testing-library/react';
 export { renderWithBaseProviders };
+

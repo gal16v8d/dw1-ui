@@ -1,4 +1,4 @@
-import RestaurantFood from 'api/model/mongo/RestaurantFood';
+import RestaurantFood from '@/api/model/mongo/RestaurantFood';
 import { TFunction } from 'i18next';
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';

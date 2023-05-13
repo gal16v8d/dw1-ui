@@ -1,6 +1,6 @@
-import { API_BASE_CONFIG } from 'config/ApiBaseConfig';
-import VALUES from 'constants/Dw1Constants';
-import { errorHandlerGetCall } from 'mocks/errors/errorHandler';
+import { API_BASE_CONFIG } from '@/config/ApiBaseConfig';
+import VALUES from '@/constants/Dw1Constants';
+import { errorHandlerGetCall } from '@/mocks/errors/errorHandler';
 import GenericService from '../GenericService';
 
 describe('http service test', () => {

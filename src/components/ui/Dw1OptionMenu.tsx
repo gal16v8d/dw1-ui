@@ -1,4 +1,4 @@
-import { API_BASE_CONFIG } from 'config/ApiBaseConfig';
+import { API_BASE_CONFIG } from '@/config/ApiBaseConfig';
 import { TFunction } from 'i18next';
 import { NavigateFunction } from 'react-router-dom';
 

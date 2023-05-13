@@ -1,4 +1,4 @@
-import { render, screen } from 'testutils/testutils';
+import { render, screen } from '@/testutils/testutils';
 import Dw1MapLocations from '../Dw1MapLocations';
 
 it.each`

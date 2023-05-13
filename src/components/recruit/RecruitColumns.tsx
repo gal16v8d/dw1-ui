@@ -1,5 +1,5 @@
-import Recruit from 'api/model/mongo/Recruit';
-import Dw1MapLocations from 'components/ui/Dw1MapLocations';
+import Recruit from '@/api/model/mongo/Recruit';
+import Dw1MapLocations from '@/components/ui/Dw1MapLocations';
 import { TFunction } from 'i18next';
 import { ColumnProps } from 'primereact/column';
 

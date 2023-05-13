@@ -1,5 +1,5 @@
+import { useDw1Store } from '@/state/Dw1Store';
 import ReactJson from 'react-json-view';
-import { useDw1Store } from 'state/Dw1Store';
 
 interface Dw1DebugProps {
   data: unknown;

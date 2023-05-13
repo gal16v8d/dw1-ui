@@ -1,5 +1,5 @@
-import { renderWithBaseProviders, screen } from 'testutils/testutils';
-import { Dw1ListingProvider } from 'provider/listing/Dw1ListingProvider';
+import { Dw1ListingProvider } from '@/provider/listing/Dw1ListingProvider';
+import { renderWithBaseProviders, screen } from '@/testutils/testutils';
 import PageFooter from '../PageFooter';
 
 test('renders layout footer app', () => {
@@ -10,6 +10,6 @@ test('renders layout footer app', () => {
   );
   const footerAppName = screen.getByText(/DW1-Api/i);
   const footerMit = screen.getByText(/MIT/i);
-  expect(footerAppName).toBeInTheDocument();
-  expect(footerMit).toBeInTheDocument();
+  expect(footerAppName).toBeDefined();
+  expect(footerMit).toBeDefined();
 });

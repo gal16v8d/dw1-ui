@@ -1,22 +1,24 @@
-import {
-  QueryObserverResult,
-  RefetchOptions,
-  RefetchQueryFilters,
-} from '@tanstack/react-query';
-import ApiConfig from 'api/model/config/ApiConfig';
-import PkData from 'api/model/mongo/PkData';
-import CrudData from 'api/model/requests/CrudData';
-import ApiError from 'api/model/responses/ApiError';
-import GenericService from 'api/service/GenericService';
+import ApiConfig from '@/api/model/config/ApiConfig';
+import PkData from '@/api/model/mongo/PkData';
+import CrudData from '@/api/model/requests/CrudData';
+import ApiError from '@/api/model/responses/ApiError';
+import GenericService from '@/api/service/GenericService';
 import {
   useDelete,
   useSave,
   useUpdate,
-} from 'api/service/hooks/useGenericService';
+} from '@/api/service/hooks/useGenericService';
+import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
+import { severity } from '@/types/severity';
+import {
+  QueryObserverResult,
+  RefetchOptions,
+  RefetchQueryFilters,
+  useQueryClient,
+} from '@tanstack/react-query';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
-import { Messages, MessagesSeverityType } from 'primereact/messages';
-import { useListingContext } from 'provider/listing/Dw1ListingProvider';
+import { Messages } from 'primereact/messages';
 import {
   Dispatch,
   RefObject,
@@ -25,7 +27,6 @@ import {
   useState,
 } from 'react';
 import { UseFormHandleSubmit } from 'react-hook-form';
-import { useQueryClient } from '@tanstack/react-query';
 
 interface Dw1BaseFormProps {
   selectedData: CrudData;
@@ -40,7 +41,7 @@ interface Dw1BaseFormProps {
   showMessage: (
     message: RefObject<Messages>,
     summary: string,
-    type: MessagesSeverityType,
+    type: severity,
     detail: string
   ) => void;
 }

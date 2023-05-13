@@ -1,23 +1,23 @@
-import ApiConfig from 'api/model/config/ApiConfig';
-import PkData from 'api/model/mongo/PkData';
-import CrudData from 'api/model/requests/CrudData';
-import GenericService from 'api/service/GenericService';
-import { useGetAll } from 'api/service/hooks/useGenericService';
-import { mapColumns } from 'components/base/mapColumns';
-import { mapForm } from 'components/base/mapForm';
-import Dw1BaseForm from 'components/ui/Dw1BaseForm';
-import Dw1Spinner from 'components/ui/Dw1Spinner';
-import VALUES from 'constants/Dw1Constants';
+import ApiConfig from '@/api/model/config/ApiConfig';
+import PkData from '@/api/model/mongo/PkData';
+import CrudData from '@/api/model/requests/CrudData';
+import GenericService from '@/api/service/GenericService';
+import { useGetAll } from '@/api/service/hooks/useGenericService';
+import { mapColumns } from '@/components/base/mapColumns';
+import { mapForm } from '@/components/base/mapForm';
+import Dw1BaseForm from '@/components/ui/Dw1BaseForm';
+import Dw1Spinner from '@/components/ui/Dw1Spinner';
+import VALUES from '@/constants/Dw1Constants';
+import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
+import { showMessage } from '@/util/ErrorHandler';
 import { Button } from 'primereact/button';
 import { Column, ColumnProps } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
 import { Image } from 'primereact/image';
 import { Messages } from 'primereact/messages';
 import { Toolbar } from 'primereact/toolbar';
-import { useListingContext } from 'provider/listing/Dw1ListingProvider';
 import { FC, Fragment, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { showMessage } from 'util/ErrorHandler';
 import Dw1DebugDisplay from './Dw1DebugDisplay';
 
 interface ListingProps {
@@ -197,6 +197,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
             <Dw1DebugDisplay data={data} />
             <Toolbar className="p-mb-4" left={leftToolbarTemplate}></Toolbar>
             <DataTable
+              //@ts-expect-error unknown[] not allowed here after update
               value={data}
               paginator={true}
               rows={VALUES.TABLE.ROWS}

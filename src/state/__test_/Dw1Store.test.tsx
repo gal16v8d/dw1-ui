@@ -1,5 +1,5 @@
+import { useDw1Store } from '@/state/Dw1Store';
 import { act, cleanup, renderHook } from '@testing-library/react';
-import { useDw1Store } from 'state/Dw1Store';
 
 describe('Dw1Store tests', () => {
   afterEach(() => cleanup());

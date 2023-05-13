@@ -1,5 +1,5 @@
-import ApiError from 'api/model/responses/ApiError';
-import GenericService from 'api/service/GenericService';
+import ApiError from '@/api/model/responses/ApiError';
+import GenericService from '@/api/service/GenericService';
 import {
   useMutation,
   UseMutationResult,

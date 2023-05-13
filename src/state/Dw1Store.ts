@@ -6,7 +6,7 @@ import { DebugProps, debugSlice } from './debugSlice';
 export type Dw1StorageData = DebugProps;
 
 const withDevTools = (
-  process.env.REACT_APP_ENV === 'development' ? devtools : (fn: unknown) => fn
+  import.meta.env.DEV? devtools : (fn: unknown) => fn
 ) as typeof devtools;
 
 export const useDw1Store = create<DebugProps>()(

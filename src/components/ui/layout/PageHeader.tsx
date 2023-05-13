@@ -1,4 +1,4 @@
-import { useListingContext } from 'provider/listing/Dw1ListingProvider';
+import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
 
 const PageHeader = (): JSX.Element => {
   const { t } = useListingContext();

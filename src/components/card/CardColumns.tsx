@@ -1,5 +1,5 @@
-import Card from 'api/model/mongo/Card';
-import Dw1YesOrNo from 'components/ui/Dw1YesOrNo';
+import Card from '@/api/model/mongo/Card';
+import Dw1YesOrNo from '@/components/ui/Dw1YesOrNo';
 import { TFunction } from 'i18next';
 import { ColumnProps } from 'primereact/column';
 

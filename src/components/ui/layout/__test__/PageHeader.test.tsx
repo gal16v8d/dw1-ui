@@ -1,5 +1,5 @@
-import { renderWithBaseProviders, screen } from 'testutils/testutils';
-import { Dw1ListingProvider } from 'provider/listing/Dw1ListingProvider';
+import { Dw1ListingProvider } from '@/provider/listing/Dw1ListingProvider';
+import { renderWithBaseProviders, screen } from '@/testutils/testutils';
 import PageHeader from '../PageHeader';
 
 test('renders layout footer app', () => {
@@ -9,5 +9,5 @@ test('renders layout footer app', () => {
     </Dw1ListingProvider>
   );
   const headerAppTitle = screen.getByText(/Digimon World 1 - Wiki/i);
-  expect(headerAppTitle).toBeInTheDocument();
+  expect(headerAppTitle).toBeDefined();
 });

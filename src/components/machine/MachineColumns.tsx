@@ -1,5 +1,5 @@
-import Machine from 'api/model/mongo/Machine';
-import Dw1YesOrNo from 'components/ui/Dw1YesOrNo';
+import Machine from '@/api/model/mongo/Machine';
+import Dw1YesOrNo from '@/components/ui/Dw1YesOrNo';
 import { TFunction } from 'i18next';
 import isEmpty from 'lodash/isEmpty';
 import { ColumnProps } from 'primereact/column';

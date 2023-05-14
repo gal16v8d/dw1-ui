@@ -6,7 +6,7 @@ import { Chip } from 'primereact/chip';
 import { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
-const mapLocations = (rowData: Item): JSX.Element => (
+const mapLocations = (rowData: Item): React.ReactNode => (
   <Dw1MapLocations
     locations={rowData?.location}
     identifier={'item-location'}
@@ -14,7 +14,7 @@ const mapLocations = (rowData: Item): JSX.Element => (
   />
 );
 
-const mapEffects = (rowData: Item): JSX.Element | null =>
+const mapEffects = (rowData: Item): React.ReactNode | null =>
   !isEmpty(rowData?.effect ?? []) ? (
     <DataScroller
       value={rowData.effect}

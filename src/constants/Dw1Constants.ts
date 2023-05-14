@@ -22,7 +22,7 @@ const VALUES = {
     MSG_LIFE: 5000,
   },
   PERMISSIONS: {
-    ENABLE_CRUD: import.meta.env.REACT_APP_ENABLE_CRUD === 'true',
+    ENABLE_CRUD: import.meta.env.VITE_ENABLE_CRUD === 'true',
   },
   TABLE: {
     ROWS: 10,

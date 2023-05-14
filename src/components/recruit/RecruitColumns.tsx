@@ -3,7 +3,7 @@ import Dw1MapLocations from '@/components/ui/Dw1MapLocations';
 import { TFunction } from 'i18next';
 import { ColumnProps } from 'primereact/column';
 
-const mapLocations = (rowData: Recruit): JSX.Element => (
+const mapLocations = (rowData: Recruit): React.ReactNode => (
   <Dw1MapLocations
     locations={rowData?.location}
     identifier={'recruit-location'}

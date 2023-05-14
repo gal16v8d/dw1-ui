@@ -6,7 +6,7 @@ import { Chip } from 'primereact/chip';
 import { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
-const mapFood = (rowData: Restaurant): JSX.Element | null =>
+const mapFood = (rowData: Restaurant): React.ReactNode | null =>
   !isEmpty(rowData?.restaurantFood ?? []) ? (
     <DataScroller
       value={rowData.restaurantFood}

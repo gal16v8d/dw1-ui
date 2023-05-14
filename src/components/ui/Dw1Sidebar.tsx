@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { buildMenuOptions } from './Dw1OptionMenu';
 
-const Dw1Sidebar = (): JSX.Element => {
+const Dw1Sidebar = (): React.ReactElement => {
   const { t } = useListingContext();
   const navigate = useNavigate();
   const [visibleLeft, setVisibleLeft] = useState<boolean>(false);

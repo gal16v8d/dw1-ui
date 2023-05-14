@@ -1,6 +1,6 @@
 import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
 
-const PageHeader = (): JSX.Element => {
+const PageHeader = (): React.ReactElement => {
   const { t } = useListingContext();
   return (
     <header className="header">

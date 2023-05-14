@@ -52,7 +52,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
 
   const form = useForm<object>();
 
-  const editComponent: JSX.Element | undefined = useMemo(() => {
+  const editComponent: React.ReactNode | undefined = useMemo(() => {
     const formData = mapForm(apiObject, t, form, selectedData);
     return (
       formData && (
@@ -78,7 +78,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
 
   const imageColumn = apiObject.imageCol ? apiObject.imagePath : undefined;
 
-  const mapImage = (rowData: unknown): JSX.Element => (
+  const mapImage = (rowData: unknown): React.ReactNode => (
     <div className="container" style={{ display: 'flex' }}>
       <Image
         src={`assets/img/${imageColumn}/${(rowData as PkData)._id}.png`}
@@ -148,7 +148,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
   const crudEnabled = (): boolean =>
     VALUES.PERMISSIONS.ENABLE_CRUD && !!editComponent;
 
-  const leftToolbarTemplate = (): JSX.Element => (
+  const leftToolbarTemplate = (): React.ReactNode => (
     <>
       {crudEnabled() && (
         <Fragment>
@@ -165,7 +165,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
     </>
   );
 
-  const actionTemplate = (rowData: unknown): JSX.Element => (
+  const actionTemplate = (rowData: unknown): React.ReactNode => (
     <div>
       <Button
         icon="pi pi-pencil"

@@ -1,6 +1,6 @@
 import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
 
-const PageFooter = (): JSX.Element => {
+const PageFooter = (): React.ReactElement => {
   const { t } = useListingContext();
   return (
     <footer className="footer">

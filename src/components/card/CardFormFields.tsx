@@ -7,7 +7,7 @@ export const cardFormFields = (
   t: TFunction<'translation', undefined>,
   useForm: UseFormReturn<Card>,
   selectedData: CrudData
-): JSX.Element => {
+): React.ReactNode => {
   const data = selectedData?.data as Card;
 
   return (

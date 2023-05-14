@@ -3,7 +3,7 @@ import { TFunction } from 'i18next';
 import { ColumnProps } from 'primereact/column';
 import { Image } from 'primereact/image';
 
-const mapTrainProps = (rowData: GymMachine): JSX.Element[] =>
+const mapTrainProps = (rowData: GymMachine): React.ReactNode[] =>
   rowData.train.map((value) => (
     <Image
       key={`${rowData._id}-train-${value}`}

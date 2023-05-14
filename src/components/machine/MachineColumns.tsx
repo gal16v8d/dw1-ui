@@ -5,7 +5,7 @@ import isEmpty from 'lodash/isEmpty';
 import { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
-const mapProducts = (rowData: Machine): JSX.Element | null =>
+const mapProducts = (rowData: Machine): React.ReactNode | null =>
   !isEmpty(rowData?.product ?? []) ? (
     <DataScroller
       value={rowData.product}
@@ -22,7 +22,7 @@ const mapProducts = (rowData: Machine): JSX.Element | null =>
     />
   ) : null;
 
-const mapRandom = (rowData: Machine): JSX.Element => (
+const mapRandom = (rowData: Machine): React.ReactNode => (
   <Dw1YesOrNo value={rowData?.random} />
 );
 

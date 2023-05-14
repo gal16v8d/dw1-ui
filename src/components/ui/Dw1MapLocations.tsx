@@ -16,7 +16,7 @@ const Dw1MapLocations: React.FC<Dw1MapLocationsProps> = ({
   locations,
   identifier,
   additionalClassName,
-}): JSX.Element | null =>
+}): React.ReactElement | null =>
   !isEmpty(locations ?? []) ? (
     <DataScroller
       data-testid={`ds-${identifier}`}

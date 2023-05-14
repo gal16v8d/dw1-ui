@@ -34,7 +34,7 @@ interface Dw1BaseFormProps {
   apiObject: ApiConfig;
   service: GenericService;
   handleSubmit: UseFormHandleSubmit<object>;
-  formElements: JSX.Element;
+  formElements: React.ReactNode;
   refetch: <TPageData>(
     options?: (RefetchOptions & RefetchQueryFilters<TPageData>) | undefined
   ) => Promise<QueryObserverResult<unknown[], unknown>>;
@@ -55,7 +55,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   formElements,
   refetch,
   showMessage,
-}): JSX.Element => {
+}): React.ReactElement => {
   const { t, message } = useListingContext();
   const queryClient = useQueryClient();
   const [displayDialog, setDisplayDialog] = useState<boolean>(false);

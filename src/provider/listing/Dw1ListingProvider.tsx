@@ -14,7 +14,7 @@ const Dw1ListingContext = React.createContext<
 
 const Dw1ListingProvider = (
   props: React.PropsWithChildren<Record<string, unknown>>
-): JSX.Element => {
+): React.ReactElement => {
   const { t } = useTranslation();
   const message = React.useRef<Messages>(null);
 

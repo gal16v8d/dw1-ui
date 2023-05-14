@@ -5,7 +5,9 @@ interface Dw1YesOrNoProps {
   value: boolean;
 }
 
-const Dw1YesOrNo: React.FC<Dw1YesOrNoProps> = ({ value }): JSX.Element => {
+const Dw1YesOrNo: React.FC<Dw1YesOrNoProps> = ({
+  value,
+}): React.ReactElement => {
   const { t } = useListingContext();
 
   return (

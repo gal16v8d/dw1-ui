@@ -8,7 +8,7 @@ import { Chip } from 'primereact/chip';
 import { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
-const mapTechs = (rowData: Digimon): JSX.Element | null =>
+const mapTechs = (rowData: Digimon): React.ReactNode | null =>
   !isEmpty(rowData?.tech ?? []) ? (
     <DataScroller
       value={rowData.tech}
@@ -20,15 +20,15 @@ const mapTechs = (rowData: Digimon): JSX.Element | null =>
     />
   ) : null;
 
-const mapRecruitable = (rowData: Digimon): JSX.Element => (
+const mapRecruitable = (rowData: Digimon): React.ReactNode => (
   <Dw1YesOrNo value={!!rowData?.recruitable} />
 );
 
-const mapRaisable = (rowData: Digimon): JSX.Element => (
+const mapRaisable = (rowData: Digimon): React.ReactNode => (
   <Dw1YesOrNo value={!!rowData?.raisable} />
 );
 
-const mapLocationHappy = (rowData: Digimon): JSX.Element => (
+const mapLocationHappy = (rowData: Digimon): React.ReactNode => (
   <Dw1MapLocations
     locations={rowData?.locationHappy}
     identifier={'digimon-happy-location'}
@@ -36,7 +36,7 @@ const mapLocationHappy = (rowData: Digimon): JSX.Element => (
   />
 );
 
-const mapLocationSad = (rowData: Digimon): JSX.Element => (
+const mapLocationSad = (rowData: Digimon): React.ReactNode => (
   <Dw1MapLocations
     locations={rowData?.locationSad}
     identifier={'digimon-sad-location'}

@@ -1,6 +1,6 @@
 import { ProgressSpinner } from 'primereact/progressspinner';
 
-const Dw1Spinner = (): JSX.Element => (
+const Dw1Spinner = (): React.ReactElement => (
   <ProgressSpinner
     style={{ width: '50px', height: '50px' }}
     strokeWidth="8"

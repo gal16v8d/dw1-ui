@@ -195,7 +195,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
         ) : (
           <>
             <Dw1DebugDisplay data={data} />
-            <Toolbar className="p-mb-4" left={leftToolbarTemplate}></Toolbar>
+            <Toolbar className="p-mb-4" start={leftToolbarTemplate}></Toolbar>
             <DataTable
               //@ts-expect-error unknown[] not allowed here after update
               value={data}

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.3.1",
   "type": "module",
-  "main": "electron/main.ts",
+  "main": "electron/main.cjs",
   "engines": {
     "node": ">=20.0.0 < 21.0.0"
   },
@@ -54,8 +54,8 @@
     "@vitejs/plugin-react": "^4.0.0",
     "@vitest/coverage-c8": "^0.31.0",
     "concurrently": "^8.0.1",
-    "electron": "^23.1.1",
-    "electron-builder": "^24.4.0",
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1",
     "electron-is": "^3.0.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -85,7 +85,7 @@
     "productName": "dw1-ui",
     "files": [
       "build/**/*",
-      "electron/main.ts",
+      "electron/main.cjs",
       "package.json"
     ],
     "extends": null,

@@ -16,6 +16,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
   "prettier.singleQuote": true,
   "eslint.lintTask.enable": true
 }

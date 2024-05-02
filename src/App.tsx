@@ -25,7 +25,15 @@ const App: React.FC = () => {
     storage: window.localStorage,
   });
   const { updateDebugState, debugEnabled } = useDw1Store();
-  useHotkeys('shift+d', () => updateDebugState());
+  useHotkeys('shift+d+e+v', () => updateDebugState());
+
+  const rqDevToolComponent = React.useMemo(
+    () =>
+      (import.meta.env.DEV || debugEnabled) && (
+        <ReactQueryDevtools initialIsOpen={false} />
+      ),
+    [debugEnabled]
+  );
 
   return (
     <div
@@ -40,9 +48,7 @@ const App: React.FC = () => {
         <Dw1ListingProvider>
           <Dw1App />
         </Dw1ListingProvider>
-        {(import.meta.env.DEV || debugEnabled) && (
-          <ReactQueryDevtools initialIsOpen={false} />
-        )}
+        {rqDevToolComponent}
       </PersistQueryClientProvider>
     </div>
   );

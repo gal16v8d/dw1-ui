@@ -1,9 +1,9 @@
+import PkData from './/PkData';
 import Item from './Item';
 import Level from './Level';
 import Location from './Location';
-import PkData from './/PkData';
 import Tech from './Tech';
-import { ActiveType, DigiType } from './types/Digimon.types';
+import type { ActiveType, DigiType } from './types/Digimon.types';
 
 class Digimon extends PkData {
   name: string;

@@ -1,4 +1,4 @@
-import ApiConfig from '@/api/model/config/ApiConfig';
+import type { ApiConfig } from '@/api/model/config/ApiConfig';
 import { cardColumns } from '@/components/card/CardColumns';
 import { digimonColumns } from '@/components/digimon/DigimonColumns';
 import { elementColumns } from '@/components/element/ElementColumns';
@@ -17,7 +17,7 @@ import { restaurantFoodColumns } from '@/components/restaurantFood/RestaurantFoo
 import { statusColumns } from '@/components/status/StatusColumns';
 import { techColumns } from '@/components/tech/TechColumns';
 import VALUES from '@/constants/Dw1Constants';
-import { TFunction } from 'i18next';
+import type { TFunction } from 'i18next';
 
 export const mapColumns = (
   apiObject: ApiConfig,

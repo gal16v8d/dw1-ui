@@ -3,4 +3,4 @@ interface Element {
   name: string;
 }
 
-export default Element;
+export type { Element };

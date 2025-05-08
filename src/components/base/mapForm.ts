@@ -1,16 +1,16 @@
-import ApiConfig from '@/api/model/config/ApiConfig';
+import type { ApiConfig } from '@/api/model/config/ApiConfig';
 import Card from '@/api/model/mongo/Card';
-import Element from '@/api/model/mongo/Element';
+import type { Element } from '@/api/model/mongo/Element';
 import Level from '@/api/model/mongo/Level';
 import Location from '@/api/model/mongo/Location';
-import CrudData from '@/api/model/requests/CrudData';
+import type { CrudData } from '@/api/model/requests/CrudData';
 import { cardFormFields } from '@/components/card/CardFormFields';
 import { elementFormFields } from '@/components/element/ElementFormFields';
 import { levelFormFields } from '@/components/level/LevelFormFields';
 import { locationFormFields } from '@/components/location/LocationFormFields';
 import VALUES from '@/constants/Dw1Constants';
-import { TFunction } from 'i18next';
-import { UseFormReturn } from 'react-hook-form';
+import type { TFunction } from 'i18next';
+import type { UseFormReturn } from 'react-hook-form';
 
 export const mapForm = (
   apiObject: ApiConfig,

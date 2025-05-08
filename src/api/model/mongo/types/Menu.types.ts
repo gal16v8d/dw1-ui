@@ -1,3 +1,3 @@
 type MenuType = 'Battle' | 'Option';
 
-export default MenuType;
+export type { MenuType };

@@ -1,4 +1,4 @@
-import ApiConfig from '@/api/model/config/ApiConfig';
+import type { ApiConfig } from '@/api/model/config/ApiConfig';
 import VALUES from '@/constants/Dw1Constants';
 
 export const API_BASE_CONFIG: ApiConfig[] = [

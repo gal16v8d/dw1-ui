@@ -4,4 +4,4 @@ interface ApiError {
   message: string;
 }
 
-export default ApiError;
+export type { ApiError };

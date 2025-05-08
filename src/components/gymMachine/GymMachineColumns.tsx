@@ -1,6 +1,6 @@
 import GymMachine from '@/api/model/mongo/GymMachine';
-import { TFunction } from 'i18next';
-import { ColumnProps } from 'primereact/column';
+import type { TFunction } from 'i18next';
+import type { ColumnProps } from 'primereact/column';
 import { Image } from 'primereact/image';
 
 const mapTrainProps = (rowData: GymMachine): React.ReactNode[] =>

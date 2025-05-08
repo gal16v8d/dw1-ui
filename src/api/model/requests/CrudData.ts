@@ -5,4 +5,4 @@ interface CrudData {
   deleting: boolean;
 }
 
-export default CrudData;
+export type { CrudData };

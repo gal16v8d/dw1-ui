@@ -1,8 +1,8 @@
 import Machine from '@/api/model/mongo/Machine';
 import Dw1YesOrNo from '@/components/ui/Dw1YesOrNo';
-import { TFunction } from 'i18next';
+import type { TFunction } from 'i18next';
 import isEmpty from 'lodash/isEmpty';
-import { ColumnProps } from 'primereact/column';
+import type { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
 const mapProducts = (rowData: Machine): React.ReactNode | null =>

@@ -1,6 +1,6 @@
-import ApiConfig from '@/api/model/config/ApiConfig';
+import type { ApiConfig } from '@/api/model/config/ApiConfig';
 import PkData from '@/api/model/mongo/PkData';
-import CrudData from '@/api/model/requests/CrudData';
+import type { CrudData } from '@/api/model/requests/CrudData';
 import GenericService from '@/api/service/GenericService';
 import { useGetAll } from '@/api/service/hooks/useGenericService';
 import { mapColumns } from '@/components/base/mapColumns';
@@ -11,12 +11,14 @@ import VALUES from '@/constants/Dw1Constants';
 import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
 import { showMessage } from '@/util/ErrorHandler';
 import { Button } from 'primereact/button';
-import { Column, ColumnProps } from 'primereact/column';
+import type { ColumnProps } from 'primereact/column';
+import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
 import { Image } from 'primereact/image';
 import { Messages } from 'primereact/messages';
 import { Toolbar } from 'primereact/toolbar';
-import { FC, Fragment, useMemo, useState } from 'react';
+import type { FC } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Dw1DebugDisplay from './Dw1DebugDisplay';
 

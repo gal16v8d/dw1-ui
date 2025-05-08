@@ -1,9 +1,9 @@
 import Item from '@/api/model/mongo/Item';
 import Dw1MapLocations from '@/components/ui/Dw1MapLocations';
-import { TFunction } from 'i18next';
+import type { TFunction } from 'i18next';
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
-import { ColumnProps } from 'primereact/column';
+import type { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
 const mapLocations = (rowData: Item): React.ReactNode => (

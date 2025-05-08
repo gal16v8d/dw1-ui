@@ -1,11 +1,7 @@
-import ApiError from '@/api/model/responses/ApiError';
+import type { ApiError } from '@/api/model/responses/ApiError';
 import GenericService from '@/api/service/GenericService';
-import {
-  useMutation,
-  UseMutationResult,
-  useQuery,
-  UseQueryResult,
-} from '@tanstack/react-query';
+import type { UseMutationResult, UseQueryResult } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 
 const useGetAll = (
   queryKey: string,
@@ -113,4 +109,4 @@ const useDelete = (
     },
   });
 
-export { useGetAll, useSave, useUpdate, useDelete };
+export { useDelete, useGetAll, useSave, useUpdate };

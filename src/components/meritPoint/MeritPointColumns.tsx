@@ -1,5 +1,5 @@
-import { TFunction } from 'i18next';
-import { ColumnProps } from 'primereact/column';
+import type { TFunction } from 'i18next';
+import type { ColumnProps } from 'primereact/column';
 
 export const meritPointColumns = (
   t: TFunction<'translation', undefined>

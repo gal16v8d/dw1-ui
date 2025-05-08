@@ -1,6 +1,6 @@
-import Element from './Element';
+import type { Element } from './Element';
 import PkData from './PkData';
-import { RangType, SpecType } from './types/Tech.types';
+import type { RangType, SpecType } from './types/Tech.types';
 
 class Tech extends PkData {
   number?: number;

@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
-import { DebugProps, debugSlice } from './debugSlice';
+import type { DebugProps } from './debugSlice';
+import { debugSlice } from './debugSlice';
 
 export type Dw1StorageData = DebugProps;
 

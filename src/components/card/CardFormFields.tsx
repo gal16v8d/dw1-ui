@@ -1,7 +1,7 @@
 import Card from '@/api/model/mongo/Card';
-import CrudData from '@/api/model/requests/CrudData';
-import { TFunction } from 'i18next';
-import { UseFormReturn } from 'react-hook-form';
+import type { CrudData } from '@/api/model/requests/CrudData';
+import type { TFunction } from 'i18next';
+import type { UseFormReturn } from 'react-hook-form';
 
 export const cardFormFields = (
   t: TFunction<'translation', undefined>,

@@ -1,5 +1,5 @@
 import Digimon from '../mongo/Digimon';
-import { ActiveType, DigiType } from '../mongo/types/Digimon.types';
+import type { ActiveType, DigiType } from '../mongo/types/Digimon.types';
 
 class DigimonRequest {
   name: string;

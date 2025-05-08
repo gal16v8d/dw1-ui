@@ -1,7 +1,7 @@
-import ApiConfig from '@/api/model/config/ApiConfig';
+import type { ApiConfig } from '@/api/model/config/ApiConfig';
 import PkData from '@/api/model/mongo/PkData';
-import CrudData from '@/api/model/requests/CrudData';
-import ApiError from '@/api/model/responses/ApiError';
+import type { CrudData } from '@/api/model/requests/CrudData';
+import type { ApiError } from '@/api/model/responses/ApiError';
 import GenericService from '@/api/service/GenericService';
 import {
   useDelete,
@@ -9,24 +9,19 @@ import {
   useUpdate,
 } from '@/api/service/hooks/useGenericService';
 import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
-import { severity } from '@/types/severity';
-import {
+import type { severity } from '@/types/severity';
+import type {
   QueryObserverResult,
   RefetchOptions,
   RefetchQueryFilters,
-  useQueryClient,
 } from '@tanstack/react-query';
+import { useQueryClient } from '@tanstack/react-query';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { Messages } from 'primereact/messages';
-import {
-  Dispatch,
-  RefObject,
-  SetStateAction,
-  useEffect,
-  useState,
-} from 'react';
-import { UseFormHandleSubmit } from 'react-hook-form';
+import type { Dispatch, RefObject, SetStateAction } from 'react';
+import { useEffect, useState } from 'react';
+import type { UseFormHandleSubmit } from 'react-hook-form';
 
 interface Dw1BaseFormProps {
   selectedData: CrudData;

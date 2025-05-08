@@ -7,4 +7,4 @@ interface ApiConfig {
   route: string;
 }
 
-export default ApiConfig;
+export type { ApiConfig };

@@ -1,7 +1,7 @@
 import VALUES from '@/constants/Dw1Constants';
-import { severity } from '@/types/severity';
+import type { severity } from '@/types/severity';
 import { Messages } from 'primereact/messages';
-import { RefObject } from 'react';
+import type { RefObject } from 'react';
 
 const showMessage = (
   message: RefObject<Messages>,

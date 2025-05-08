@@ -1,9 +1,9 @@
 import Restaurant from '@/api/model/mongo/Restaurant';
 import RestaurantFood from '@/api/model/mongo/RestaurantFood';
-import { TFunction } from 'i18next';
+import type { TFunction } from 'i18next';
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
-import { ColumnProps } from 'primereact/column';
+import type { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
 
 const mapFood = (rowData: Restaurant): React.ReactNode | null =>

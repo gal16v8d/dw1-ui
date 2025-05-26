@@ -19,7 +19,14 @@ import { useQueryClient } from '@tanstack/react-query';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { Messages } from 'primereact/messages';
-import type { Dispatch, RefObject, SetStateAction } from 'react';
+import type {
+  Dispatch,
+  FC,
+  ReactElement,
+  ReactNode,
+  RefObject,
+  SetStateAction,
+} from 'react';
 import { useEffect, useState } from 'react';
 import type { UseFormHandleSubmit } from 'react-hook-form';
 
@@ -29,7 +36,7 @@ interface Dw1BaseFormProps {
   apiObject: ApiConfig;
   service: GenericService;
   handleSubmit: UseFormHandleSubmit<object>;
-  formElements: React.ReactNode;
+  formElements: ReactNode;
   refetch: <TPageData>(
     options?: (RefetchOptions & RefetchQueryFilters<TPageData>) | undefined
   ) => Promise<QueryObserverResult<unknown[], unknown>>;
@@ -41,7 +48,7 @@ interface Dw1BaseFormProps {
   ) => void;
 }
 
-const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
+const Dw1BaseForm: FC<Dw1BaseFormProps> = ({
   selectedData,
   setSelectedData,
   apiObject,
@@ -50,7 +57,7 @@ const Dw1BaseForm: React.FC<Dw1BaseFormProps> = ({
   formElements,
   refetch,
   showMessage,
-}): React.ReactElement => {
+}): ReactElement => {
   const { t, message } = useListingContext();
   const queryClient = useQueryClient();
   const [displayDialog, setDisplayDialog] = useState<boolean>(false);

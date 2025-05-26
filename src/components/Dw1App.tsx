@@ -1,5 +1,6 @@
 import { API_BASE_CONFIG } from '@/config/ApiBaseConfig';
-import React, { lazy, Suspense } from 'react';
+import type { ReactElement } from 'react';
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './home/Home';
 import Dw1Sidebar from './ui/Dw1Sidebar';
@@ -9,7 +10,7 @@ import PageHeader from './ui/layout/PageHeader';
 
 const Dw1Listing = lazy(() => import('./ui/Dw1Listing'));
 
-const Dw1App = (): React.ReactElement => {
+const Dw1App = (): ReactElement => {
   return (
     <>
       <PageHeader />

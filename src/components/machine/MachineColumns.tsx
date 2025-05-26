@@ -4,8 +4,9 @@ import type { TFunction } from 'i18next';
 import isEmpty from 'lodash/isEmpty';
 import type { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
+import type { ReactNode } from 'react';
 
-const mapProducts = (rowData: Machine): React.ReactNode | null =>
+const mapProducts = (rowData: Machine): ReactNode | null =>
   !isEmpty(rowData?.product ?? []) ? (
     <DataScroller
       value={rowData.product}
@@ -22,7 +23,7 @@ const mapProducts = (rowData: Machine): React.ReactNode | null =>
     />
   ) : null;
 
-const mapRandom = (rowData: Machine): React.ReactNode => (
+const mapRandom = (rowData: Machine): ReactNode => (
   <Dw1YesOrNo value={rowData?.random} />
 );
 

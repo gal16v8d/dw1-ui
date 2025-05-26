@@ -1,13 +1,12 @@
 import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
 import { Badge } from 'primereact/badge';
+import type { FC, ReactElement } from 'react';
 
 interface Dw1YesOrNoProps {
   value: boolean;
 }
 
-const Dw1YesOrNo: React.FC<Dw1YesOrNoProps> = ({
-  value,
-}): React.ReactElement => {
+const Dw1YesOrNo: FC<Dw1YesOrNoProps> = ({ value }): ReactElement => {
   const { t } = useListingContext();
 
   return (

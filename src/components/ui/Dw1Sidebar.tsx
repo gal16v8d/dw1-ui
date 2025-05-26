@@ -2,11 +2,12 @@ import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
 import { Button } from 'primereact/button';
 import { Menu } from 'primereact/menu';
 import { Sidebar } from 'primereact/sidebar';
+import type { ReactElement } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { buildMenuOptions } from './Dw1OptionMenu';
 
-const Dw1Sidebar = (): React.ReactElement => {
+const Dw1Sidebar = (): ReactElement => {
   const { t } = useListingContext();
   const navigate = useNavigate();
   const [visibleLeft, setVisibleLeft] = useState<boolean>(false);

@@ -1,13 +1,14 @@
 import Card from '@/api/model/mongo/Card';
 import type { CrudData } from '@/api/model/requests/CrudData';
 import type { TFunction } from 'i18next';
+import type { ReactNode } from 'react';
 import type { UseFormReturn } from 'react-hook-form';
 
 export const cardFormFields = (
   t: TFunction<'translation', undefined>,
   useForm: UseFormReturn<Card>,
   selectedData: CrudData
-): React.ReactNode => {
+): ReactNode => {
   const data = selectedData?.data as Card;
 
   return (

@@ -7,8 +7,9 @@ import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import type { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
+import type { ReactNode } from 'react';
 
-const mapTechs = (rowData: Digimon): React.ReactNode | null =>
+const mapTechs = (rowData: Digimon): ReactNode | null =>
   !isEmpty(rowData?.tech ?? []) ? (
     <DataScroller
       value={rowData.tech}
@@ -20,15 +21,15 @@ const mapTechs = (rowData: Digimon): React.ReactNode | null =>
     />
   ) : null;
 
-const mapRecruitable = (rowData: Digimon): React.ReactNode => (
+const mapRecruitable = (rowData: Digimon): ReactNode => (
   <Dw1YesOrNo value={!!rowData?.recruitable} />
 );
 
-const mapRaisable = (rowData: Digimon): React.ReactNode => (
+const mapRaisable = (rowData: Digimon): ReactNode => (
   <Dw1YesOrNo value={!!rowData?.raisable} />
 );
 
-const mapLocationHappy = (rowData: Digimon): React.ReactNode => (
+const mapLocationHappy = (rowData: Digimon): ReactNode => (
   <Dw1MapLocations
     locations={rowData?.locationHappy}
     identifier={'digimon-happy-location'}
@@ -36,7 +37,7 @@ const mapLocationHappy = (rowData: Digimon): React.ReactNode => (
   />
 );
 
-const mapLocationSad = (rowData: Digimon): React.ReactNode => (
+const mapLocationSad = (rowData: Digimon): ReactNode => (
   <Dw1MapLocations
     locations={rowData?.locationSad}
     identifier={'digimon-sad-location'}

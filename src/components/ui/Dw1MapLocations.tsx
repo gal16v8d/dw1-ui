@@ -2,6 +2,7 @@ import Location from '@/api/model/mongo/Location';
 import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import { DataScroller } from 'primereact/datascroller';
+import type { FC, ReactElement } from 'react';
 import './Dw1MapLocations.css';
 
 type LocationClassName = 'good-chip' | 'bad-chip';
@@ -12,11 +13,11 @@ interface Dw1MapLocationsProps {
   additionalClassName: LocationClassName;
 }
 
-const Dw1MapLocations: React.FC<Dw1MapLocationsProps> = ({
+const Dw1MapLocations: FC<Dw1MapLocationsProps> = ({
   locations,
   identifier,
   additionalClassName,
-}): React.ReactElement | null =>
+}): ReactElement | null =>
   !isEmpty(locations ?? []) ? (
     <DataScroller
       data-testid={`ds-${identifier}`}

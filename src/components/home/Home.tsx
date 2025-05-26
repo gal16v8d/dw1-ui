@@ -1,7 +1,8 @@
 import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
 import { Image } from 'primereact/image';
+import type { ReactElement } from 'react';
 
-const Home = (): React.ReactElement => {
+const Home = (): ReactElement => {
   const { t } = useListingContext();
   return (
     <div

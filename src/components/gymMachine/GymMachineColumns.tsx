@@ -2,8 +2,9 @@ import GymMachine from '@/api/model/mongo/GymMachine';
 import type { TFunction } from 'i18next';
 import type { ColumnProps } from 'primereact/column';
 import { Image } from 'primereact/image';
+import type { ReactNode } from 'react';
 
-const mapTrainProps = (rowData: GymMachine): React.ReactNode[] =>
+const mapTrainProps = (rowData: GymMachine): ReactNode[] =>
   rowData.train.map((value) => (
     <Image
       key={`${rowData._id}-train-${value}`}

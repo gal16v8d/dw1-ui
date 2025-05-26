@@ -5,11 +5,12 @@ import { createSyncStoragePersister } from '@tanstack/query-sync-storage-persist
 import { QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
-import React from 'react';
+import type { FC } from 'react';
+import { useMemo } from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 import './App.css';
 
-const App: React.FC = () => {
+const App: FC = () => {
   console.log(`Running DW1 UI Version: ${import.meta.env.VITE_APP_VERSION}`);
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -27,7 +28,7 @@ const App: React.FC = () => {
   const { updateDebugState, debugEnabled } = useDw1Store();
   useHotkeys('shift+d+e+v', () => updateDebugState());
 
-  const rqDevToolComponent = React.useMemo(
+  const rqDevToolComponent = useMemo(
     () =>
       (import.meta.env.DEV || debugEnabled) && (
         <ReactQueryDevtools initialIsOpen={false} />

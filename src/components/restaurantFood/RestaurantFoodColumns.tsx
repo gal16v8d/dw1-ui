@@ -4,8 +4,9 @@ import isEmpty from 'lodash/isEmpty';
 import { Chip } from 'primereact/chip';
 import type { ColumnProps } from 'primereact/column';
 import { DataScroller } from 'primereact/datascroller';
+import type { ReactNode } from 'react';
 
-const mapEffects = (rowData: RestaurantFood): React.ReactNode | null =>
+const mapEffects = (rowData: RestaurantFood): ReactNode | null =>
   !isEmpty(rowData?.effect ?? []) ? (
     <DataScroller
       value={rowData.effect}

@@ -1,6 +1,7 @@
 import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
+import type { ReactElement } from 'react';
 
-const PageHeader = (): React.ReactElement => {
+const PageHeader = (): ReactElement => {
   const { t } = useListingContext();
   return (
     <header className="header">

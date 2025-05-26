@@ -2,8 +2,9 @@ import Card from '@/api/model/mongo/Card';
 import Dw1YesOrNo from '@/components/ui/Dw1YesOrNo';
 import type { TFunction } from 'i18next';
 import type { ColumnProps } from 'primereact/column';
+import type { ReactNode } from 'react';
 
-const mapExchangeable = (rowData: Card): React.ReactNode => (
+const mapExchangeable = (rowData: Card): ReactNode => (
   <Dw1YesOrNo value={rowData?.exchangeable} />
 );
 

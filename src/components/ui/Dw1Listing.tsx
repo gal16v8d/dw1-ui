@@ -17,7 +17,7 @@ import { DataTable } from 'primereact/datatable';
 import { Image } from 'primereact/image';
 import { Messages } from 'primereact/messages';
 import { Toolbar } from 'primereact/toolbar';
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import { Fragment, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Dw1DebugDisplay from './Dw1DebugDisplay';
@@ -54,7 +54,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
 
   const form = useForm<object>();
 
-  const editComponent: React.ReactNode | undefined = useMemo(() => {
+  const editComponent: ReactNode | undefined = useMemo(() => {
     const formData = mapForm(apiObject, t, form, selectedData);
     return (
       formData && (
@@ -80,7 +80,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
 
   const imageColumn = apiObject.imageCol ? apiObject.imagePath : undefined;
 
-  const mapImage = (rowData: unknown): React.ReactNode => (
+  const mapImage = (rowData: unknown): ReactNode => (
     <div className="container" style={{ display: 'flex' }}>
       <Image
         src={`assets/img/${imageColumn}/${(rowData as PkData)._id}.png`}
@@ -150,7 +150,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
   const crudEnabled = (): boolean =>
     VALUES.PERMISSIONS.ENABLE_CRUD && !!editComponent;
 
-  const leftToolbarTemplate = (): React.ReactNode => (
+  const leftToolbarTemplate = (): ReactNode => (
     <>
       {crudEnabled() && (
         <Fragment>
@@ -167,7 +167,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
     </>
   );
 
-  const actionTemplate = (rowData: unknown): React.ReactNode => (
+  const actionTemplate = (rowData: unknown): ReactNode => (
     <div>
       <Button
         icon="pi pi-pencil"

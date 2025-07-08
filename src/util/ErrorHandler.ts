@@ -1,12 +1,12 @@
 import VALUES from '@/constants/Dw1Constants';
-import type { severity } from '@/types/severity';
+import type { Severity } from '@/types/severity';
 import { Messages } from 'primereact/messages';
 import type { RefObject } from 'react';
 
-const showMessage = (
+const displayNotification = (
   message: RefObject<Messages>,
   summary: string,
-  type: severity,
+  type: Severity,
   detail: string
 ): void =>
   message.current?.show({
@@ -16,4 +16,4 @@ const showMessage = (
     detail: detail,
   });
 
-export { showMessage };
+export { displayNotification };

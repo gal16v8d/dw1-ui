@@ -9,7 +9,7 @@ import {
   useUpdate,
 } from '@/api/service/hooks/useGenericService';
 import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
-import type { severity } from '@/types/severity';
+import type { Severity } from '@/types/severity';
 import type {
   QueryObserverResult,
   RefetchOptions,
@@ -43,7 +43,7 @@ interface Dw1BaseFormProps {
   showMessage: (
     message: RefObject<Messages>,
     summary: string,
-    type: severity,
+    type: Severity,
     detail: string
   ) => void;
 }
@@ -62,10 +62,20 @@ const Dw1BaseForm: FC<Dw1BaseFormProps> = ({
   const queryClient = useQueryClient();
   const [displayDialog, setDisplayDialog] = useState<boolean>(false);
   const currentId = (selectedData?.data as PkData)?._id ?? '';
-  const goBackToList = async (detail: string, severity: 'success' | 'warn') => {
-    setDisplayDialog(false);
+
+  const closeDialog = (): void => setDisplayDialog(false);
+
+  const invalidateAndRefetch = async (): Promise<void> => {
     await queryClient.invalidateQueries({ queryKey: [apiObject.queryKey] });
     await refetch();
+  };
+
+  const goBackToList = async (
+    detail: string,
+    severity: Severity
+  ): Promise<void> => {
+    closeDialog();
+    await invalidateAndRefetch();
     showMessage(message, severity, severity, detail);
   };
 

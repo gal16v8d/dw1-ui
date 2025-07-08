@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import type { DebugProps } from './debugSlice';
@@ -7,7 +6,7 @@ import { debugSlice } from './debugSlice';
 export type Dw1StorageData = DebugProps;
 
 const withDevTools = (
-  import.meta.env.DEV? devtools : (fn: unknown) => fn
+  import.meta.env.DEV ? devtools : (fn: unknown) => fn
 ) as typeof devtools;
 
 export const useDw1Store = create<DebugProps>()(

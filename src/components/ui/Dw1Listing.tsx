@@ -9,7 +9,7 @@ import Dw1BaseForm from '@/components/ui/Dw1BaseForm';
 import Dw1Spinner from '@/components/ui/Dw1Spinner';
 import VALUES from '@/constants/Dw1Constants';
 import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
-import { showMessage } from '@/util/ErrorHandler';
+import { displayNotification } from '@/util/ErrorHandler';
 import { Button } from 'primereact/button';
 import type { ColumnProps } from 'primereact/column';
 import { Column } from 'primereact/column';
@@ -36,7 +36,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
     apiObject.expanded,
     {
       onError: (error: { message: string }) => {
-        showMessage(message, 'warn', 'warn', error?.message);
+        displayNotification(message, 'warn', 'warn', error?.message);
       },
       // Api is not updated so often, so this can be Infinity
       // to avoid multiple fetch to Db, and avoid to consume a lot of
@@ -63,7 +63,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
           selectedData={selectedData}
           setSelectedData={setSelectedData}
           refetch={refetch}
-          showMessage={showMessage}
+          showMessage={displayNotification}
           apiObject={apiObject}
           service={service}
           handleSubmit={form.handleSubmit}

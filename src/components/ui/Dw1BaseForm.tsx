@@ -8,12 +8,11 @@ import {
   useSave,
   useUpdate,
 } from '@/api/service/hooks/useGenericService';
-import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
+import { useListingContext } from '@/provider/listing/Dw1ListingContext';
 import type { Severity } from '@/types/severity';
 import type {
   QueryObserverResult,
   RefetchOptions,
-  RefetchQueryFilters,
 } from '@tanstack/react-query';
 import { useQueryClient } from '@tanstack/react-query';
 import { Button } from 'primereact/button';
@@ -27,7 +26,7 @@ import type {
   RefObject,
   SetStateAction,
 } from 'react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import type { UseFormHandleSubmit } from 'react-hook-form';
 
 interface Dw1BaseFormProps {
@@ -37,9 +36,9 @@ interface Dw1BaseFormProps {
   service: GenericService;
   handleSubmit: UseFormHandleSubmit<object>;
   formElements: ReactNode;
-  refetch: <TPageData>(
-    options?: (RefetchOptions & RefetchQueryFilters<TPageData>) | undefined
-  ) => Promise<QueryObserverResult<unknown[], unknown>>;
+  refetch: (
+    options?: RefetchOptions
+  ) => Promise<QueryObserverResult<Array<unknown>, ApiError>>;
   showMessage: (
     message: RefObject<Messages>,
     summary: string,
@@ -98,10 +97,11 @@ const Dw1BaseForm: FC<Dw1BaseFormProps> = ({
     onError: (err: ApiError) => goBackToList(err?.message ?? '', 'warn'),
   });
 
-  const performDelete = async (): Promise<void> =>
+  const performDelete = useCallback(async (): Promise<void> => {
     await deleteApi.mutateAsync({
       id: currentId,
     });
+  }, [deleteApi, currentId]);
 
   useEffect(() => {
     if (selectedData.deleting) {
@@ -109,7 +109,7 @@ const Dw1BaseForm: FC<Dw1BaseFormProps> = ({
     } else if (selectedData.creating || selectedData.updating) {
       setDisplayDialog(true);
     }
-  }, [selectedData]);
+  }, [selectedData, performDelete]);
 
   const performCreate = async (rowData: unknown): Promise<void> =>
     await postApi.mutateAsync({

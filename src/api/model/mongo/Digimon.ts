@@ -12,9 +12,9 @@ class Digimon extends PkData {
   active?: ActiveType;
   techInitial?: Tech;
   techFinal?: Tech;
-  tech: Tech[];
-  locationHappy?: Location[];
-  locationSad?: Location[];
+  tech: Array<Tech>;
+  locationHappy?: Array<Location>;
+  locationSad?: Array<Location>;
   raisable: boolean;
   recruitable: boolean;
   itemDrop?: Item;

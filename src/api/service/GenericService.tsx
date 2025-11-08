@@ -1,11 +1,13 @@
 import axios from 'axios';
 
 class GenericService {
-  constructor(private readonly baseUri: string) {
+  private readonly baseUri: string;
+
+  constructor(baseUri: string) {
     this.baseUri = `/api${baseUri}`;
   }
 
-  public getAll = async (expanded?: boolean): Promise<unknown[]> => {
+  public getAll = async (expanded?: boolean): Promise<Array<unknown>> => {
     const response = await axios.get(
       `${this.baseUri}?expanded=${expanded ?? false}`
     );

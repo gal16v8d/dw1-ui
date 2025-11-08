@@ -3,7 +3,7 @@ import type { ColumnProps } from 'primereact/column';
 
 export const techColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'number',
     field: 'number',

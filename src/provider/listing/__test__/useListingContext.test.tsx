@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { Dw1ListingProvider, useListingContext } from '../Dw1ListingProvider';
+import { useListingContext } from '../Dw1ListingContext';
+import { Dw1ListingProvider } from '../Dw1ListingProvider';
 
 function TestComponent() {
   const context = useListingContext();

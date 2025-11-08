@@ -1,4 +1,4 @@
-import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
+import { useListingContext } from '@/provider/listing/Dw1ListingContext';
 import { Badge } from 'primereact/badge';
 import type { FC, ReactElement } from 'react';
 

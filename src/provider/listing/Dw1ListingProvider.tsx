@@ -1,19 +1,12 @@
-import type { TFunction } from 'i18next';
 import { Messages } from 'primereact/messages';
-import type { PropsWithChildren, ReactElement, RefObject } from 'react';
-import { createContext, useContext, useMemo, useRef } from 'react';
+import type { PropsWithChildren, ReactElement } from 'react';
+import { useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Dw1ListingContext } from './Dw1ListingContext';
 
-interface Dw1ListingContextProps {
-  t: TFunction<'translation', undefined>;
-  message: RefObject<Messages>;
-}
-
-const Dw1ListingContext = createContext<Dw1ListingContextProps | undefined>(
-  undefined
-);
-
-const Dw1ListingProvider = ({ children }: PropsWithChildren): ReactElement => {
+export const Dw1ListingProvider = ({
+  children,
+}: PropsWithChildren): ReactElement => {
   const { t } = useTranslation<'translation', undefined>();
   const message = useRef<Messages>(null);
   const contextValue = useMemo(() => ({ t, message }), [t]);
@@ -24,15 +17,3 @@ const Dw1ListingProvider = ({ children }: PropsWithChildren): ReactElement => {
     </Dw1ListingContext.Provider>
   );
 };
-
-function useListingContext(): Dw1ListingContextProps {
-  const context = useContext(Dw1ListingContext);
-  if (context === undefined) {
-    throw new Error(
-      'useListingContext must be used within a <Dw1ListingProvider>'
-    );
-  }
-  return context;
-}
-
-export { Dw1ListingProvider, useListingContext };

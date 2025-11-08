@@ -3,6 +3,7 @@ import type { ReactElement } from 'react';
 
 const Dw1Spinner = (): ReactElement => (
   <ProgressSpinner
+    data-testid="dw1-spinner"
     style={{ width: '50px', height: '50px' }}
     strokeWidth="8"
     fill="#EEEEEE"

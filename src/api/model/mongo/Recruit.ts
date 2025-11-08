@@ -4,7 +4,7 @@ import PkData from './PkData';
 
 class Recruit extends PkData {
   digimon: Digimon;
-  location: Location[];
+  location: Array<Location>;
   job?: string;
   note?: string;
 

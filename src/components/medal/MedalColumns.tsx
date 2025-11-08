@@ -3,7 +3,7 @@ import type { ColumnProps } from 'primereact/column';
 
 export const medalColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'number',
     field: 'number',

@@ -1,5 +1,5 @@
 import PkData from './PkData';
-import MenuType from './types/Menu.types';
+import type { MenuType } from './types/Menu.types';
 
 class Menu extends PkData {
   name: string;

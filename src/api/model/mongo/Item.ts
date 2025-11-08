@@ -3,8 +3,8 @@ import PkData from './PkData';
 
 class Item extends PkData {
   name: string;
-  effect?: string[];
-  location?: Location[];
+  effect?: Array<string>;
+  location?: Array<Location>;
   note?: string;
 
   constructor(data: Item) {

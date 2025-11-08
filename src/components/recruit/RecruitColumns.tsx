@@ -14,7 +14,7 @@ const mapLocations = (rowData: Recruit): ReactNode => (
 
 export const recruitColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'digimon.name',
     field: 'digimon.name',

@@ -3,7 +3,7 @@ import type { ColumnProps } from 'primereact/column';
 
 export const exchangeColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'who',
     field: 'who',

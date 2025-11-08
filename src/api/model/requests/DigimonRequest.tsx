@@ -8,9 +8,9 @@ class DigimonRequest {
   active?: ActiveType;
   techInitial?: string;
   techFinal?: string;
-  tech: string[];
-  locationHappy?: string[];
-  locationSad?: string[];
+  tech: Array<string>;
+  locationHappy?: Array<string>;
+  locationSad?: Array<string>;
   raisable: boolean;
   recruitable: boolean;
   itemDrop?: string;

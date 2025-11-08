@@ -34,7 +34,7 @@ const mapEffects = (rowData: Item): ReactNode | null =>
 
 export const itemColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'name',
     field: 'name',

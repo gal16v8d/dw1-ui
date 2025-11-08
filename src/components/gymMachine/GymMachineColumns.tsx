@@ -4,18 +4,30 @@ import type { ColumnProps } from 'primereact/column';
 import { Image } from 'primereact/image';
 import type { ReactNode } from 'react';
 
-const mapTrainProps = (rowData: GymMachine): ReactNode[] =>
-  rowData.train.map((value) => (
+const parameterImages = import.meta.glob<{ default: string }>(
+  '@/assets/parameters/*.png',
+  {
+    eager: true,
+  }
+);
+
+const getImageFromValue = (rowData: GymMachine, value: string): ReactNode => {
+  const imageModule = parameterImages[`/src/assets/parameters/${value}.png`];
+  return (
     <Image
       key={`${rowData._id}-train-${value}`}
-      src={`assets/img/parameters/${value}.png`}
+      src={imageModule?.default}
       alt={value}
     />
-  ));
+  );
+};
+
+const mapTrainProps = (rowData: GymMachine): Array<ReactNode> =>
+  rowData.train.map((value) => getImageFromValue(rowData, value));
 
 export const gymMachineColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'name',
     field: 'name',

@@ -4,7 +4,7 @@ import RestaurantFood from './RestaurantFood';
 
 class Restaurant extends PkData {
   digimon: Digimon;
-  restaurantFood: RestaurantFood[];
+  restaurantFood: Array<RestaurantFood>;
 
   constructor(data: Restaurant) {
     super(data._id);

@@ -3,7 +3,7 @@ import PkData from './PkData';
 class RestaurantFood extends PkData {
   name: string;
   price: number;
-  effect: string[];
+  effect: Array<string>;
 
   constructor(data: RestaurantFood) {
     super(data._id);

@@ -3,7 +3,7 @@ import PkData from './PkData';
 
 class Machine extends PkData {
   location: Location;
-  product: { name: string; price: number }[];
+  product: Array<{ name: string; price: number }>;
   random: boolean;
 
   constructor(data: Machine) {

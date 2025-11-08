@@ -8,7 +8,7 @@ import { mapForm } from '@/components/base/mapForm';
 import Dw1BaseForm from '@/components/ui/Dw1BaseForm';
 import Dw1Spinner from '@/components/ui/Dw1Spinner';
 import VALUES from '@/constants/Dw1Constants';
-import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
+import { useListingContext } from '@/provider/listing/Dw1ListingContext';
 import { displayNotification } from '@/util/ErrorHandler';
 import { Button } from 'primereact/button';
 import type { ColumnProps } from 'primereact/column';
@@ -26,9 +26,19 @@ interface ListingProps {
   apiObject: ApiConfig;
 }
 
+const listingImages = import.meta.glob<{ default: string }>(
+  '@/assets/listing/**/*.png',
+  {
+    eager: true,
+  }
+);
+
 const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
   const { t, message } = useListingContext();
-  const service = new GenericService(apiObject.route);
+  const service = useMemo(
+    () => new GenericService(apiObject.route),
+    [apiObject.route]
+  );
 
   const { data, refetch } = useGetAll(
     apiObject.queryKey,
@@ -41,7 +51,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
       // Api is not updated so often, so this can be Infinity
       // to avoid multiple fetch to Db, and avoid to consume a lot of
       // railway backend free tier
-      cacheTime: Infinity,
+      gcTime: Infinity,
       staleTime: Infinity,
     }
   );
@@ -71,9 +81,9 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
         />
       )
     );
-  }, [apiObject, selectedData]);
+  }, [apiObject, selectedData, service, t, form, refetch]);
 
-  const columns: ColumnProps[] = useMemo(
+  const columns: Array<ColumnProps> = useMemo(
     () => mapColumns(apiObject, t),
     [apiObject, t]
   );
@@ -83,7 +93,11 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
   const mapImage = (rowData: unknown): ReactNode => (
     <div className="container" style={{ display: 'flex' }}>
       <Image
-        src={`assets/img/${imageColumn}/${(rowData as PkData)._id}.png`}
+        src={
+          listingImages[
+            `/src/assets/listing/${imageColumn}/${(rowData as PkData)._id}.png`
+          ]?.default
+        }
         alt={`${imageColumn} img`}
         width="50"
         height="50"
@@ -91,7 +105,7 @@ const Dw1Listing: FC<ListingProps> = ({ apiObject }) => {
     </div>
   );
 
-  const appendImageColumn = (columnsToEdit: ColumnProps[]) => {
+  const appendImageColumn = (columnsToEdit: Array<ColumnProps>) => {
     const elementExists = columns.find((col) => col.columnKey === 'image');
     if (!elementExists) {
       columnsToEdit.unshift({

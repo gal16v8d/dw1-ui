@@ -10,6 +10,7 @@ export default defineConfig({
     css: false,
     coverage: {
       reporter: ['text', 'lcov'],
+      exclude: ['**/*.json', '**/*.css'],
     },
     environment: 'jsdom',
     // This is to not import test, it, expect, vi (instead of jest). Similar to how jest works

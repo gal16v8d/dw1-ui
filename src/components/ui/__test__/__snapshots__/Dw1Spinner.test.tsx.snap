@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render Spinner component and match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      aria-busy="true"
+      class="p-progress-spinner"
+      data-pc-name="progressspinner"
+      data-pc-section="root"
+      data-testid="dw1-spinner"
+      role="progressbar"
+      style="width: 50px; height: 50px;"
+    >
+      <svg
+        class="p-progress-spinner-svg"
+        data-pc-section="spinner"
+        style="animation-duration: .5s;"
+        viewBox="25 25 50 50"
+      >
+        <circle
+          class="p-progress-spinner-circle"
+          cx="50"
+          cy="50"
+          data-pc-section="circle"
+          fill="#EEEEEE"
+          r="20"
+          stroke-miterlimit="10"
+          stroke-width="8"
+        />
+      </svg>
+    </div>
+  </div>
+</body>
+`;

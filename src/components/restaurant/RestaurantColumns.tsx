@@ -21,7 +21,7 @@ const mapFood = (rowData: Restaurant): ReactNode | null =>
 
 export const restaurantColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'digimon',
     field: 'digimon.name',

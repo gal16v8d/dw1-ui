@@ -20,7 +20,7 @@ const mapEffects = (rowData: RestaurantFood): ReactNode | null =>
 
 export const restaurantFoodColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'name',
     field: 'name',

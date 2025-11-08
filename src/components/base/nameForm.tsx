@@ -1,10 +1,13 @@
+import type PkData from '@/api/model/mongo/PkData';
 import type { CrudData } from '@/api/model/requests/CrudData';
 import type { TFunction } from 'i18next';
 import type { UseFormReturn } from 'react-hook-form';
 
+type WithName = PkData & { name: string };
+
 export const nameFormFields = (
   t: TFunction<'translation', undefined>,
-  useForm: UseFormReturn<any>,
+  useForm: UseFormReturn<WithName>,
   selectedData: CrudData,
   translationNameLabel: string
 ) => {

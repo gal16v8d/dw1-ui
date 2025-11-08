@@ -2,10 +2,21 @@ import { API_BASE_CONFIG } from '@/config/ApiBaseConfig';
 import type { TFunction } from 'i18next';
 import type { NavigateFunction } from 'react-router-dom';
 
+type MenuItem = {
+  label: string;
+  icon: string;
+  command: () => void;
+};
+
+type MenuOptions = Array<{
+  label: string;
+  items: Array<MenuItem>;
+}>;
+
 const mapApiToMenu = (
   t: TFunction<'translation', undefined>,
   navigate: NavigateFunction
-) =>
+): Array<MenuItem> =>
   API_BASE_CONFIG.map((data) => {
     return {
       label: t(`menu.${data.name}`),
@@ -17,14 +28,7 @@ const mapApiToMenu = (
 const buildMenuOptions = (
   t: TFunction<'translation', undefined>,
   navigate: NavigateFunction
-): {
-  label: string;
-  items: {
-    label: string;
-    icon: string;
-    command: () => void;
-  }[];
-}[] => [
+): MenuOptions => [
   {
     label: 'Wiki Info',
     items: mapApiToMenu(t, navigate),

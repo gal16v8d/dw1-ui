@@ -3,7 +3,7 @@ import type { ColumnProps } from 'primereact/column';
 
 export const meritPointColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'item.name',
     field: 'item.name',

@@ -4,7 +4,7 @@ exports[`should render Badge component and match snapshot 1`] = `
 <body>
   <div>
     <span
-      class="p-badge p-component p-badge-success p-mr-2"
+      class="p-mr-2 p-badge p-component p-badge-success"
       data-pc-name="badge"
       data-pc-section="root"
     >

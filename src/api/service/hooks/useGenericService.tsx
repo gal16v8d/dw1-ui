@@ -8,31 +8,31 @@ const useGetAll = (
   service: GenericService,
   expanded?: boolean,
   payload?: {
-    onSuccess?: (response: unknown[]) => void;
+    onSuccess?: (response: Array<unknown>) => void;
     onError?: (error: ApiError) => void;
     enabled?: boolean;
-    cacheTime?: number;
+    gcTime?: number;
     staleTime?: number;
     refetchOnMount?: boolean;
   }
-): UseQueryResult<unknown[], ApiError> =>
+): UseQueryResult<Array<unknown>, ApiError> =>
   useQuery({
     queryKey: [queryKey],
     queryFn: async () => {
       return await service.getAll(expanded);
     },
-    cacheTime: payload?.cacheTime ?? undefined,
-    staleTime: payload?.cacheTime ?? undefined,
-    enabled: payload?.enabled === undefined || payload?.enabled,
-    onSuccess: (response: unknown[]) => {
-      payload?.onSuccess && payload.onSuccess(response);
+    ...{
+      gcTime: payload?.gcTime ?? undefined,
+      staleTime: payload?.staleTime ?? undefined,
+      enabled: payload?.enabled === undefined || payload?.enabled,
+      onSuccess: (response: Array<unknown>) => payload?.onSuccess?.(response),
+      onError: (error: ApiError) => {
+        console.warn(error?.message);
+        payload?.onError?.(error);
+      },
+      refetchOnMount:
+        payload?.refetchOnMount === undefined || payload.refetchOnMount,
     },
-    onError: (error: ApiError) => {
-      console.warn(error?.message);
-      payload?.onError && payload.onError(error);
-    },
-    refetchOnMount:
-      payload?.refetchOnMount === undefined || payload.refetchOnMount,
   });
 
 const useSave = (
@@ -52,10 +52,10 @@ const useSave = (
 > =>
   useMutation({
     mutationFn: ({ data }: { data: unknown }) => service.save(data),
-    onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
+    onSuccess: () => payload?.onSuccess?.(),
     onError: (err: ApiError) => {
       console.warn(`Could not create the ${apiObject}`, err?.message);
-      return payload?.onError && payload?.onError(err);
+      return payload?.onError?.(err);
     },
   });
 
@@ -78,10 +78,10 @@ const useUpdate = (
   useMutation({
     mutationFn: ({ id, data }: { id: string; data: unknown }) =>
       service.update(id, data),
-    onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
+    onSuccess: () => payload?.onSuccess?.(),
     onError: (err: ApiError) => {
       console.warn(`Could not update the ${apiObject}`, err?.message);
-      return payload?.onError && payload?.onError(err);
+      return payload?.onError?.(err);
     },
   });
 
@@ -102,10 +102,10 @@ const useDelete = (
 > =>
   useMutation({
     mutationFn: ({ id }: { id: string }) => service.delete(id),
-    onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
+    onSuccess: () => payload?.onSuccess?.(),
     onError: (err: ApiError) => {
       console.warn(`Could not delete the ${apiObject}`, err?.message);
-      return payload?.onError && payload?.onError(err);
+      return payload?.onError?.(err);
     },
   });
 

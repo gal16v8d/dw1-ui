@@ -4,10 +4,8 @@ import type { Element } from '@/api/model/mongo/Element';
 import Level from '@/api/model/mongo/Level';
 import Location from '@/api/model/mongo/Location';
 import type { CrudData } from '@/api/model/requests/CrudData';
+import { nameFormFields } from '@/components/base/nameForm';
 import { cardFormFields } from '@/components/card/CardFormFields';
-import { elementFormFields } from '@/components/element/ElementFormFields';
-import { levelFormFields } from '@/components/level/LevelFormFields';
-import { locationFormFields } from '@/components/location/LocationFormFields';
 import VALUES from '@/constants/Dw1Constants';
 import type { TFunction } from 'i18next';
 import type { UseFormReturn } from 'react-hook-form';
@@ -26,22 +24,25 @@ export const mapForm = (
         selectedData
       );
     case VALUES.API_OBJECT.ELEMENT:
-      return elementFormFields(
+      return nameFormFields(
         t,
         useForm as unknown as UseFormReturn<Element>,
-        selectedData
+        selectedData,
+        'elementListing.l_name'
       );
     case VALUES.API_OBJECT.LEVEL:
-      return levelFormFields(
+      return nameFormFields(
         t,
         useForm as unknown as UseFormReturn<Level>,
-        selectedData
+        selectedData,
+        'levelListing.l_name'
       );
     case VALUES.API_OBJECT.LOCATION:
-      return locationFormFields(
+      return nameFormFields(
         t,
         useForm as unknown as UseFormReturn<Location>,
-        selectedData
+        selectedData,
+        'locationListing.l_name'
       );
     default:
       return undefined;

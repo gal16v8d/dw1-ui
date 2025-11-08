@@ -7,7 +7,7 @@ import './Dw1MapLocations.css';
 type LocationClassName = 'good-chip' | 'bad-chip';
 
 interface Dw1MapLocationsProps {
-  locations?: Location[];
+  locations?: Array<Location>;
   identifier: string;
   additionalClassName: LocationClassName;
 }

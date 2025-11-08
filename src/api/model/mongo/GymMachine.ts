@@ -4,7 +4,7 @@ import PkData from './PkData';
 class GymMachine extends PkData {
   name: string;
   location: Location;
-  train: string[];
+  train: Array<string>;
 
   constructor(data: GymMachine) {
     super(data._id);

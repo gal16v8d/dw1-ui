@@ -1,4 +1,4 @@
-import { useListingContext } from '@/provider/listing/Dw1ListingProvider';
+import { useListingContext } from '@/provider/listing/Dw1ListingContext';
 import { Button } from 'primereact/button';
 import { Menu } from 'primereact/menu';
 import { Sidebar } from 'primereact/sidebar';
@@ -14,16 +14,19 @@ const Dw1Sidebar = (): ReactElement => {
 
   return (
     <>
-      <Sidebar visible={visibleLeft} onHide={() => setVisibleLeft(false)}>
-        <Menu model={buildMenuOptions(t, navigate)} />
-      </Sidebar>
-
       <Button
         data-testid="dw1-sidebar-btn"
         icon="pi pi-list"
         onClick={() => setVisibleLeft(true)}
         className="p-mr-2"
       />
+      <Sidebar
+        visible={visibleLeft}
+        onHide={() => setVisibleLeft(false)}
+        role="region"
+      >
+        <Menu model={buildMenuOptions(t, navigate)} />
+      </Sidebar>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import type { ApiConfig } from '@/api/model/config/ApiConfig';
 import VALUES from '@/constants/Dw1Constants';
 
-export const API_BASE_CONFIG: ApiConfig[] = [
+export const API_BASE_CONFIG: Array<ApiConfig> = [
   {
     name: VALUES.API_OBJECT.CARD,
     expanded: false,

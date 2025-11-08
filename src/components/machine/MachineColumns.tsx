@@ -29,7 +29,7 @@ const mapRandom = (rowData: Machine): ReactNode => (
 
 export const machineColumns = (
   t: TFunction<'translation', undefined>
-): ColumnProps[] => [
+): Array<ColumnProps> => [
   {
     columnKey: 'location.name',
     field: 'location.name',

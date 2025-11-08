@@ -39,7 +39,7 @@ const App: FC = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(/src/assets/background/background.png)`,
+        backgroundImage: `url(/assets/img/background.png)`,
       }}
     >
       <PersistQueryClientProvider

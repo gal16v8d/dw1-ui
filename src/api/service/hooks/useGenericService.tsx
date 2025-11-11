@@ -18,9 +18,7 @@ const useGetAll = (
 ): UseQueryResult<Array<unknown>, ApiError> =>
   useQuery({
     queryKey: [queryKey],
-    queryFn: async () => {
-      return await service.getAll(expanded);
-    },
+    queryFn: async () => service.getAll(expanded),
     ...{
       gcTime: payload?.gcTime ?? undefined,
       staleTime: payload?.staleTime ?? undefined,

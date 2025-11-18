@@ -144,20 +144,16 @@ const Dw1BaseForm: FC<Dw1BaseFormProps> = ({
   };
 
   const dialogOptions = (
-    <div className="field is-grouped">
-      <div className="control">
-        <Button
-          label={t('baseComponent.form.save') ?? 'baseComponent.form.save'}
-        />
-      </div>
-      <div className="control">
-        <Button
-          label={t('baseComponent.form.cancel') ?? 'baseComponent.form.cancel'}
-          className="p-button-warning"
-          onClick={onCancel}
-          type="button"
-        />
-      </div>
+    <div className="button-container">
+      <Button
+        label={t('baseComponent.form.save') ?? 'baseComponent.form.save'}
+      />
+      <Button
+        label={t('baseComponent.form.cancel') ?? 'baseComponent.form.cancel'}
+        className="p-button-warning"
+        onClick={onCancel}
+        type="button"
+      />
     </div>
   );
 

@@ -7,6 +7,10 @@ This UI consumes a service that currently is available at [Railway](https://rail
 
 ## Available Scripts
 
+### setup
+
+NOTE: as ignore-scripts flag was added might need to run npx husky to install pre-commit hook
+
 In the project directory, you can run:
 
 ### `npm run dev`
